@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ブログ | TRUSTEP JAPAN — 補助金・AI・経営の実務知見</title>
+<meta name="description" content="TRUSTEP JAPAN 公式ブログ。補助金・助成金、生成AI／DX、経営、営業、資金調達など、中小企業の経営者・事業責任者向けに実務知見を発信しています。">
+<meta name="theme-color" content="#0a1428">
+<link rel="canonical" href="https://trustep-japan.co.jp/blog.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a2f5e'/%3E%3Cpath d='M14 20h36v7H36v24h-8V27H14z' fill='%23b8963e'/%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="ブログ | TRUSTEP JAPAN">
+<meta property="og:description" content="補助金・助成金、生成AI／DX、経営の実務知見を発信。中小企業の経営者向けブログ。">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="TRUSTEP JAPAN">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+
+<style>
+/* ==== Blog Index ==== */
+.blog-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:24px;
+}
+@media (max-width:980px){.blog-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:640px){.blog-grid{grid-template-columns:1fr;}}
+
+.post-card{
+  display:flex;flex-direction:column;
+  background:rgba(255,255,255,.02);
+  border:1px solid rgba(120,160,220,.12);
+  border-radius:16px;overflow:hidden;
+  text-decoration:none;color:#fff;
+  transition:all .35s ease;height:100%;
+}
+.post-card:hover{
+  background:rgba(75,156,251,.05);
+  border-color:rgba(75,156,251,.32);
+  transform:translateY(-4px);
+  box-shadow:0 20px 50px rgba(10,20,45,.3);
+}
+.post-card-thumb{
+  aspect-ratio:16/9;position:relative;overflow:hidden;
+  background:
+    radial-gradient(ellipse 60% 80% at 25% 50%,rgba(75,156,251,.4),transparent 70%),
+    radial-gradient(ellipse 60% 80% at 75% 50%,rgba(232,199,106,.32),transparent 70%),
+    linear-gradient(135deg,#0d1f3c,#1a2f5e);
+}
+.post-card-thumb::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(232,199,106,.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(232,199,106,.07) 1px,transparent 1px);
+  background-size:40px 40px;
+  mask-image:radial-gradient(ellipse 70% 70% at center,#000 0%,transparent 70%);
+}
+.post-card-thumb-text{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-size:clamp(20px,2.4vw,28px);
+  font-weight:700;color:rgba(255,255,255,.95);
+  text-align:center;padding:16px;z-index:2;
+  text-shadow:0 4px 18px rgba(0,0,0,.4);letter-spacing:.04em;
+}
+.post-card-thumb-text .em{
+  background:linear-gradient(135deg,var(--gold-a),#ffd97a);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+/* Theme variants */
+.post-card-thumb.theme-ai{
+  background:
+    radial-gradient(ellipse 60% 80% at 30% 60%,rgba(75,156,251,.5),transparent 70%),
+    linear-gradient(135deg,#0c1e44,#173a7a);
+}
+.post-card-thumb.theme-finance{
+  background:
+    radial-gradient(ellipse 60% 80% at 75% 50%,rgba(232,199,106,.4),transparent 70%),
+    linear-gradient(135deg,#1a2f5e,#0d1f3c);
+}
+.post-card-thumb.theme-sales{
+  background:
+    radial-gradient(ellipse 60% 80% at 25% 50%,rgba(248,79,101,.32),transparent 70%),
+    linear-gradient(135deg,#0d1f3c,#3a1626);
+}
+.post-card-thumb.theme-insight{
+  background:
+    radial-gradient(ellipse 80% 80% at 50% 50%,rgba(180,140,255,.25),transparent 70%),
+    linear-gradient(135deg,#0d1f3c,#1f1a4a);
+}
+
+.post-card-body{padding:24px;flex:1;display:flex;flex-direction:column;}
+.post-card-meta{
+  display:flex;gap:14px;align-items:center;font-size:11.5px;
+  color:var(--muted);margin-bottom:14px;letter-spacing:.04em;
+}
+.post-card-cat{
+  display:inline-block;padding:4px 10px;border-radius:30px;font-size:10px;
+  font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  background:rgba(232,199,106,.1);color:var(--gold-a);
+  border:1px solid rgba(232,199,106,.25);
+}
+.post-card-cat.cat-ai{background:rgba(75,156,251,.12);color:#95c7ff;border-color:rgba(75,156,251,.28);}
+.post-card-cat.cat-finance{background:rgba(184,150,62,.12);color:#e8c76a;border-color:rgba(184,150,62,.28);}
+.post-card-cat.cat-sales{background:rgba(248,79,101,.1);color:#ff8fa1;border-color:rgba(248,79,101,.28);}
+.post-card-cat.cat-insight{background:rgba(180,140,255,.1);color:#c5acff;border-color:rgba(180,140,255,.28);}
+.post-card-cat.cat-hr{background:rgba(95,212,167,.1);color:#7be3b8;border-color:rgba(95,212,167,.28);}
+
+.post-card-date{font-family:var(--serif);font-style:italic;color:var(--gold-a);font-size:13px;}
+.post-card-title{
+  font-family:var(--serif);font-size:17px;line-height:1.55;font-weight:600;
+  color:#fff;margin:0 0 14px;flex-grow:1;
+}
+.post-card-excerpt{
+  font-size:13px;line-height:1.75;color:var(--muted);margin:0 0 16px;
+  display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+}
+.post-card-readmore{
+  font-size:12px;color:var(--blue-a);letter-spacing:.06em;
+  display:flex;align-items:center;gap:6px;font-weight:500;
+}
+
+/* Filter */
+.cat-filter{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:36px;}
+.cat-filter button{
+  padding:9px 20px;border-radius:50px;cursor:pointer;
+  background:rgba(255,255,255,.04);border:1px solid rgba(120,160,220,.18);
+  color:var(--muted);font-size:12.5px;letter-spacing:.05em;
+  transition:all .25s ease;font-family:inherit;font-weight:500;
+}
+.cat-filter button:hover{color:#fff;border-color:rgba(75,156,251,.4);}
+.cat-filter button.is-active{
+  background:linear-gradient(135deg,var(--blue-a),var(--cyan-a));
+  color:#fff;border-color:transparent;
+}
+.post-card.is-hidden{display:none;}
+
+.post-coming{
+  opacity:.55;cursor:default;pointer-events:none;
+  position:relative;
+}
+.post-coming::after{
+  content:'準備中';position:absolute;top:14px;right:14px;z-index:5;
+  background:rgba(0,0,0,.55);color:#fff;font-size:10px;
+  padding:4px 10px;border-radius:30px;letter-spacing:.08em;
+}
+
+/* Empty state */
+.empty-state{
+  text-align:center;padding:60px 20px;color:var(--muted);
+  font-size:14px;display:none;
+}
+.empty-state.is-visible{display:block;}
+</style>
+</head>
+
+<body class="noise">
+<div class="bg-layer"></div><div class="bg-grid"></div><div class="scroll-progress"></div>
+
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" class="site-logo"><img src="assets/trustep-logo-white.png" alt="TRUSTEP JAPAN"></a>
+    <nav class="site-nav">
+      <a class="nav-item" href="about.html">About</a>
+      <a class="nav-item" href="services.html">Services</a>
+      <a class="nav-item" href="case-studies.html">Cases</a>
+      <a class="nav-item" href="news.html">News</a>
+      <a class="nav-item nav-active" href="blog.html">Blog</a>
+      <a class="nav-item" href="recruit.html">Recruit</a>
+      <a class="nav-item" href="faq.html">FAQ</a>
+      <a class="btn-header-cta magnetic" href="contact.html">お問い合わせ →</a>
+    </nav>
+    <button class="menu-toggle" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-menu">
+  <a href="about.html">About <span class="arr">→</span></a>
+  <a href="services.html">Services <span class="arr">→</span></a>
+  <a href="case-studies.html">Cases <span class="arr">→</span></a>
+  <a href="news.html">News <span class="arr">→</span></a>
+  <a href="blog.html">Blog <span class="arr">→</span></a>
+  <a href="recruit.html">Recruit <span class="arr">→</span></a>
+  <a href="faq.html">FAQ <span class="arr">→</span></a>
+  <a class="mobile-cta" href="contact.html">お問い合わせ <span class="arr">→</span></a>
+</nav>
+
+<!-- Hero -->
+<section class="page-hero">
+  <div class="container container-narrow text-center">
+    <p class="page-hero-kicker reveal">— Insight & Updates —</p>
+    <h1 class="page-hero-title reveal delay-1">
+      <span class="serif">最新の</span><span class="serif" style="background:linear-gradient(135deg,var(--blue-a),var(--gold-a),var(--pink-a));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">知見と実務</span><span class="serif">。</span>
+    </h1>
+    <p class="page-hero-lead reveal delay-2">
+      補助金・助成金、生成AI／DX、経営、営業、資金調達——<br>
+      中小企業の経営者・事業責任者に役立つ知見を、TRUSTEP JAPANが発信します。
+    </p>
+    <p class="page-hero-breadcrumb reveal delay-3">HOME / BLOG</p>
+  </div>
+</section>
+
+<!-- Filter & Posts -->
+<section class="section">
+  <div class="container container-narrow">
+    <div class="cat-filter reveal" id="blogFilter">
+      <button class="is-active" data-cat="all">All</button>
+      <button data-cat="subsidy">補助金・助成金</button>
+      <button data-cat="ai">AI / DX</button>
+      <button data-cat="finance">資金調達</button>
+      <button data-cat="sales">営業</button>
+      <button data-cat="hr">人材育成</button>
+      <button data-cat="insight">経営インサイト</button>
+    </div>
+
+    <div class="blog-grid reveal" id="blogGrid">
+
+      <a class="post-card" data-cat="hr" href="blog/2026-05-30-ai-jinzai-ikusei-roadmap.html">
+        <div class="post-card-thumb">
+          <div class="post-card-thumb-text">採用 × 育成 × 定着で、<br><span class="em">AI活用組織</span> をつくる</div>
+        </div>
+        <div class="post-card-body">
+          <div class="post-card-meta">
+            <span class="post-card-cat cat-hr">HR</span>
+            <span class="post-card-date">2026.05.30</span>
+          </div>
+          <h2 class="post-card-title">中小企業のAI人材育成 完全ロードマップ｜採用・育成・定着の3ステップ</h2>
+          <p class="post-card-excerpt">AI人材を「採用するか、育成するか」で迷う中小企業の経営者・人事担当者へ。AI人材定義、社内育成のロードマップ、採用の代替手段、定着までの仕組みを実務観点で完全解説。</p>
+          <span class="post-card-readmore">続きを読む <span>→</span></span>
+        </div>
+      </a>
+
+      <a class="post-card" data-cat="ai" href="blog/2026-05-26-gijiroku-jidouka-claude.html">
+        <div class="post-card-thumb theme-ai">
+          <div class="post-card-thumb-text">議事録作成を、<br><span class="em">月20時間</span>から<span class="em">月2時間</span>へ</div>
+        </div>
+        <div class="post-card-body">
+          <div class="post-card-meta">
+            <span class="post-card-cat cat-ai">AI / DX</span>
+            <span class="post-card-date">2026.05.26</span>
+          </div>
+          <h2 class="post-card-title">議事録自動化の決定版｜Claudeで月20時間を取り戻す業務改革ロードマップ</h2>
+          <p class="post-card-excerpt">会議が多くて議事録作成に追われていませんか。Claudeを使った議事録自動化で月20時間を取り戻すための具体的ワークフロー、おすすめツール組み合わせ、社内展開の進め方を実例ベースで解説。</p>
+          <span class="post-card-readmore">続きを読む <span>→</span></span>
+        </div>
+      </a>
+
+      <a class="post-card" data-cat="insight" href="blog/2026-05-23-shagai-torishimariyaku-katsuyou.html">
+        <div class="post-card-thumb theme-insight">
+          <div class="post-card-thumb-text">中小企業経営者の<br><span class="em">"孤独"</span> を終わらせる選択</div>
+        </div>
+        <div class="post-card-body">
+          <div class="post-card-meta">
+            <span class="post-card-cat cat-insight">INSIGHT</span>
+            <span class="post-card-date">2026.05.23</span>
+          </div>
+          <h2 class="post-card-title">社外取締役・顧問の活用ガイド｜中小企業の経営者が「右腕」を得る5つのメリットと選び方</h2>
+          <p class="post-card-excerpt">社外取締役・顧問契約は、中小企業の経営者にとって"孤独"を打開する強力な手段。導入のメリット、適切な人材の選び方、契約形態、報酬相場、活用が成功する企業の共通点を経営伴走の視点で解説。</p>
+          <span class="post-card-readmore">続きを読む <span>→</span></span>
+        </div>
+      </a>
+
+      <a class="post-card" data-cat="sales" href="blog/2026-05-19-sfa-katsuyou-5gensoku.html">
+        <div class="post-card-thumb theme-sales">
+          <div class="post-card-thumb-text">SFAを使い倒すための<br><span class="em">5原則 × 中小企業設計</span></div>
+        </div>
+        <div class="post-card-body">
+          <div class="post-card-meta">
+            <span class="post-card-cat cat-sales">SALES</span>
+            <span class="post-card-date">2026.05.19</span>
+          </div>
+          <h2 class="post-card-title">営業生産性を2倍にするSFA活用5原則｜中小企業の"宝の持ち腐れ"を終わらせる実務ガイド</h2>
+          <p class="post-card-excerpt">SFA（営業支援システム）を導入したのに使われない・成果が出ない——。中小企業がSFAで営業生産性を2倍にするための活用5原則と、Salesforce/HubSpot等の選定軸、定着のコツを次世代型営業コンサルが解説。</p>
+          <span class="post-card-readmore">続きを読む <span>→</span></span>
+        </div>
+      </a>
+
+      <a class="post-card" data-cat="subsidy" href="blog/2026-05-15-jizokuka-hojokin-2026.html">
+        <div class="post-card-thumb">
+          <div class="post-card-thumb-text">小規模事業者の販路開拓を、<br><span class="em">最大¥2,500,000</span>でサポート</div>
+        </div>
+        <div class="post-card-body">
+          <div class="post-card-meta">
+            <span class="post-card-cat">SUBSIDY</span>
+            <span class="post-card-date">2026.05.15</span>
+          </div>
+          <h2 class="post-card-title">小規模事業者持続化補助金 2026最新活用法｜上限250万円・採択を引き寄せる事業計画書テンプレ</h2>
+          <p class="post-card-excerpt">小規模事業者持続化補助金（一般型・創業型・成長型）の対象・補助率・上限250万円の使い方を完全解説。採択率を高める事業計画書のテンプレート構成と、商工会・商工会議所との連携ポイントを認定支援機関が指南。</p>
+          <span class="post-card-readmore">続きを読む <span>→</span></span>
+        </div>
+      </a>
+
+      <!-- 公開済み記事 -->
+      <a class="post-card" data-cat="subsidy" href="blog/2026-04-28-jinzai-kaihatsu-josei-kin-guide.html">
+        <div class="post-card-thumb">
+          <div class="post-card-thumb-text">経費助成 <span class="em">¥311,000</span>／名<br>負担率 <span class="em">22%</span></div>
+        </div>
+        <div class="post-card-body">
+          <div class="post-card-meta">
+            <span class="post-card-cat">SUBSIDY</span>
+            <span class="post-card-date">2026.04.28</span>
+          </div>
+          <h2 class="post-card-title">人材開発支援助成金 2026 完全ガイド｜中小企業がAI研修を"実質負担22%"で導入する方法</h2>
+          <p class="post-card-excerpt">2026年版・人材開発支援助成金（事業展開等リスキリング支援コース）の対象・助成率・申請手順を中小企業向けに完全解説。1名あたり経費助成311,000円カバーで実質負担89,000円・負担率22%まで圧縮するスキームを詳述。</p>
+          <span class="post-card-readmore">続きを読む <span>→</span></span>
+        </div>
+      </a>
+
+      <a class="post-card" data-cat="ai" href="blog/2026-05-12-claude-prompt-5gensoku.html">
+        <div class="post-card-thumb theme-ai">
+          <div class="post-card-thumb-text">5原則 × 実務テンプレで<br><span class="em">業務効率3倍</span></div>
+        </div>
+        <div class="post-card-body">
+          <div class="post-card-meta">
+            <span class="post-card-cat cat-ai">AI / DX</span>
+            <span class="post-card-date">2026.05.12</span>
+          </div>
+          <h2 class="post-card-title">中小企業のためのClaudeプロンプト設計5原則｜業務効率を3倍にする実務テンプレート</h2>
+          <p class="post-card-excerpt">Claude を中小企業の現場業務で活用するためのプロンプト設計5原則と、議事録要約・提案書ドラフト・調査リサーチ・契約書チェック・営業メールなど、明日から使える実務テンプレート集。</p>
+          <span class="post-card-readmore">続きを読む <span>→</span></span>
+        </div>
+      </a>
+
+      <a class="post-card" data-cat="subsidy" href="blog/2026-05-08-kanagawa-seisansei-koujou-hojokin.html">
+        <div class="post-card-thumb">
+          <div class="post-card-thumb-text">神奈川の生産性向上を、<br><span class="em">最大数百万円</span>でサポート</div>
+        </div>
+        <div class="post-card-body">
+          <div class="post-card-meta">
+            <span class="post-card-cat">SUBSIDY</span>
+            <span class="post-card-date">2026.05.08</span>
+          </div>
+          <h2 class="post-card-title">神奈川県「生産性向上促進事業費補助金」完全ガイド｜要件・公募日程・採択される計画の作り方</h2>
+          <p class="post-card-excerpt">神奈川県が運営する生産性向上促進事業費補助金について、対象事業者・補助率・公募スケジュール、そして審査を通過する計画書のコツまで解説します。</p>
+          <span class="post-card-readmore">続きを読む <span>→</span></span>
+        </div>
+      </a>
+
+      <a class="post-card" data-cat="ai" href="blog/2026-05-05-degital-ai-dounyu-hojokin-2026.html">
+        <div class="post-card-thumb theme-ai">
+          <div class="post-card-thumb-text">IT導入補助金 2026<br><span class="em">最大450万円</span>のIT投資支援</div>
+        </div>
+        <div class="post-card-body">
+          <div class="post-card-meta">
+            <span class="post-card-cat cat-ai">AI / DX</span>
+            <span class="post-card-date">2026.05.05</span>
+          </div>
+          <h2 class="post-card-title">デジタル化・AI導入補助金 2026最新｜通常枠・インボイス枠の違いと、導入後に成果を出す実行ガイド</h2>
+          <p class="post-card-excerpt">2026年度版IT導入補助金について、通常枠・インボイス枠・セキュリティ枠の違い、対象ITツール、補助率、申請のコツ、導入後に成果を出すための運用設計まで一気通貫で解説。</p>
+          <span class="post-card-readmore">続きを読む <span>→</span></span>
+        </div>
+      </a>
+
+      <a class="post-card" data-cat="finance" href="blog/2026-05-02-maru-kei-yushi-guide.html">
+        <div class="post-card-thumb theme-finance">
+          <div class="post-card-thumb-text">無担保・無保証人<br><span class="em">最大¥20,000,000</span></div>
+        </div>
+        <div class="post-card-body">
+          <div class="post-card-meta">
+            <span class="post-card-cat cat-finance">FINANCE</span>
+            <span class="post-card-date">2026.05.02</span>
+          </div>
+          <h2 class="post-card-title">マル経融資の全貌｜最大2,000万円・無担保・無保証人で資金繰りを強くする実務ロードマップ</h2>
+          <p class="post-card-excerpt">商工会議所の経営指導を受けた小規模事業者が利用できるマル経融資について、適用要件・申請フロー・採択を引き寄せる経営計画書の作り方を実務目線で解説。</p>
+          <span class="post-card-readmore">続きを読む <span>→</span></span>
+        </div>
+      </a>
+
+      <a class="post-card" data-cat="subsidy" href="blog/2026-04-29-tokyo-keieiryoku-kyouka-hojokin.html">
+        <div class="post-card-thumb">
+          <div class="post-card-thumb-text">東京都の創意工夫を、<br><span class="em">最大1,500万円</span>で後押し</div>
+        </div>
+        <div class="post-card-body">
+          <div class="post-card-meta">
+            <span class="post-card-cat">SUBSIDY</span>
+            <span class="post-card-date">2026.04.29</span>
+          </div>
+          <h2 class="post-card-title">東京都「経営力強化に向けた創意工夫チャレンジ促進事業」3コース完全解説｜対象経費・申請の流れ</h2>
+          <p class="post-card-excerpt">東京都が実施する経営力強化補助金の3コース（小規模・中規模・大規模）について、対象経費・補助率・採択ポイントを中小企業向けに完全解説します。</p>
+          <span class="post-card-readmore">続きを読む <span>→</span></span>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="empty-state" id="blogEmpty">
+      該当するカテゴリの記事はまだありません。<br>新着記事をお待ちください。
+    </div>
+
+  </div>
+</section>
+
+<!-- Newsletter CTA -->
+<section class="section">
+  <div class="container container-narrow text-center">
+    <p class="section-kicker reveal">Stay Connected</p>
+    <h2 class="section-title center reveal delay-1" style="margin-bottom:24px;font-size:clamp(28px,4vw,42px);">最新記事をいち早く。</h2>
+    <p class="section-lead reveal delay-2" style="margin:0 auto 30px;">補助金・AI 活用・経営の最新知見を、不定期でお届けします。</p>
+    <a class="btn btn-primary magnetic reveal delay-3" href="contact.html">ニュース配信に登録する <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="assets/trustep-logo-white.png" alt="TRUSTEP JAPAN"><p>中小企業の経営課題を、本気で解決する。顧問・人材育成・AI開発・営業支援・補助金活用までを一気通貫で提供する経営パートナーです。</p></div>
+      <div class="footer-col"><h4>Sitemap</h4><ul><li><a href="about.html">会社概要</a></li><li><a href="services.html">サービス</a></li><li><a href="case-studies.html">導入事例</a></li><li><a href="news.html">ニュース</a></li><li><a href="blog.html">ブログ</a></li><li><a href="recruit.html">採用情報</a></li><li><a href="faq.html">よくある質問</a></li><li><a href="contact.html">お問い合わせ</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="advisory-and-outside-director-consulting.html">顧問・社外取締役</a></li><li><a href="ai-talent-development-consulting.html">人材育成 × AI</a></li><li><a href="corporate-custom-ai-training.html">法人向け AI 研修</a></li><li><a href="trust-forge-lp.html">TRUST FORGE</a></li><li><a href="top-seller-advance-lp.html">Top Seller Advance</a></li><li><a href="mitasu-consul.html">ミタス・コンサル</a></li><li><a href="claude-training-lp.html">Claude Training Program</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><div class="footer-contact-row"><span style="font-weight:600;color:rgba(255,255,255,.8)">本社</span><span>TRUSTEP JAPAN株式会社</span><span>〒102-0074 東京都千代田区九段南 1-5-6<br>りそな九段ビル 5F</span><span>TEL <a href="tel:0368695250">03-6869-5250</a></span><span>FAX 03-4216-7051</span></div><div class="footer-contact-row" style="margin-top:16px;"><span style="font-weight:600;color:rgba(255,255,255,.8)">茨城営業所</span><span>〒301-0824 茨城県龍ケ崎市下町4872-11 3F</span><span>TEL <a href="tel:05037185250">050-3718-5250</a></span></div></div>
+    </div>
+    <div class="footer-bottom"><p>© <span data-year></span> TRUSTEP JAPAN Co., Ltd. All rights reserved.</p><div class="links"><a href="privacy-policy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></div></div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('[data-year]').forEach(e=>e.textContent=new Date().getFullYear());
+
+// Category Filter
+(function(){
+  const buttons = document.querySelectorAll('#blogFilter button');
+  const cards = document.querySelectorAll('#blogGrid .post-card');
+  const empty = document.getElementById('blogEmpty');
+  buttons.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      buttons.forEach(b=>b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      const cat = btn.dataset.cat;
+      let visible = 0;
+      cards.forEach(c=>{
+        const show = (cat === 'all' || c.dataset.cat === cat);
+        c.classList.toggle('is-hidden', !show);
+        if(show) visible++;
+      });
+      empty.classList.toggle('is-visible', visible === 0);
+    });
+  });
+})();
+</script>
+
+<script defer src="assets/js/ai-assistant.js"></script>
+</body>
+</html>

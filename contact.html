@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>お問い合わせ・無料相談 | TRUSTEP JAPAN</title>
+<meta name="description" content="TRUSTEP JAPAN株式会社へのお問い合わせ・無料相談はこちらから。経営課題、AI活用、補助金、人材育成について、お気軽にご相談ください。">
+<meta name="theme-color" content="#0a1428">
+<link rel="canonical" href="https://trustep-japan.co.jp/contact.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a2f5e'/%3E%3Cpath d='M14 20h36v7H36v24h-8V27H14z' fill='%23b8963e'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+
+<style>
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:60px;align-items:flex-start;}
+.contact-side{position:sticky;top:120px;}
+.info-block{
+  padding:32px;border-radius:18px;
+  background:linear-gradient(135deg,rgba(75,156,251,.12),rgba(232,199,106,.04));
+  border:1px solid rgba(120,160,220,.18);
+  margin-bottom:18px;
+}
+.info-block h3{
+  font-size:14px;font-family:var(--serif);font-style:italic;letter-spacing:.18em;
+  color:var(--gold-a);text-transform:uppercase;margin-bottom:14px;font-weight:400;
+}
+.info-block .big{font-family:var(--serif);font-size:30px;color:#fff;letter-spacing:.04em;}
+.info-block p{color:var(--muted);font-size:13.5px;line-height:1.95;}
+.info-block a{color:#fff;}
+.info-block .small{font-size:12px;color:var(--muted-2);margin-top:6px;}
+
+.method-row{
+  display:flex;gap:14px;align-items:center;
+  padding:18px;border-radius:14px;
+  background:rgba(255,255,255,.03);border:1px solid rgba(120,160,220,.12);
+  margin-bottom:10px;
+  transition:border-color .25s ease,background .25s ease;
+}
+.method-row:hover{border-color:rgba(75,156,251,.35);background:rgba(75,156,251,.05);}
+.method-icon{
+  width:42px;height:42px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--blue-a),var(--cyan-a));
+  display:grid;place-items:center;color:#fff;
+}
+.method-row .label{font-size:11px;letter-spacing:.18em;color:var(--gold-a);text-transform:uppercase;}
+.method-row .val{color:#fff;font-size:15px;font-weight:500;margin-top:2px;}
+
+.form-card{
+  padding:48px;border-radius:24px;
+  background:linear-gradient(180deg,rgba(18,46,92,.5) 0%,rgba(12,26,50,.85) 100%);
+  border:1px solid rgba(120,160,220,.16);
+  position:relative;overflow:hidden;
+}
+.form-card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--blue-a),var(--gold-a),var(--pink-a));
+}
+
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.form-row .field{margin-bottom:0;}
+
+.consent{
+  display:flex;align-items:flex-start;gap:10px;font-size:12.5px;color:var(--muted);
+  margin-top:6px;
+}
+.consent input{width:auto;margin-top:4px;}
+.consent a{color:var(--blue-a);text-decoration:underline;text-underline-offset:2px;}
+
+.form-success{
+  display:none;text-align:center;padding:60px 30px;
+}
+.form-success.is-shown{display:block;}
+.form-success svg{width:80px;height:80px;color:var(--gold-a);margin-bottom:20px;}
+.form-success h3{font-size:28px;margin-bottom:14px;color:#fff;}
+.form-success p{color:var(--muted);max-width:480px;margin:0 auto;line-height:1.95;}
+
+@media (max-width:900px){
+  .contact-grid{grid-template-columns:1fr;gap:40px;}
+  .contact-side{position:static;}
+  .form-card{padding:32px 24px;}
+  .form-row{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body class="noise">
+
+<div class="bg-layer"></div>
+<div class="bg-grid"></div>
+<div class="scroll-progress"></div>
+
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" class="site-logo" aria-label="TRUSTEP JAPAN ホーム">
+      <img src="assets/trustep-logo-white.png" alt="TRUSTEP JAPAN">
+    </a>
+    <nav class="site-nav">
+      <a class="nav-item" href="about.html">About</a>
+      <a class="nav-item" href="services.html">Services</a>
+      <a class="nav-item" href="case-studies.html">Cases</a>
+      <a class="nav-item" href="news.html">News</a>
+      <a class="nav-item" href="blog.html">Blog</a>
+      <a class="nav-item" href="recruit.html">Recruit</a>
+      <a class="nav-item" href="faq.html">FAQ</a>
+      <a class="btn-header-cta magnetic" href="contact.html">お問い合わせ →</a>
+    </nav>
+    <button class="menu-toggle" aria-label="メニュー" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-menu" aria-label="モバイルメニュー">
+  <a href="about.html">About <span class="arr">→</span></a>
+  <a href="services.html">Services <span class="arr">→</span></a>
+  <a href="case-studies.html">Cases <span class="arr">→</span></a>
+  <a href="news.html">News <span class="arr">→</span></a>
+  <a href="blog.html">Blog <span class="arr">→</span></a>
+  <a href="recruit.html">Recruit <span class="arr">→</span></a>
+  <a href="faq.html">FAQ <span class="arr">→</span></a>
+  <a class="mobile-cta" href="contact.html">お問い合わせ <span class="arr">→</span></a>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="page-eyebrow reveal">Contact / Free Consultation</p>
+    <h1 class="page-title reveal delay-1">まずは、<br><span class="accent">無料相談</span>から。</h1>
+    <p class="page-lead reveal delay-2">
+      経営課題・AI 活用・補助金・人材育成——。<br>
+      "本気で困っていること" を、お気軽にお聞かせください。<br>
+      原則 1 営業日以内にご返信いたします。
+    </p>
+    <div class="crumbs reveal delay-3"><a href="index.html">Home</a><span>/</span><span>Contact</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <aside class="contact-side reveal">
+        <div class="info-block">
+          <h3>By Phone</h3>
+          <a href="tel:0368695250" class="big">03-6869-5250</a>
+          <p class="small">平日 9:00 - 18:00（土日祝休み）</p>
+        </div>
+        <div class="info-block" style="background:linear-gradient(135deg,rgba(232,199,106,.1),rgba(184,150,62,.04));">
+          <h3>Office</h3>
+          <p>TRUSTEP JAPAN株式会社<br>
+          〒102-0074<br>
+          東京都千代田区九段南 1-5-6<br>
+          りそな九段ビル 5F</p>
+        </div>
+
+        <div style="margin-top:18px;">
+          <a class="method-row" href="tel:0368695250">
+            <span class="method-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <span><span class="label">Phone</span><br><span class="val">03-6869-5250</span></span>
+          </a>
+          <a class="method-row" href="https://trustep-japan.co.jp/contact/" target="_blank" rel="noopener">
+            <span class="method-icon" style="background:linear-gradient(135deg,#e8c76a,#b8963e);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1 0 2 1 2 2v12c0 1-1 2-2 2H4c-1 0-2-1-2-2V6c0-1 1-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            </span>
+            <span><span class="label">Email Form</span><br><span class="val">trustep-japan.co.jp/contact/</span></span>
+          </a>
+          <a class="method-row" href="faq.html">
+            <span class="method-icon" style="background:linear-gradient(135deg,#f84f65,#e8c76a);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </span>
+            <span><span class="label">FAQ</span><br><span class="val">よくある質問を確認する</span></span>
+          </a>
+        </div>
+      </aside>
+
+      <div>
+        <div class="form-card reveal delay-1">
+          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <!-- Web3Forms 設定: ここに自分のアクセスキーを入れてください
+                 取得方法: https://web3forms.com/ で 1 分登録 → Access Key を発行 → 下記 value="" に貼り付け -->
+            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+            <input type="hidden" name="from_name" value="TRUSTEP JAPAN お問い合わせフォーム">
+            <input type="hidden" name="subject" value="【TRUSTEP JAPAN お問い合わせ】新着あり">
+            <input type="hidden" name="redirect" value="false">
+            <input type="checkbox" name="botcheck" style="display:none;">
+
+            <h2 style="font-size:24px;margin-bottom:8px;color:#fff;font-weight:600;">お問い合わせフォーム</h2>
+            <p style="color:var(--muted);font-size:13px;margin-bottom:32px;">必要項目をご入力ください。<span style="color:var(--pink-a);">*</span> は必須項目です。</p>
+
+            <div class="form-row">
+              <div class="field">
+                <label class="field-required" for="company">会社名</label>
+                <input id="company" name="company" type="text" required placeholder="株式会社〇〇">
+              </div>
+              <div class="field">
+                <label class="field-required" for="name">お名前</label>
+                <input id="name" name="name" type="text" required placeholder="山田 太郎">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label class="field-required" for="email">メールアドレス</label>
+                <input id="email" name="email" type="email" required placeholder="example@company.co.jp">
+              </div>
+              <div class="field">
+                <label for="phone">電話番号</label>
+                <input id="phone" name="phone" type="tel" placeholder="03-1234-5678">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field-required" for="topic">ご相談内容</label>
+              <select id="topic" name="topic" required>
+                <option value="">選択してください</option>
+                <option value="advisory">顧問・社外取締役コンサルティング</option>
+                <option value="ai-talent">人材育成 × AI</option>
+                <option value="ai-training">法人向け AI 研修</option>
+                <option value="trust-forge">TRUST FORGE（AIシステム開発）</option>
+                <option value="top-seller">Top Seller Advance（営業改革）</option>
+                <option value="mitasu">ミタス・コンサル（補助金活用）</option>
+                <option value="claude">Claude Training Program</option>
+                <option value="other">その他・複合的なご相談</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label class="field-required" for="message">具体的なご相談内容</label>
+              <textarea id="message" name="message" required placeholder="現在の状況、抱えている課題、検討したい取り組みなど、お気軽にご記入ください。&#10;簡単な情報でも構いません。"></textarea>
+            </div>
+
+            <div class="field">
+              <label for="budget">想定予算（任意）</label>
+              <select id="budget" name="budget">
+                <option value="">未定／不明</option>
+                <option value="under-100">100万円未満</option>
+                <option value="100-300">100〜300万円</option>
+                <option value="300-500">300〜500万円</option>
+                <option value="500-1000">500〜1,000万円</option>
+                <option value="over-1000">1,000万円以上</option>
+              </select>
+            </div>
+
+            <div class="consent">
+              <input type="checkbox" id="consent" name="consent" required>
+              <label for="consent" style="font-size:12.5px;color:var(--muted);letter-spacing:0;text-transform:none;font-family:var(--sans);font-style:normal;">
+                <a href="privacy-policy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に同意の上、送信します。<span style="color:var(--pink-a);">*</span>
+              </label>
+            </div>
+
+            <div style="margin-top:32px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;">
+              <button type="submit" class="btn btn-primary magnetic" style="min-width:200px;">送信する <span class="arrow">→</span></button>
+              <span style="font-size:12px;color:var(--muted-2);">原則 1 営業日以内にご返信</span>
+            </div>
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <h3>送信ありがとうございました</h3>
+            <p>お問い合わせを受け付けました。原則 1 営業日以内に、ご入力いただいたメールアドレス宛にご返信いたします。<br>お急ぎの場合は <a href="tel:0368695250" style="color:var(--gold-a);">03-6869-5250</a> までお電話ください。</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Map / Access -->
+<section class="section">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:36px;">
+      <p class="section-num reveal">Access</p>
+      <h2 class="section-title center reveal delay-1" style="font-size:clamp(28px,4vw,42px);">アクセス</h2>
+    </div>
+    <div class="reveal" style="border-radius:20px;overflow:hidden;border:1px solid rgba(120,160,220,.18);box-shadow:0 20px 50px rgba(0,0,0,.4);">
+      <iframe
+        src="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E4%B9%9D%E6%AE%B5%E5%8D%97%EF%BC%91%E2%88%92%EF%BC%95%E2%88%92%EF%BC%96&output=embed"
+        width="100%" height="420" style="border:0;display:block;filter:invert(.92) hue-rotate(180deg) saturate(.6);" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+    <div class="reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px;">
+      <div class="card" style="padding:28px 24px;">
+        <h4 style="font-family:var(--serif);font-style:italic;color:var(--gold-a);font-size:13px;letter-spacing:.18em;margin-bottom:8px;">最寄駅</h4>
+        <p style="color:#fff;font-size:14px;line-height:2;">東京メトロ半蔵門線・東西線・都営新宿線「九段下駅」徒歩 5 分</p>
+      </div>
+      <div class="card" style="padding:28px 24px;">
+        <h4 style="font-family:var(--serif);font-style:italic;color:var(--gold-a);font-size:13px;letter-spacing:.18em;margin-bottom:8px;">営業時間</h4>
+        <p style="color:#fff;font-size:14px;line-height:2;">平日 9:00 - 18:00<br>（土・日・祝日休業）</p>
+      </div>
+      <div class="card" style="padding:28px 24px;">
+        <h4 style="font-family:var(--serif);font-style:italic;color:var(--gold-a);font-size:13px;letter-spacing:.18em;margin-bottom:8px;">面談</h4>
+        <p style="color:#fff;font-size:14px;line-height:2;">対面・オンライン（Zoom／Google Meet）<br>どちらも対応可能</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer (shared) -->
+<footer class="site-footer">
+  <div class="inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/trustep-logo-white.png" alt="TRUSTEP JAPAN">
+        <p>中小企業の経営課題を、本気で解決する。顧問・人材育成・AI開発・営業支援・補助金活用までを一気通貫で提供する経営パートナーです。</p>
+      </div>
+      <div class="footer-col"><h4>Sitemap</h4><ul>
+        <li><a href="about.html">会社概要</a></li>
+        <li><a href="services.html">サービス</a></li>
+        <li><a href="case-studies.html">導入事例</a></li>
+        <li><a href="news.html">ニュース</a></li>
+        <li><a href="blog.html">ブログ</a></li>
+        <li><a href="recruit.html">採用情報</a></li>
+        <li><a href="faq.html">よくある質問</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Services</h4><ul>
+        <li><a href="advisory-and-outside-director-consulting.html">顧問・社外取締役</a></li>
+        <li><a href="ai-talent-development-consulting.html">人材育成 × AI</a></li>
+        <li><a href="corporate-custom-ai-training.html" target="_blank" rel="noopener">法人向け AI 研修</a></li>
+        <li><a href="trust-forge-lp.html" target="_blank" rel="noopener">TRUST FORGE</a></li>
+        <li><a href="top-seller-advance-lp.html">Top Seller Advance</a></li>
+        <li><a href="mitasu-consul.html">ミタス・コンサル</a></li>
+        <li><a href="claude-training-lp.html">Claude Training Program</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4>
+        <div class="footer-contact-row">
+          <span style="font-weight:600;color:rgba(255,255,255,.8)">本社</span>
+          <span>TRUSTEP JAPAN株式会社</span>
+          <span>〒102-0074 東京都千代田区九段南 1-5-6<br>りそな九段ビル 5F</span>
+          <span>TEL <a href="tel:0368695250">03-6869-5250</a></span>
+          <span>FAX 03-4216-7051</span>
+        </div>
+        <div class="footer-contact-row" style="margin-top:16px;">
+          <span style="font-weight:600;color:rgba(255,255,255,.8)">茨城営業所</span>
+          <span>〒301-0824 茨城県龍ケ崎市下町4872-11 3F</span>
+          <span>TEL <a href="tel:05037185250">050-3718-5250</a></span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span data-year></span> TRUSTEP JAPAN Co., Ltd. All rights reserved.</p>
+      <div class="links">
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Web3Forms に接続済みのフォーム送信
+// セットアップ:
+//   1. https://web3forms.com/ で info@trustep-japan.co.jp を登録（1分・無料）
+//   2. 発行された Access Key を上の <input name="access_key" value="..."> に貼り付け
+//   3. これだけで、送信内容が指定メールに自動転送されます（バックエンド不要）
+(function(){
+  const f = document.getElementById('contactForm');
+  const ok = document.getElementById('formSuccess');
+  if (!f || !ok) return;
+
+  f.addEventListener('submit', async e => {
+    e.preventDefault();
+    if (!f.checkValidity()){ f.reportValidity(); return; }
+
+    const submitBtn = f.querySelector('button[type="submit"]');
+    const accessKey = f.querySelector('input[name="access_key"]').value;
+    const useWeb3Forms = accessKey && accessKey !== 'YOUR_WEB3FORMS_ACCESS_KEY_HERE';
+
+    if (!useWeb3Forms){
+      // Access Key 未設定 → フォールバック: 成功画面を表示するのみ
+      f.style.display = 'none';
+      ok.classList.add('is-shown');
+      ok.querySelector('p').innerHTML = 'お問い合わせを受け付けました。<br><strong style="color:var(--gold-a);">※ メール自動送信は未設定です。</strong> Owner が <code>contact.html</code> の Web3Forms Access Key を設定すると、このフォームの送信内容が info@trustep-japan.co.jp に自動転送されます。<br>お急ぎの場合は <a href="tel:0368695250" style="color:var(--gold-a);">03-6869-5250</a> までお電話ください。';
+      window.scrollTo({top: ok.getBoundingClientRect().top + window.scrollY - 120, behavior:'smooth'});
+      return;
+    }
+
+    if (submitBtn){ submitBtn.disabled = true; submitBtn.textContent = '送信中…'; }
+
+    const fd = new FormData(f);
+    try {
+      const r = await fetch(f.action, {
+        method: 'POST',
+        body: fd,
+        headers: {'Accept': 'application/json'}
+      });
+      const data = await r.json().catch(() => ({}));
+      if (r.ok || data.success){
+        f.style.display = 'none';
+        ok.classList.add('is-shown');
+        window.scrollTo({top: ok.getBoundingClientRect().top + window.scrollY - 120, behavior:'smooth'});
+      } else {
+        alert('送信に失敗しました: ' + (data.message || 'ネットワークエラー'));
+        if (submitBtn){ submitBtn.disabled = false; submitBtn.innerHTML = '送信する <span class="arrow">→</span>'; }
+      }
+    } catch(err){
+      alert('送信エラー: ' + err.message);
+      if (submitBtn){ submitBtn.disabled = false; submitBtn.innerHTML = '送信する <span class="arrow">→</span>'; }
+    }
+  });
+})();
+</script>
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/chatbot.js" defer></script>
+<script defer src="assets/js/ai-assistant.js"></script>
+</body>
+</html>

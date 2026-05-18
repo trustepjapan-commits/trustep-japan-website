@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>会社概要 | TRUSTEP JAPAN</title>
+<meta name="description" content="TRUSTEP JAPAN株式会社の会社概要・代表メッセージ・ミッション・沿革・アクセス。中小企業の経営課題を、本気で解決する経営パートナー。">
+<meta name="theme-color" content="#0a1428">
+<link rel="canonical" href="https://trustep-japan.co.jp/about.html">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a2f5e'/%3E%3Cpath d='M14 20h36v7H36v24h-8V27H14z' fill='%23b8963e'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/site.css">
+
+<style>
+.about-hero{padding:160px 24px 80px;}
+
+.message-block{
+  display:grid;grid-template-columns:1fr 1.4fr;gap:72px;align-items:center;
+}
+.message-portrait{
+  position:relative;border-radius:24px;overflow:hidden;
+  aspect-ratio:4/5;
+  background:linear-gradient(135deg,#0d1f3c,#1a2f5e 60%,#2c4a8a);
+  border:1px solid rgba(232,199,106,.25);
+  box-shadow:0 24px 60px -28px rgba(0,0,0,.6);
+}
+.message-portrait img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center top;
+  transition:transform 1.2s cubic-bezier(.22,1,.36,1);
+}
+.message-portrait:hover img{transform:scale(1.04);}
+.message-portrait::after{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,transparent 55%,rgba(8,15,30,.55) 100%);
+}
+.portrait-tag{
+  position:absolute;left:24px;bottom:24px;z-index:2;
+  padding:14px 22px;border-radius:12px;
+  background:rgba(8,15,30,.7);backdrop-filter:blur(10px);
+  border:1px solid rgba(120,160,220,.2);
+}
+.portrait-tag .name{font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:.04em;}
+.portrait-tag .role{font-size:11px;letter-spacing:.2em;color:var(--gold-a);text-transform:uppercase;margin-top:4px;}
+.message-body blockquote{
+  font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.5vw,30px);
+  line-height:1.6;color:#fff;margin-bottom:24px;
+  border-left:3px solid var(--gold-a);padding-left:24px;
+}
+.message-body p{color:var(--muted);line-height:2.05;font-size:14.5px;}
+.message-body p+p{margin-top:1em;}
+
+/* MVV — bold, sculptural treatment */
+.philosophy-section{
+  padding:140px 0 !important;
+  position:relative;overflow:hidden;
+}
+.philosophy-section::before{
+  content:"PHILOSOPHY";
+  position:absolute;top:30px;left:50%;transform:translateX(-50%);
+  font-family:"Playfair Display",serif;font-style:italic;font-weight:700;
+  font-size:clamp(80px,12vw,180px);line-height:1;
+  letter-spacing:-.02em;color:rgba(232,199,106,.04);
+  white-space:nowrap;pointer-events:none;z-index:0;
+}
+.philosophy-display{
+  font-family:"Playfair Display","Noto Serif JP",serif;
+  font-weight:700;letter-spacing:.01em;
+  font-size:clamp(40px,7vw,84px);line-height:1.1;
+  background:linear-gradient(180deg,#fff 0%,#dbe6f7 60%,#7ea6dc 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  display:inline-block;
+}
+.philosophy-display .em{
+  background:linear-gradient(90deg,#4b9cfb 0%,#e8c76a 50%,#4b9cfb 100%);
+  background-size:200% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  font-style:italic;font-weight:700;
+  animation:shimmerAbout 14s linear infinite;
+}
+@keyframes shimmerAbout{0%{background-position:0% 50%;}100%{background-position:200% 50%;}}
+.philosophy-section .section-num,
+.philosophy-section .section-kicker,
+.philosophy-section .philosophy-display{position:relative;z-index:1;}
+
+.values-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:64px;
+  position:relative;z-index:1;
+}
+.values-grid > .card{
+  position:relative;padding:48px 36px 40px !important;border-radius:22px;
+  background:linear-gradient(180deg,rgba(18,46,92,.45),rgba(12,26,50,.85)) !important;
+  border:1px solid rgba(232,199,106,.28) !important;
+  overflow:hidden;
+  transition:transform .35s cubic-bezier(.22,1,.36,1), border-color .25s ease, box-shadow .25s ease;
+}
+.values-grid > .card::before{
+  content:attr(data-letter);position:absolute;
+  top:-30px;right:-12px;
+  font-family:"Playfair Display",serif;font-style:italic;font-weight:700;
+  font-size:240px;line-height:1;color:rgba(232,199,106,.06);
+  letter-spacing:-.05em;pointer-events:none;
+  transition:color .35s ease, transform .35s ease;
+}
+.values-grid > .card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(232,199,106,.65) !important;
+  box-shadow:0 30px 70px -28px rgba(232,199,106,.5);
+}
+.values-grid > .card:hover::before{color:rgba(232,199,106,.18);transform:scale(1.05) rotate(-2deg);}
+.value-num-icon{
+  display:inline-grid;place-items:center;
+  width:72px;height:72px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%,rgba(232,199,106,.30),rgba(75,156,251,.15) 70%);
+  border:1px solid rgba(232,199,106,.55);
+  font-family:"Playfair Display",serif;font-style:italic;font-weight:700;
+  font-size:28px;color:var(--gold-a);position:relative;
+  margin-bottom:24px;
+  box-shadow:inset 0 0 18px rgba(232,199,106,.18), 0 8px 22px rgba(0,124,255,.18);
+}
+.value-num-icon::after{
+  content:"";position:absolute;inset:-5px;border-radius:50%;
+  border:1px dashed rgba(232,199,106,.4);
+  animation:spinSlowMVV 14s linear infinite;
+}
+@keyframes spinSlowMVV{to{transform:rotate(360deg);}}
+.value-kicker{
+  font-family:"Playfair Display",serif;font-style:italic;
+  color:var(--gold-a);font-size:13px;letter-spacing:.22em;
+  text-transform:uppercase;font-weight:700;margin-bottom:10px;
+  display:inline-flex;align-items:center;gap:10px;
+}
+.value-kicker::before{content:"";width:24px;height:1px;background:linear-gradient(90deg,var(--gold-a),transparent);}
+.value-card h3,.values-grid h3{
+  font-family:"Playfair Display","Noto Serif JP",serif;
+  font-size:clamp(22px,2.4vw,28px);font-weight:700;
+  color:#fff;line-height:1.45;letter-spacing:.02em;
+  margin:0 0 16px 0;
+  position:relative;
+}
+.value-card h3::after,.values-grid h3::after{
+  content:"";display:block;width:42px;height:2px;
+  background:linear-gradient(90deg,#e8c76a,transparent);
+  margin-top:14px;
+}
+.value-card p,.values-grid p{
+  color:#dbe6f7;font-size:14px;line-height:1.95;letter-spacing:.02em;
+  position:relative;z-index:1;
+}
+
+.timeline{position:relative;max-width:780px;margin:60px auto 0;}
+.timeline::before{
+  content:"";position:absolute;top:0;bottom:0;left:160px;width:1px;
+  background:linear-gradient(180deg,var(--blue-a),transparent);
+}
+.timeline-row{
+  display:grid;grid-template-columns:160px 1fr;gap:24px;align-items:flex-start;
+  margin-bottom:48px;position:relative;
+}
+.timeline-row::before{
+  content:"";position:absolute;left:154px;top:6px;width:13px;height:13px;border-radius:50%;
+  background:var(--gold-a);box-shadow:0 0 0 4px rgba(232,199,106,.2);
+}
+.timeline-year{
+  font-family:var(--serif);font-style:italic;font-size:24px;color:var(--gold-a);
+  letter-spacing:.04em;text-align:right;padding-right:32px;
+}
+.timeline-text h4{font-size:17px;margin-bottom:8px;font-weight:600;}
+.timeline-text p{font-size:13.5px;color:var(--muted);line-height:1.9;}
+
+.facts-table{width:100%;border-collapse:collapse;}
+.facts-table tr{border-bottom:1px solid rgba(120,160,220,.1);}
+.facts-table th{
+  text-align:left;padding:18px 16px;width:200px;
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  color:var(--gold-a);font-size:13px;letter-spacing:.15em;text-transform:uppercase;
+  vertical-align:top;
+}
+.facts-table td{padding:18px 16px;color:#dbe6f7;font-size:14px;line-height:1.9;}
+.facts-table a{color:var(--blue-a);text-decoration:underline;text-underline-offset:2px;}
+
+@media (max-width:900px){
+  .message-block{grid-template-columns:1fr;gap:32px;}
+  .values-grid{grid-template-columns:1fr;}
+  .timeline::before{left:60px;}
+  .timeline-row{grid-template-columns:60px 1fr;}
+  .timeline-year{font-size:18px;padding-right:8px;text-align:right;}
+  .timeline-row::before{left:54px;}
+  .facts-table th{width:auto;display:block;padding-bottom:4px;}
+  .facts-table td{display:block;padding-top:0;}
+}
+</style>
+
+</head>
+
+<body class="noise">
+
+<div class="bg-layer"></div>
+<div class="bg-grid"></div>
+<div class="scroll-progress"></div>
+
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" class="site-logo" aria-label="TRUSTEP JAPAN ホーム">
+      <img src="assets/trustep-logo-white.png" alt="TRUSTEP JAPAN">
+    </a>
+    <nav class="site-nav">
+      <a class="nav-item" href="about.html">About</a>
+      <a class="nav-item" href="services.html">Services</a>
+      <a class="nav-item" href="case-studies.html">Cases</a>
+      <a class="nav-item" href="news.html">News</a>
+      <a class="nav-item" href="blog.html">Blog</a>
+      <a class="nav-item" href="recruit.html">Recruit</a>
+      <a class="nav-item" href="faq.html">FAQ</a>
+      <a class="btn-header-cta magnetic" href="contact.html">お問い合わせ →</a>
+    </nav>
+    <button class="menu-toggle" aria-label="メニュー" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="mobile-menu" aria-label="モバイルメニュー">
+  <a href="about.html">About <span class="arr">→</span></a>
+  <a href="services.html">Services <span class="arr">→</span></a>
+  <a href="case-studies.html">Cases <span class="arr">→</span></a>
+  <a href="news.html">News <span class="arr">→</span></a>
+  <a href="blog.html">Blog <span class="arr">→</span></a>
+  <a href="recruit.html">Recruit <span class="arr">→</span></a>
+  <a href="faq.html">FAQ <span class="arr">→</span></a>
+  <a class="mobile-cta" href="contact.html">お問い合わせ <span class="arr">→</span></a>
+</nav>
+
+<!-- Hero -->
+<section class="page-hero about-hero">
+  <div class="container">
+    <p class="page-eyebrow reveal">About TRUSTEP JAPAN</p>
+    <h1 class="page-title reveal delay-1">心の繋がりを、<br><span class="accent">事業成長</span>に。</h1>
+    <p class="page-lead reveal delay-2">
+      TRUSTEP JAPAN は、中小企業の経営課題を「本質」から捉え直し、<br>
+      利益が上がる仕組みそのものを変えていく経営パートナーです。
+    </p>
+    <div class="crumbs reveal delay-3">
+      <a href="index.html">Home</a><span>/</span><span>About</span>
+    </div>
+  </div>
+</section>
+
+<!-- 代表メッセージ -->
+<section class="section">
+  <div class="container">
+    <div class="message-block">
+      <div class="message-portrait reveal">
+        <img src="assets/images/representative.jpg" alt="代表取締役 飛田 昌邦" loading="lazy" decoding="async">
+        <div class="portrait-tag">
+          <div class="name">飛田 昌邦</div>
+          <div class="role">REPRESENTATIVE DIRECTOR</div>
+        </div>
+      </div>
+      <div class="message-body reveal delay-1">
+        <p class="section-num">01 — Message</p>
+        <p class="section-kicker">代表メッセージ</p>
+        <h2 class="section-title" style="margin-top:14px;font-size:clamp(28px,4vw,42px);">
+          「目標は達成して当然。<br>夢は叶えるもの。」
+        </h2>
+        <div class="divider" style="margin:24px 0;"></div>
+        <blockquote>本気でやらない人は、本気で困っていない。</blockquote>
+        <p>
+          私たち TRUSTEP JAPAN は、中小企業の経営課題を、小手先の改善ではなく「本質」から捉え直し、利益が上がる仕組みそのものを変えていくパートナーでありたいと考えています。
+        </p>
+        <p>
+          経営者の皆様の "右腕" として、戦略設計から現場の実行、定着までを本気で伴走します。会議体の整備、数値管理、営業改革、人材育成、そして AI の現場実装まで——。一時的なアドバイスではなく、"再現性のある経営" を、ご一緒に築いてまいります。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ミッション・ビジョン・バリュー -->
+<section class="section philosophy-section" style="background:linear-gradient(180deg,rgba(75,156,251,.06),rgba(232,199,106,.03));border-top:1px solid rgba(120,160,220,.08);border-bottom:1px solid rgba(120,160,220,.08);">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:30px;">
+      <p class="section-num reveal">02 — Philosophy</p>
+      <p class="section-kicker reveal delay-1">私たちの哲学</p>
+      <h2 class="philosophy-display reveal delay-2">Mission. <span class="em">Vision.</span> Values.</h2>
+    </div>
+    <div class="values-grid reveal-stagger">
+      <article class="card card-3d card-glow" data-letter="M">
+        <div class="card-3d-inner">
+          <span class="value-num-icon">M</span>
+          <p class="value-kicker">Mission ／ 使命</p>
+          <h3>本質課題を見抜き、<br>仕組みで解決する。</h3>
+          <p>表面的な症状ではなく、経営者がまだ言語化できていない本質課題まで丁寧に整理し、利益が継続的に上がる仕組みづくりを支援します。</p>
+        </div>
+      </article>
+      <article class="card card-3d card-glow" data-letter="V">
+        <div class="card-3d-inner">
+          <span class="value-num-icon">V</span>
+          <p class="value-kicker">Vision ／ 未来像</p>
+          <h3>中小企業の未来を、<br>本気で変えていく。</h3>
+          <p>AI と人と組織を融合し、日本の中小企業が世界水準の成長と生産性を実現する未来を作る。地方・業種を問わず、変化の起点となる企業を増やします。</p>
+        </div>
+      </article>
+      <article class="card card-3d card-glow" data-letter="V">
+        <div class="card-3d-inner">
+          <span class="value-num-icon">V</span>
+          <p class="value-kicker">Values ／ 行動指針</p>
+          <h3>人がやらない事を、<br>本気でチャレンジする。</h3>
+          <p>誰もが見て見ぬふりをする課題に、当事者意識を持って向き合う。アドバイスだけで終わらせず、実行と定着まで責任を持って伴走します。</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 数字で見る -->
+<section class="section">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:60px;">
+      <p class="section-num reveal">03 — Numbers</p>
+      <p class="section-kicker reveal delay-1">数字で見る TRUSTEP</p>
+      <h2 class="section-title center reveal delay-2">実績が証明する、<br>本気の伴走支援。</h2>
+    </div>
+    <div class="reveal-stagger" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;">
+      <div class="card" style="padding:40px 24px;">
+        <div class="stat">
+          <span class="stat-value"><span data-count="400" data-suffix="">0</span>+</span>
+          <span class="stat-label">Client Support</span>
+        </div>
+      </div>
+      <div class="card" style="padding:40px 24px;">
+        <div class="stat">
+          <span class="stat-value"><span data-count="1000" data-format="comma" data-suffix="">0</span>+</span>
+          <span class="stat-label">Subsidy Cases</span>
+        </div>
+      </div>
+      <div class="card" style="padding:40px 24px;">
+        <div class="stat">
+          <span class="stat-value"><span data-count="80">0</span>%+</span>
+          <span class="stat-label">Adoption Rate</span>
+        </div>
+      </div>
+      <div class="card" style="padding:40px 24px;">
+        <div class="stat">
+          <span class="stat-value"><span data-count="24">0</span>h</span>
+          <span class="stat-label">Inquiry Open</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 沿革 -->
+<section class="section" style="background:linear-gradient(180deg,transparent,rgba(232,199,106,.03));">
+  <div class="container container-narrow">
+    <div class="text-center" style="margin-bottom:30px;">
+      <p class="section-num reveal">04 — History</p>
+      <p class="section-kicker reveal delay-1">沿革</p>
+      <h2 class="section-title center reveal delay-2">歩んできた軌跡。</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-row reveal">
+        <div class="timeline-year">2020</div>
+        <div class="timeline-text">
+          <h4>TRUSTEP JAPAN株式会社 設立</h4>
+          <p>中小企業の経営支援を本業とするコンサルティング会社として、東京・千代田区に設立。</p>
+        </div>
+      </div>
+      <div class="timeline-row reveal">
+        <div class="timeline-year">2021</div>
+        <div class="timeline-text">
+          <h4>認定経営革新等支援機関に認定</h4>
+          <p>中小企業の経営革新と補助金活用を国の認定機関として支援開始。</p>
+        </div>
+      </div>
+      <div class="timeline-row reveal">
+        <div class="timeline-year">2022</div>
+        <div class="timeline-text">
+          <h4>パートナー企業 50 社を達成</h4>
+          <p>顧問・士業・金融機関・IT企業との連携網を構築し、パートナー企業が 50 社を突破。中小企業のあらゆる課題に対応できる協業エコシステムが整う。</p>
+        </div>
+      </div>
+      <div class="timeline-row reveal">
+        <div class="timeline-year">2023</div>
+        <div class="timeline-text">
+          <h4>支援実績 200 社突破</h4>
+          <p>顧問・社外取締役コンサルティングで継続支援する企業が 200 社を突破。</p>
+        </div>
+      </div>
+      <div class="timeline-row reveal">
+        <div class="timeline-year">2024</div>
+        <div class="timeline-text">
+          <h4>AI 事業領域へ拡大</h4>
+          <p>TRUST FORGE（AI システム開発）と AI 研修事業を立ち上げ、DX 推進を本格的に支援。</p>
+        </div>
+      </div>
+      <div class="timeline-row reveal">
+        <div class="timeline-year">2025</div>
+        <div class="timeline-text">
+          <h4>支援実績 400 社・補助金 1,000 件超</h4>
+          <p>累計支援実績が 400 社、補助金申請支援が 1,000 件を突破。紹介ベースで全国に展開。</p>
+        </div>
+      </div>
+      <div class="timeline-row reveal">
+        <div class="timeline-year">2026</div>
+        <div class="timeline-text">
+          <h4>Claude Training Program 始動</h4>
+          <p>Claude を中心とした生成AI活用研修の本格提供を開始。経費助成と組み合わせた実践的プログラムへ。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 会社情報 -->
+<section class="section">
+  <div class="container container-narrow">
+    <div class="text-center" style="margin-bottom:60px;">
+      <p class="section-num reveal">05 — Profile</p>
+      <p class="section-kicker reveal delay-1">会社情報</p>
+      <h2 class="section-title center reveal delay-2">Company Profile</h2>
+    </div>
+
+    <div class="card reveal" style="padding:48px;">
+      <table class="facts-table">
+        <tr><th>商号</th><td>TRUSTEP JAPAN株式会社</td></tr>
+        <tr><th>代表者</th><td>代表取締役 飛田 昌邦</td></tr>
+        <tr><th>設立</th><td>2020年</td></tr>
+        <tr><th>本社所在地</th><td>〒102-0074 東京都千代田区九段南 1-5-6 りそな九段ビル 5F<br><span style="font-size:13px;color:#95adcf;">TEL 03-6869-5250 ／ FAX 03-4216-7051</span></td></tr>
+        <tr><th>茨城営業所</th><td>〒301-0824 茨城県龍ケ崎市下町4872-11 3F<br><span style="font-size:13px;color:#95adcf;">TEL 050-3718-5250</span></td></tr>
+        <tr><th>連絡先</th><td>TEL 03-6869-5250 ／ FAX 03-4216-7051 ／ <a href="mailto:info@trustep-japan.co.jp">info@trustep-japan.co.jp</a></td></tr>
+        <tr><th>従業員数</th><td>32名（パート・業務委託含む）</td></tr>
+        <tr><th>事業内容</th><td>顧問・社外取締役コンサルティング／人材育成 × AI／法人向け AI 研修／TRUST FORGE（AI システム開発）／Top Seller Advance（営業コンサル）／ミタス・コンサル（補助金活用支援）／Claude Training Program（生成AI研修）</td></tr>
+        <tr><th>認定</th><td>認定経営革新等支援機関</td></tr>
+        <tr><th>取引銀行</th><td>三井住友銀行／東京シティ銀行／筑波銀行／千葉銀行</td></tr>
+        <tr><th>ウェブサイト</th><td><a href="https://trustep-japan.co.jp/" target="_blank" rel="noopener">trustep-japan.co.jp</a></td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container container-narrow text-center">
+    <p class="section-kicker reveal">Let's Talk</p>
+    <h2 class="section-title center reveal delay-1" style="margin-bottom:32px;">まずは、無料でご相談から。</h2>
+    <p class="section-lead reveal delay-2" style="margin:0 auto 36px;">
+      経営課題、AI活用、補助金、人材育成——。<br>
+      "本気で困っていること" を、お気軽にお聞かせください。
+    </p>
+    <div class="reveal delay-3" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a class="btn btn-primary magnetic" href="contact.html">無料相談を申し込む <span class="arrow">→</span></a>
+      <a class="btn btn-ghost magnetic" href="services.html">サービスを見る <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/trustep-logo-white.png" alt="TRUSTEP JAPAN">
+        <p>中小企業の経営課題を、本気で解決する。顧問・人材育成・AI開発・営業支援・補助金活用までを一気通貫で提供する経営パートナーです。</p>
+      </div>
+      <div class="footer-col">
+        <h4>Sitemap</h4>
+        <ul>
+          <li><a href="about.html">会社概要</a></li>
+          <li><a href="services.html">サービス</a></li>
+          <li><a href="case-studies.html">導入事例</a></li>
+          <li><a href="news.html">ニュース</a></li>
+          <li><a href="blog.html">ブログ</a></li>
+          <li><a href="recruit.html">採用情報</a></li>
+          <li><a href="faq.html">よくある質問</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="advisory-and-outside-director-consulting.html">顧問・社外取締役</a></li>
+          <li><a href="ai-talent-development-consulting.html">人材育成 × AI</a></li>
+          <li><a href="corporate-custom-ai-training.html" target="_blank" rel="noopener">法人向け AI 研修</a></li>
+          <li><a href="trust-forge-lp.html" target="_blank" rel="noopener">TRUST FORGE</a></li>
+          <li><a href="top-seller-advance-lp.html">Top Seller Advance</a></li>
+          <li><a href="mitasu-consul.html">ミタス・コンサル</a></li>
+          <li><a href="claude-training-lp.html">Claude Training Program</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-row">
+          <span>TRUSTEP JAPAN株式会社</span>
+          <span>〒102-0074 東京都千代田区九段南 1-5-6<br>りそな九段ビル 5F</span>
+          <span>TEL <a href="tel:0368695250">03-6869-5250</a></span>
+          <span>FAX 03-4216-7051</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span data-year></span> TRUSTEP JAPAN Co., Ltd. All rights reserved.</p>
+      <div class="links">
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/chatbot.js" defer></script>
+<script defer src="assets/js/ai-assistant.js"></script>
+</body>
+</html>

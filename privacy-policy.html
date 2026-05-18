@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー | TRUSTEP JAPAN</title>
+<meta name="description" content="TRUSTEP JAPAN株式会社の個人情報保護方針（プライバシーポリシー）。当社における個人情報の取得・利用・管理・第三者提供等の取扱いについて定めます。">
+<meta name="theme-color" content="#0c1a32">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://trustep-japan.co.jp/privacy-policy.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg-deep:#0c1a32;
+  --bg-mid:#0f2a53;
+  --bg-soft:#122e5c;
+  --line:#1e3a66;
+  --blue-a:#4b9cfb;
+  --cyan-a:#007cff;
+  --pink-a:#f84f65;
+  --gold-a:#e8c76a;
+  --muted:#b8c5d8;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+html,body{
+  background:var(--bg-deep);color:#fff;
+  font-family:Inter,"Noto Sans JP",sans-serif;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.9;
+}
+body{overflow-x:hidden;}
+h1,h2,h3,.serif{font-family:"Playfair Display","Noto Serif JP",serif;letter-spacing:.01em;}
+a{color:#95c7ff;text-decoration:none;transition:color .2s ease;}
+a:hover{color:var(--gold-a);}
+ul,ol{padding-left:1.4em;}
+li{margin:.4em 0;}
+
+.bg-layer{
+  position:fixed;inset:0;z-index:-2;pointer-events:none;
+  background:
+    radial-gradient(1200px 800px at 15% 10%, rgba(75,156,251,.12), transparent 60%),
+    radial-gradient(900px 700px at 85% 30%, rgba(248,79,101,.08), transparent 60%),
+    radial-gradient(1000px 900px at 60% 90%, rgba(232,199,106,.06), transparent 60%),
+    linear-gradient(180deg,#0a1428 0%, #0c1a32 40%, #0e1f3d 100%);
+}
+.noise::before{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;z-index:-1;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+/* Header */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  backdrop-filter:blur(12px);
+  background:rgba(10,20,40,.55);
+  border-bottom:1px solid rgba(120,160,220,.08);
+}
+.site-header .inner{
+  max-width:1180px;margin:0 auto;padding:0 24px;height:68px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.site-header img{height:36px;width:auto;}
+.site-header .back{
+  font-size:13px;color:var(--muted);
+  display:inline-flex;align-items:center;gap:6px;
+  padding:8px 14px;border:1px solid rgba(120,160,220,.18);
+  border-radius:999px;
+  transition:border-color .2s ease,color .2s ease,background .2s ease;
+}
+.site-header .back:hover{
+  color:#fff;border-color:rgba(75,156,251,.5);
+  background:rgba(75,156,251,.08);
+}
+
+/* Hero */
+.page-hero{
+  padding:140px 24px 60px;
+  max-width:980px;margin:0 auto;text-align:center;
+}
+.eyebrow{
+  display:inline-block;
+  font-family:"Playfair Display",serif;font-style:italic;
+  letter-spacing:.3em;font-size:13px;color:var(--gold-a);
+  margin-bottom:18px;text-transform:uppercase;
+}
+.page-hero h1{
+  font-size:clamp(32px,5vw,56px);font-weight:600;line-height:1.2;
+  background:linear-gradient(180deg,#fff 0%,#dbe6f7 60%,#95adcf 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.page-hero p.lead{
+  margin-top:20px;color:var(--muted);font-size:15px;line-height:2;
+}
+.divider{
+  margin:30px auto 0;width:64px;height:2px;
+  background:linear-gradient(90deg,var(--blue-a),var(--gold-a));
+  border-radius:2px;
+}
+
+/* Content */
+.content{
+  max-width:880px;margin:0 auto;padding:30px 24px 80px;
+}
+.section{
+  background:linear-gradient(180deg,rgba(18,46,92,.45) 0%,rgba(12,26,50,.7) 100%);
+  border:1px solid rgba(120,160,220,.12);
+  border-radius:18px;
+  padding:36px 40px;margin-bottom:18px;
+  position:relative;overflow:hidden;
+}
+.section::before{
+  content:"";position:absolute;inset:0;border-radius:18px;padding:1px;pointer-events:none;
+  background:linear-gradient(135deg,rgba(75,156,251,.25),transparent 50%,rgba(232,199,106,.15) 100%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;
+}
+.section h2{
+  font-size:22px;font-weight:600;margin-bottom:16px;
+  display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
+  color:#fff;
+}
+.section h2 .num{
+  font-family:"Playfair Display",serif;font-style:italic;
+  color:var(--gold-a);font-size:14px;letter-spacing:.18em;
+  font-weight:400;flex-shrink:0;
+}
+.section p,.section li{
+  color:#dbe6f7;font-size:14.5px;line-height:2;
+}
+.section p+p{margin-top:.9em;}
+.section h3{
+  font-size:15px;color:#fff;margin:18px 0 8px;
+  font-family:Inter,"Noto Sans JP",sans-serif;font-weight:600;
+}
+.section strong{color:#fff;}
+
+/* Definition list */
+.meta-list{
+  margin-top:14px;
+  display:grid;grid-template-columns:140px 1fr;gap:10px 18px;
+  font-size:14px;
+}
+.meta-list dt{color:var(--gold-a);font-style:italic;font-family:"Playfair Display",serif;letter-spacing:.05em;font-size:13px;}
+.meta-list dd{color:#dbe6f7;}
+
+/* Footer */
+footer{
+  border-top:1px solid rgba(120,160,220,.1);
+  padding:32px 24px;
+  text-align:center;color:var(--muted);font-size:12.5px;
+  background:rgba(10,15,30,.4);
+}
+footer a{color:var(--muted);margin:0 12px;}
+footer a:hover{color:#fff;}
+
+@media (max-width:640px){
+  .section{padding:26px 22px;}
+  .site-header img{height:28px;}
+  .page-hero{padding:110px 24px 40px;}
+  .meta-list{grid-template-columns:1fr;gap:4px 0;}
+  .meta-list dd{margin-bottom:8px;}
+}
+</style>
+</head>
+
+<body class="noise">
+<div class="bg-layer"></div>
+
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" aria-label="TRUSTEP JAPAN ホーム">
+      <img src="assets/trustep-logo-white.png" alt="TRUSTEP JAPAN">
+    </a>
+    <div style="display:flex;gap:18px;align-items:center;">
+      <a href="about.html" style="color:var(--muted);font-size:13px;letter-spacing:.04em;">About</a>
+      <a href="services.html" style="color:var(--muted);font-size:13px;letter-spacing:.04em;">Services</a>
+      <a href="contact.html" class="back">お問い合わせ →</a>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <p class="eyebrow">Privacy Policy</p>
+  <h1>プライバシーポリシー</h1>
+  <p class="lead">
+    TRUSTEP JAPAN株式会社（以下「当社」といいます。）は、お客様の個人情報の重要性を認識し、その保護を当社の重要な責務と考え、
+    個人情報保護に関する法令その他関連諸法令を遵守し、以下の方針に基づき適切に取り扱います。
+  </p>
+  <div class="divider"></div>
+</section>
+
+<main class="content">
+
+  <article class="section">
+    <h2><span class="num">01</span>個人情報の定義</h2>
+    <p>
+      本プライバシーポリシーにおいて「個人情報」とは、個人情報の保護に関する法律（以下「個人情報保護法」といいます。）第2条第1項により定義された個人情報、すなわち、生存する個人に関する情報であって、当該情報に含まれる氏名、生年月日その他の記述等により特定の個人を識別することができるもの、もしくは個人識別符号が含まれるものを指します。
+    </p>
+  </article>
+
+  <article class="section">
+    <h2><span class="num">02</span>個人情報の取得方法</h2>
+    <p>当社は、以下の方法により個人情報を取得します。</p>
+    <ul>
+      <li>お問い合わせフォーム、無料相談フォーム等のフォームへのご入力</li>
+      <li>電話、メール、面談等によるご連絡</li>
+      <li>当社サービスのご利用に伴うご提供</li>
+      <li>名刺交換、商談、セミナー等のビジネス上の接点</li>
+      <li>当社ウェブサイトのアクセスログ・Cookie 等の情報技術による自動取得</li>
+    </ul>
+  </article>
+
+  <article class="section">
+    <h2><span class="num">03</span>個人情報の利用目的</h2>
+    <p>当社は、取得した個人情報を以下の目的の範囲内で利用します。</p>
+    <ul>
+      <li>お問い合わせ・無料相談・ご依頼への対応のため</li>
+      <li>当社サービスの提供・運営・契約履行のため</li>
+      <li>当社サービスに関する情報のご提供・ご案内のため</li>
+      <li>各種資料・セミナー等のご案内、ニュースレターの配信のため</li>
+      <li>当社サービスの改善・新規サービスの開発のため</li>
+      <li>料金のご請求、お支払い処理のため</li>
+      <li>利用規約等に違反した行為への対応のため</li>
+      <li>法令・行政機関等からの要請への対応のため</li>
+      <li>その他、上記利用目的に付随する目的のため</li>
+    </ul>
+  </article>
+
+  <article class="section">
+    <h2><span class="num">04</span>個人情報の第三者提供</h2>
+    <p>
+      当社は、次の各号に該当する場合を除き、ご本人の同意を得ずに第三者へ個人情報を提供することはありません。
+    </p>
+    <ul>
+      <li>法令に基づく場合</li>
+      <li>人の生命、身体または財産の保護のために必要があり、かつご本人の同意を得ることが困難であるとき</li>
+      <li>公衆衛生の向上または児童の健全な育成の推進のために特に必要があり、かつご本人の同意を得ることが困難であるとき</li>
+      <li>国または地方公共団体等の業務遂行に協力する必要があり、ご本人の同意を得ることにより当該業務の遂行に支障を及ぼすおそれがあるとき</li>
+      <li>あらかじめ次の事項を告知または公表し、かつ個人情報保護委員会に届出を行ったとき（オプトアウトによる提供）</li>
+    </ul>
+  </article>
+
+  <article class="section">
+    <h2><span class="num">05</span>個人情報の取扱いの委託</h2>
+    <p>
+      当社は、利用目的の達成に必要な範囲内において、個人情報の取扱いの全部または一部を外部に委託することがあります。この場合、当社は委託先について、適切な選定および管理、必要かつ適切な監督を行います。
+    </p>
+  </article>
+
+  <article class="section">
+    <h2><span class="num">06</span>個人情報の安全管理措置</h2>
+    <p>
+      当社は、個人情報の漏えい、滅失または毀損を防止するため、組織的・人的・物理的・技術的安全管理措置を講じます。具体的には、社内規程の整備、従業者への教育、アクセス制御、不正アクセス対策、暗号化通信（SSL/TLS）の使用などを実施しています。
+    </p>
+  </article>
+
+  <article class="section">
+    <h2><span class="num">07</span>Cookie（クッキー）等の利用について</h2>
+    <p>
+      当社のウェブサイトでは、サービスの利便性向上、利用状況の分析、当社サービスのご案内などを目的として、Cookie および類似技術（ローカルストレージ、Web ビーコン等）を利用することがあります。
+    </p>
+    <p>
+      Cookie は、お客様のブラウザ設定により受け入れの可否を制御することができます。Cookie を無効化された場合、当社ウェブサイトの一部機能がご利用いただけなくなる可能性があります。
+    </p>
+    <h3>アクセス解析ツールについて</h3>
+    <p>
+      当社ウェブサイトでは、Google LLC が提供する「Google Analytics」等のアクセス解析ツールを利用する場合があります。これらのツールはトラフィックデータ収集のために Cookie を使用しますが、収集されるデータは匿名化されており、個人を特定するものではありません。
+    </p>
+  </article>
+
+  <article class="section">
+    <h2><span class="num">08</span>個人情報の開示・訂正・利用停止等</h2>
+    <p>
+      ご本人から、個人情報保護法に基づき、個人情報の開示、訂正、追加、削除、利用停止、第三者提供の停止等の請求があった場合、ご本人であることを確認の上、法令に従い遅滞なく対応します。
+    </p>
+    <p>
+      請求にあたっては、本人確認書類のご提示をお願いする場合があります。なお、開示請求にあたっては所定の手数料を申し受けることがあります。
+    </p>
+  </article>
+
+  <article class="section">
+    <h2><span class="num">09</span>未成年者の個人情報について</h2>
+    <p>
+      当社は、未成年者から個人情報をご提供いただく場合、保護者の同意のもとで取得することを基本とします。保護者の同意なく個人情報をご提供いただいたことが判明した場合、速やかに削除等の対応を行います。
+    </p>
+  </article>
+
+  <article class="section">
+    <h2><span class="num">10</span>本ポリシーの改定</h2>
+    <p>
+      当社は、関連法令の改正、運用状況の変化、その他必要に応じて本プライバシーポリシーを改定することがあります。改定後のプライバシーポリシーは、当社ウェブサイトに掲載した時点から効力を生じるものとします。重要な変更がある場合は、適切な方法でお知らせします。
+    </p>
+  </article>
+
+  <article class="section">
+    <h2><span class="num">11</span>お問い合わせ窓口</h2>
+    <p>
+      個人情報の取扱いに関するお問い合わせ、開示請求、ご意見・ご相談等は、下記窓口までご連絡ください。
+    </p>
+    <dl class="meta-list">
+      <dt>事業者名</dt><dd>TRUSTEP JAPAN株式会社</dd>
+      <dt>所在地</dt><dd>〒102-0074 東京都千代田区九段南1-5-6 りそな九段ビル 5F</dd>
+      <dt>電話</dt><dd><a href="tel:0368695250">03-6869-5250</a></dd>
+      <dt>お問い合わせ</dt><dd><a href="https://trustep-japan.co.jp/contact/" target="_blank" rel="noopener">お問い合わせフォーム</a></dd>
+    </dl>
+    <p style="margin-top:18px;color:var(--muted);font-size:13px;">
+      制定日：2024年1月1日<br>
+      最終改定日：2026年4月25日
+    </p>
+  </article>
+
+</main>
+
+<footer>
+  <p>© <span id="year"></span> TRUSTEP JAPAN Co., Ltd. All rights reserved.</p>
+  <div style="margin-top:10px;">
+    <a href="index.html">ホーム</a>
+    <a href="index.html#services">サービス</a>
+    <a href="https://trustep-japan.co.jp/contact/" target="_blank" rel="noopener">お問い合わせ</a>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

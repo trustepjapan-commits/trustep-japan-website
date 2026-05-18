@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>議事録自動化の決定版｜Claudeで月20時間を取り戻す業務改革ロードマップ | TRUSTEP JAPAN</title>
+<meta name="description" content="会議が多くて議事録作成に追われていませんか。Claudeを使った議事録自動化で月20時間を取り戻すための具体的ワークフロー、おすすめツール組み合わせ、社内展開の進め方を実例ベースで解説。">
+<meta name="theme-color" content="#0a1428">
+<link rel="canonical" href="../blog/2026-05-26-gijiroku-jidouka-claude.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a2f5e'/%3E%3Cpath d='M14 20h36v7H36v24h-8V27H14z' fill='%23b8963e'/%3E%3C/svg%3E">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="議事録自動化の決定版｜Claudeで月20時間を取り戻す業務改革ロードマップ">
+<meta property="og:description" content="Claudeを使った議事録自動化で月20時間削減するワークフローと社内展開の進め方を実例で解説。">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="TRUSTEP JAPAN">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"BlogPosting",
+  "headline":"議事録自動化の決定版｜Claudeで月20時間を取り戻す業務改革ロードマップ",
+  "description":"Claudeを使った議事録自動化で月20時間削減するワークフローと社内展開の進め方を実例で解説。",
+  "datePublished":"2026-05-26","dateModified":"2026-05-26",
+  "author":{"@type":"Organization","name":"TRUSTEP JAPAN株式会社"},
+  "publisher":{"@type":"Organization","name":"TRUSTEP JAPAN株式会社"},
+  "mainEntityOfPage":"https://trustep-japan.co.jp/blog/2026-05-26-gijiroku-jidouka-claude.html",
+  "articleSection":"AI / DX"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="_blog-article.css">
+
+<style>
+.prompt-block{
+  background:rgba(13,31,60,.7);border:1px solid rgba(232,199,106,.25);
+  border-left:4px solid var(--gold-a);border-radius:10px;
+  padding:18px 22px;margin:18px 0 28px;font-family:Menlo,Consolas,monospace;
+  font-size:13.5px;line-height:1.85;color:#dee5f0;white-space:pre-wrap;
+}
+</style>
+</head>
+
+<body class="noise">
+<div class="bg-layer"></div><div class="bg-grid"></div><div class="scroll-progress"></div>
+
+<header class="site-header">
+  <div class="inner">
+    <a href="../index.html" class="site-logo"><img src="../assets/trustep-logo-white.png" alt="TRUSTEP JAPAN"></a>
+    <nav class="site-nav">
+      <a class="nav-item" href="../about.html">About</a>
+      <a class="nav-item" href="../services.html">Services</a>
+      <a class="nav-item" href="../case-studies.html">Cases</a>
+      <a class="nav-item" href="../news.html">News</a>
+      <a class="nav-item nav-active" href="../blog.html">Blog</a>
+      <a class="nav-item" href="../recruit.html">Recruit</a>
+      <a class="nav-item" href="../faq.html">FAQ</a>
+      <a class="btn-header-cta magnetic" href="../contact.html">お問い合わせ →</a>
+    </nav>
+    <button class="menu-toggle" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-menu">
+  <a href="../about.html">About <span class="arr">→</span></a>
+  <a href="../services.html">Services <span class="arr">→</span></a>
+  <a href="../case-studies.html">Cases <span class="arr">→</span></a>
+  <a href="../news.html">News <span class="arr">→</span></a>
+  <a href="../blog.html">Blog <span class="arr">→</span></a>
+  <a href="../recruit.html">Recruit <span class="arr">→</span></a>
+  <a href="../faq.html">FAQ <span class="arr">→</span></a>
+  <a class="mobile-cta" href="../contact.html">お問い合わせ <span class="arr">→</span></a>
+</nav>
+
+<section class="article-hero">
+  <div class="article-breadcrumb">
+    <a href="../index.html">HOME</a> / <a href="../blog.html">BLOG</a> / AI / DX
+  </div>
+  <span class="article-cat-pill cat-ai">AI / DX</span>
+  <h1 class="article-title">議事録自動化の決定版<br>Claudeで<em>月20時間を取り戻す</em>業務改革ロードマップ</h1>
+  <div class="article-meta">
+    <span><span class="dot">●</span> 2026.05.26</span>
+    <span>カテゴリ：AI / DX</span>
+    <span>読了目安：約8分</span>
+  </div>
+</section>
+
+<div class="article-eyecatch">
+  <div class="article-eyecatch-inner theme-ai">
+    <div class="article-eyecatch-text">議事録作成を、<br><span class="em">月20時間</span>から<span class="em">月2時間</span>へ</div>
+  </div>
+</div>
+
+<article class="article-body">
+
+<p>「会議が多くて議事録作成に追われている」「営業同行の議事録を翌朝までに作る無理ゲー」「経営会議の議事録は誰が書くのか毎回押し付け合い」——多くの企業で、議事録作成は最も時間を奪う事務作業の一つです。</p>
+
+<p>本記事では、Claude等の生成AI研修を多数手掛けてきた TRUSTEP JAPAN が、<strong>Claudeを使った議事録自動化で月20時間を取り戻す</strong>具体的なワークフローと、おすすめツール組み合わせ、社内展開の進め方を実例ベースで解説します。</p>
+
+<div class="callout">
+  <div class="callout-title">📌 本記事のポイント</div>
+  <p>・典型的な中堅社員は<strong>月20時間以上</strong>を議事録作成に使っている<br>・録音 → 文字起こし → Claude要約のワークフローで<strong>月2時間まで圧縮可能</strong><br>・必要なツールは<strong>合計月¥1,500-3,000程度</strong>と費用対効果が高い<br>・推進担当を1名置き、3ヶ月で社内全展開できる</p>
+</div>
+
+<h2>1. 議事録作成にかかる「見えないコスト」</h2>
+
+<p>議事録作成は地味な業務ですが、積み上げると相当な時間とコストになります。</p>
+
+<h3>典型的な時間消費</h3>
+
+<ul>
+  <li>1時間の会議 → 議事録作成に<strong>30〜60分</strong></li>
+  <li>1日2-3会議に出席する中堅社員 → 1日<strong>1-3時間</strong>を議事録に消費</li>
+  <li>月20営業日換算で <strong>20〜60時間/月</strong></li>
+  <li>時給換算で <strong>月¥40,000〜¥120,000</strong>のコスト</li>
+</ul>
+
+<p>これが10人いれば月¥40万〜120万、年¥480万〜1,440万。これだけのコストが、ほとんど可視化されないまま消費されているのが多くの中小企業の実態です。</p>
+
+<h2>2. Claudeを使った議事録自動化の全体像</h2>
+
+<p>議事録自動化は、3つのステップに分けて設計します。</p>
+
+<div class="fact-box">
+  <div class="fact-box-item">
+    <div class="fact-box-num">Step 1</div>
+    <div class="fact-box-label">録音 / 文字起こし<br>（自動）</div>
+  </div>
+  <div class="fact-box-item">
+    <div class="fact-box-num">Step 2</div>
+    <div class="fact-box-label">Claudeで要約<br>（半自動）</div>
+  </div>
+  <div class="fact-box-item">
+    <div class="fact-box-num">Step 3</div>
+    <div class="fact-box-label">確認・配布<br>（手動）</div>
+  </div>
+</div>
+
+<p>Step 1とStep 2の自動化により、従来30-60分かかっていた作業が<strong>5-10分</strong>に短縮されます。</p>
+
+<h2>3. ツール構成（おすすめパターン）</h2>
+
+<h3>パターンA：シンプル構成（月¥1,500程度）</h3>
+
+<ul>
+  <li><strong>録音</strong>：スマホ標準アプリ（無料）</li>
+  <li><strong>文字起こし</strong>：Whisper or 標準Speech-to-Text（無料〜¥500/月）</li>
+  <li><strong>要約</strong>：Claude Pro（月¥3,000）</li>
+  <li><strong>合計</strong>：月¥1,500-3,000</li>
+</ul>
+
+<h3>パターンB：本格構成（月¥5,000-10,000程度）</h3>
+
+<ul>
+  <li><strong>録音 + 文字起こし</strong>：Notta / tl;dv / Otter.ai（月¥1,500-5,000）</li>
+  <li><strong>要約 + 議事録テンプレ</strong>：Claude Pro（月¥3,000）</li>
+  <li><strong>議事録共有</strong>：Slack / Notion / Microsoft Teams</li>
+  <li><strong>合計</strong>：月¥5,000-10,000</li>
+</ul>
+
+<h3>パターンC：エンタープライズ構成（月¥10,000-30,000程度）</h3>
+
+<ul>
+  <li><strong>会議システム連動</strong>：Zoom AI Companion / Google Meet AI / Microsoft Copilot for Teams</li>
+  <li><strong>要約・改修</strong>：Claude for Work（チームプラン）</li>
+  <li><strong>セキュリティ・コンプライアンス</strong>：Single Sign-On / 監査ログ</li>
+  <li><strong>合計</strong>：月¥10,000-30,000/人</li>
+</ul>
+
+<h2>4. Claudeに与える議事録要約プロンプト</h2>
+
+<p>議事録要約の精度を決めるのは、プロンプトの質です。下記は実践的なテンプレート例です。</p>
+
+<div class="prompt-block">あなたは中小企業の経営会議議事録を担当する熟練秘書です。
+下記の会議録音テキストから、以下の形式で議事録を作成してください。
+
+【出力形式】
+■ 開催情報（日時・出席者・議題）
+■ 結論（3行以内）
+■ 決定事項（箇条書き・期限つき）
+■ 検討中事項（誰が・何を・いつまでに検討するか）
+■ 次回までのアクション（担当者・期日付き）
+■ 参考メモ（重要発言・引用）
+
+【制約】
+- 個人名は役職名で表記
+- 議論の経緯は省略し、結論と次のアクションに集中
+- 専門用語は社内用語で統一
+- 推測や憶測は含めず、発言された内容のみ記録
+
+【会議録音テキスト】
+〔ここに文字起こしテキストを貼る〕</div>
+
+<p>このプロンプトを「自社の会議体ごと」にカスタマイズすることで、毎回の議事録品質が一定に保たれます。</p>
+
+<h2>5. 議事録自動化を社内に展開する3ステップ</h2>
+
+<h3>Step 1：1人で試す（1週間）</h3>
+
+<p>まずは推進担当者1名がツールを試して、<strong>「自分の議事録時間が確実に減る」</strong>状態を作ります。最初の成功体験が、社内展開の説得材料になります。</p>
+
+<h3>Step 2：チームに広げる（1ヶ月）</h3>
+
+<p>10人程度のチームで試行します。<strong>セキュリティルール・命名規則・保存場所</strong>などの運用ルールを整備します。</p>
+
+<h3>Step 3：全社展開（3ヶ月）</h3>
+
+<p>全社員向けの研修・運用マニュアル・問い合わせ窓口を整備し、本格運用に移行します。<strong>月次の利用状況レビュー</strong>を行うことで、定着を加速します。</p>
+
+<h2>6. セキュリティ・情報管理の注意点</h2>
+
+<p>議事録には機密情報が含まれるため、自動化には情報管理の設計が必須です。</p>
+
+<h3>必須対応事項</h3>
+
+<ul>
+  <li>機密情報を含む会議は<strong>録音可否を事前に決める</strong></li>
+  <li>クラウド型ツールの<strong>データ保管先・期間・利用権限</strong>を確認</li>
+  <li>Claude等のAIに入力するデータの<strong>社内ガイドライン</strong>策定</li>
+  <li>外部関係者を含む会議では<strong>録音同意</strong>を取得</li>
+  <li>定期的な<strong>セキュリティ監査</strong>の実施</li>
+</ul>
+
+<h2>7. 投資対効果（ROI）試算例</h2>
+
+<p>10名規模のチームでの典型的なROI試算です。</p>
+
+<ul>
+  <li><strong>導入前</strong>：1人月20時間 × 10人 = <strong>200時間/月</strong>を議事録に消費</li>
+  <li><strong>導入後</strong>：1人月2時間 × 10人 = <strong>20時間/月</strong>に圧縮</li>
+  <li><strong>削減時間</strong>：月180時間 = 約1人月の労働時間に相当</li>
+  <li><strong>導入コスト</strong>：月¥5,000 × 10人 = <strong>月¥50,000</strong></li>
+  <li><strong>削減効果</strong>：時給¥3,000 × 180時間 = <strong>月¥540,000</strong></li>
+  <li><strong>ROI</strong>：約 10倍</li>
+</ul>
+
+<h2>8. 専門家活用の判断基準</h2>
+
+<p>「自社で試したいが何から手をつけるか分からない」「ツール選定で迷っている」「社内展開のロードマップを描いてほしい」というケースでは、専門家活用が有効です。</p>
+
+<p>TRUSTEP JAPAN の<a href="../claude-training-lp.html" style="color:var(--gold-a);text-decoration:underline;">Claude Training Program</a>では、議事録自動化を含む業務効率化テンプレートを<strong>受講中に作り切る</strong>ハンズオン中心の研修を提供しています。研修終了後30日のチャットサポートで、定着まで伴走します。</p>
+
+<div class="cta-card">
+  <div class="cta-card-kicker">無料相談 受付中</div>
+  <div class="cta-card-title">議事録自動化の社内導入を、<br>無料相談で診断・ロードマップ提案します。</div>
+  <a href="../contact.html" class="cta-card-btn">無料相談を申し込む <span>→</span></a>
+</div>
+
+<h2>9. まとめ</h2>
+
+<p>議事録作成は、ほとんどの中小企業で<strong>「最も時間を奪う事務作業」</strong>の一つです。Claudeを使った自動化により、月20時間消費していた作業を月2時間まで圧縮することは現実的に可能です。</p>
+
+<p>必要なツールは月¥1,500-3,000程度から始められ、ROIは10倍以上。推進担当を1名置き、3ヶ月で社内展開する設計を行えば、確実な業務改革効果が得られます。</p>
+
+<p>TRUSTEP JAPANでは、<a href="../claude-training-lp.html" style="color:var(--gold-a);text-decoration:underline;">Claude Training Program</a> や <a href="../corporate-custom-ai-training.html" style="color:var(--gold-a);text-decoration:underline;">法人向けオーダーメイドAI研修</a> を通じて、議事録自動化の組織導入支援を行っています。経費助成311,000円／名カバーで、実質負担89,000円から導入可能です。</p>
+
+<div class="share-bar">
+  <span class="share-bar-label">Share</span>
+  <a href="https://twitter.com/intent/tweet?url=https://trustep-japan.co.jp/blog/2026-05-26-gijiroku-jidouka-claude.html&text=議事録自動化の決定版" target="_blank" rel="noopener">𝕏</a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://trustep-japan.co.jp/blog/2026-05-26-gijiroku-jidouka-claude.html" target="_blank" rel="noopener">f</a>
+  <a href="https://timeline.line.me/social-plugin/share?url=https://trustep-japan.co.jp/blog/2026-05-26-gijiroku-jidouka-claude.html" target="_blank" rel="noopener">LINE</a>
+  <a href="javascript:navigator.clipboard?.writeText(location.href)">🔗</a>
+</div>
+
+<div class="author-card">
+  <div class="author-avatar">T</div>
+  <div>
+    <div class="author-name">TRUSTEP JAPAN 編集部</div>
+    <div class="author-bio">認定経営革新等支援機関として1,000件超の補助金・助成金申請を支援。中小企業の経営課題を、補助金活用 × AI × 営業改革で本気で解決するパートナー。</div>
+  </div>
+</div>
+
+</article>
+
+<section class="related-posts">
+  <h3 class="related-posts-title">— 関連記事 —</h3>
+  <div class="related-grid">
+    <a href="2026-05-12-claude-prompt-5gensoku.html" class="related-card">
+      <span class="related-cat cat-ai">AI / DX</span>
+      <div class="related-title">中小企業のためのClaudeプロンプト設計5原則｜業務効率を3倍にする実務テンプレート</div>
+    </a>
+    <a href="2026-04-28-jinzai-kaihatsu-josei-kin-guide.html" class="related-card">
+      <span class="related-cat">SUBSIDY</span>
+      <div class="related-title">人材開発支援助成金 2026 完全ガイド｜中小企業がAI研修を"実質負担22%"で導入する方法</div>
+    </a>
+    <a href="2026-05-19-sfa-katsuyou-5gensoku.html" class="related-card">
+      <span class="related-cat cat-sales">SALES</span>
+      <div class="related-title">営業生産性を2倍にするSFA活用5原則｜中小企業の"宝の持ち腐れ"を終わらせる実務ガイド</div>
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="../assets/trustep-logo-white.png" alt="TRUSTEP JAPAN"><p>中小企業の経営課題を、本気で解決する。顧問・人材育成・AI開発・営業支援・補助金活用までを一気通貫で提供する経営パートナーです。</p></div>
+      <div class="footer-col"><h4>Sitemap</h4><ul><li><a href="../about.html">会社概要</a></li><li><a href="../services.html">サービス</a></li><li><a href="../case-studies.html">導入事例</a></li><li><a href="../news.html">ニュース</a></li><li><a href="../blog.html">ブログ</a></li><li><a href="../recruit.html">採用情報</a></li><li><a href="../faq.html">よくある質問</a></li><li><a href="../contact.html">お問い合わせ</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="../advisory-and-outside-director-consulting.html">顧問・社外取締役</a></li><li><a href="../ai-talent-development-consulting.html">人材育成 × AI</a></li><li><a href="../corporate-custom-ai-training.html">法人向け AI 研修</a></li><li><a href="../trust-forge-lp.html">TRUST FORGE</a></li><li><a href="../top-seller-advance-lp.html">Top Seller Advance</a></li><li><a href="../mitasu-consul.html">ミタス・コンサル</a></li><li><a href="../claude-training-lp.html">Claude Training Program</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><div class="footer-contact-row"><span>TRUSTEP JAPAN株式会社</span><span>〒102-0074 東京都千代田区九段南 1-5-6<br>りそな九段ビル 5F</span><span>TEL <a href="tel:0368695250">03-6869-5250</a></span><span>FAX 03-4216-7051</span></div></div>
+    </div>
+    <div class="footer-bottom"><p>© <span data-year></span> TRUSTEP JAPAN Co., Ltd. All rights reserved.</p><div class="links"><a href="../privacy-policy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div></div>
+  </div>
+</footer>
+
+<script>document.querySelectorAll('[data-year]').forEach(e=>e.textContent=new Date().getFullYear());</script>
+
+</body>
+</html>

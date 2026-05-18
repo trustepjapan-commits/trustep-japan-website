@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>導入事例 | TRUSTEP JAPAN</title>
+<meta name="description" content="TRUSTEP JAPAN株式会社の支援実績・導入事例。製造業・サービス業・小売業など、業種を超えた経営改善・AI活用・補助金活用の事例を掲載。">
+<meta name="theme-color" content="#0a1428">
+<link rel="canonical" href="https://trustep-japan.co.jp/case-studies.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a2f5e'/%3E%3Cpath d='M14 20h36v7H36v24h-8V27H14z' fill='%23b8963e'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+
+<style>
+.filter-bar{
+  display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:50px;
+}
+.filter-btn{
+  padding:9px 18px;border-radius:50px;cursor:pointer;
+  background:rgba(255,255,255,.04);border:1px solid rgba(120,160,220,.18);
+  color:var(--muted);font-size:12.5px;letter-spacing:.05em;
+  transition:all .25s ease;font-family:inherit;
+}
+.filter-btn:hover{color:#fff;border-color:rgba(75,156,251,.4);}
+.filter-btn.is-active{background:linear-gradient(135deg,var(--blue-a),var(--cyan-a));color:#fff;border-color:transparent;}
+
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.case-card{
+  display:flex;flex-direction:column;cursor:pointer;
+  padding:0;overflow:hidden;
+}
+.case-cover{
+  height:200px;position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#0d1f3c,#1a2f5e,#2c4a8a);
+}
+.case-cover::after{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 30% 30%,rgba(75,156,251,.4),transparent 60%),
+             radial-gradient(circle at 80% 70%,rgba(232,199,106,.25),transparent 60%);
+}
+.case-cover .industry{
+  position:absolute;top:18px;left:18px;z-index:2;
+  padding:6px 14px;border-radius:50px;
+  background:rgba(8,15,30,.7);backdrop-filter:blur(8px);
+  font-size:11px;letter-spacing:.1em;color:var(--gold-a);text-transform:uppercase;
+  border:1px solid rgba(232,199,106,.3);
+}
+.case-cover .num{
+  position:absolute;top:18px;right:18px;z-index:2;
+  font-family:var(--serif);font-style:italic;color:rgba(255,255,255,.4);
+  font-size:48px;line-height:1;
+}
+.case-body{padding:28px;flex:1;display:flex;flex-direction:column;}
+.case-body h3{font-size:18px;line-height:1.5;margin-bottom:12px;color:#fff;font-weight:600;}
+.case-body p{color:var(--muted);font-size:13.5px;line-height:1.95;flex:1;}
+.case-meta{
+  display:flex;gap:8px;flex-wrap:wrap;margin-top:18px;
+  padding-top:18px;border-top:1px solid rgba(120,160,220,.1);
+}
+.case-meta .tag{font-size:10.5px;}
+.case-result{
+  margin-top:18px;display:flex;gap:12px;align-items:center;
+  padding:12px 16px;border-radius:12px;
+  background:linear-gradient(135deg,rgba(232,199,106,.1),rgba(184,150,62,.04));
+  border:1px solid rgba(232,199,106,.18);
+}
+.case-result .arrow{color:var(--gold-a);font-size:18px;flex-shrink:0;}
+.case-result .text{font-size:12.5px;color:#fff;line-height:1.6;}
+.case-result strong{color:var(--gold-a);}
+
+.case-card.is-hidden{display:none;}
+
+@media (max-width:1000px){.case-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:640px){.case-grid{grid-template-columns:1fr;}}
+
+.numbers-row{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+  padding:60px 30px;border-radius:24px;
+  background:linear-gradient(135deg,rgba(75,156,251,.1),rgba(232,199,106,.05));
+  border:1px solid rgba(120,160,220,.15);
+  text-align:center;
+}
+@media (max-width:700px){.numbers-row{grid-template-columns:repeat(2,1fr);padding:40px 20px;}}
+
+.testimonial-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+.testimonial{padding:36px 32px;}
+.testimonial blockquote{
+  font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.7;color:#fff;
+  border-left:3px solid var(--gold-a);padding-left:20px;margin-bottom:20px;
+}
+.testimonial .from{display:flex;align-items:center;gap:14px;margin-top:auto;}
+.testimonial .from .avatar{
+  width:46px;height:46px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,#1a2f5e,#2c4a8a);
+  display:grid;place-items:center;color:var(--gold-a);font-family:var(--serif);font-size:18px;font-weight:600;
+}
+.testimonial .from .meta-text{font-size:13px;color:var(--muted);}
+.testimonial .from .meta-text strong{color:#fff;display:block;font-size:14px;font-weight:500;}
+@media (max-width:700px){.testimonial-grid{grid-template-columns:1fr;}}
+</style>
+
+</head>
+<body class="noise">
+
+<div class="bg-layer"></div>
+<div class="bg-grid"></div>
+<div class="scroll-progress"></div>
+
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" class="site-logo" aria-label="TRUSTEP JAPAN ホーム">
+      <img src="assets/trustep-logo-white.png" alt="TRUSTEP JAPAN">
+    </a>
+    <nav class="site-nav">
+      <a class="nav-item" href="about.html">About</a>
+      <a class="nav-item" href="services.html">Services</a>
+      <a class="nav-item" href="case-studies.html">Cases</a>
+      <a class="nav-item" href="news.html">News</a>
+      <a class="nav-item" href="blog.html">Blog</a>
+      <a class="nav-item" href="recruit.html">Recruit</a>
+      <a class="nav-item" href="faq.html">FAQ</a>
+      <a class="btn-header-cta magnetic" href="contact.html">お問い合わせ →</a>
+    </nav>
+    <button class="menu-toggle" aria-label="メニュー" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-menu" aria-label="モバイルメニュー">
+  <a href="about.html">About <span class="arr">→</span></a>
+  <a href="services.html">Services <span class="arr">→</span></a>
+  <a href="case-studies.html">Cases <span class="arr">→</span></a>
+  <a href="news.html">News <span class="arr">→</span></a>
+  <a href="blog.html">Blog <span class="arr">→</span></a>
+  <a href="recruit.html">Recruit <span class="arr">→</span></a>
+  <a href="faq.html">FAQ <span class="arr">→</span></a>
+  <a class="mobile-cta" href="contact.html">お問い合わせ <span class="arr">→</span></a>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="page-eyebrow reveal">Case Studies</p>
+    <h1 class="page-title reveal delay-1">数字が語る、<br><span class="accent">伴走</span>の証明。</h1>
+    <p class="page-lead reveal delay-2">
+      製造業・小売・サービス・IT・建設——。<br>
+      業種・規模を超えて積み上げた、本気の経営改善事例をご紹介します。
+    </p>
+    <div class="crumbs reveal delay-3"><a href="index.html">Home</a><span>/</span><span>Cases</span></div>
+  </div>
+</section>
+
+<!-- Numbers -->
+<section class="section compact">
+  <div class="container">
+    <div class="numbers-row reveal">
+      <div class="stat"><span class="stat-value"><span data-count="400">0</span>+</span><span class="stat-label">支援実績 (社)</span></div>
+      <div class="stat"><span class="stat-value"><span data-count="1000" data-format="comma">0</span>+</span><span class="stat-label">補助金 (件)</span></div>
+      <div class="stat"><span class="stat-value"><span data-count="80">0</span>%</span><span class="stat-label">平均採択率</span></div>
+      <div class="stat"><span class="stat-value"><span data-count="92">0</span>%</span><span class="stat-label">継続率</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Filter + Case Grid -->
+<section class="section">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:40px;">
+      <p class="section-num reveal">Cases</p>
+      <h2 class="section-title center reveal delay-1" style="font-size:clamp(28px,4vw,42px);">業種で絞り込む</h2>
+    </div>
+
+    <div class="filter-bar reveal" id="filterBar">
+      <button class="filter-btn is-active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="manufacturing">製造業</button>
+      <button class="filter-btn" data-filter="service">サービス業</button>
+      <button class="filter-btn" data-filter="retail">小売・EC</button>
+      <button class="filter-btn" data-filter="it">IT・テクノロジー</button>
+      <button class="filter-btn" data-filter="construction">建設・不動産</button>
+      <button class="filter-btn" data-filter="healthcare">医療・福祉</button>
+    </div>
+
+    <div class="case-grid reveal-stagger" id="caseGrid">
+
+      <article class="card case-card card-glow" data-industry="manufacturing">
+        <div class="case-cover"><span class="industry">Manufacturing</span><span class="num">01</span></div>
+        <div class="case-body">
+          <h3>製造業 A社｜営業属人化の解消で売上 130%</h3>
+          <p>長年の属人営業を Top Seller Advance で仕組み化。AI ナレッジ共有 + 営業会議刷新により、新人の早期戦力化と既存トップ営業の負担分散を同時実現。</p>
+          <div class="case-result">
+            <span class="arrow">↑</span>
+            <span class="text">売上 <strong>130%</strong> ／ 商談化率 <strong>+45%</strong> ／ 新人立ち上がり期間 <strong>50% 短縮</strong></span>
+          </div>
+          <div class="case-meta"><span class="tag tag-pink">Top Seller</span><span class="tag">12ヶ月伴走</span></div>
+        </div>
+      </article>
+
+      <article class="card case-card card-glow" data-industry="service">
+        <div class="case-cover"><span class="industry">Service</span><span class="num">02</span></div>
+        <div class="case-body">
+          <h3>士業事務所 B社｜業務 DX で残業 60% 削減</h3>
+          <p>TRUST FORGE で書類作成・スケジュール管理を AI 自動化。月次定例で改善サイクルを定着させ、属人業務をシステム化。</p>
+          <div class="case-result">
+            <span class="arrow">↓</span>
+            <span class="text">残業 <strong>60% 減</strong> ／ 月次定例工数 <strong>40% 減</strong> ／ 顧客対応速度 <strong>2.4 倍</strong></span>
+          </div>
+          <div class="case-meta"><span class="tag">TRUST FORGE</span><span class="tag tag-gold">10万円〜</span></div>
+        </div>
+      </article>
+
+      <article class="card case-card card-glow" data-industry="retail">
+        <div class="case-cover"><span class="industry">Retail / EC</span><span class="num">03</span></div>
+        <div class="case-body">
+          <h3>EC企業 C社｜補助金 4 件採択で AI 投資加速</h3>
+          <p>ミタス・コンサルで年間制度活用を計画。事業再構築・IT 導入・ものづくり・小規模事業者持続化の 4 件すべてを採択。</p>
+          <div class="case-result">
+            <span class="arrow">★</span>
+            <span class="text">補助金累計 <strong>2,800万円</strong> ／ 採択率 <strong>100%</strong> ／ 投資回収期間 <strong>2.1 年</strong></span>
+          </div>
+          <div class="case-meta"><span class="tag tag-gold">ミタス・コンサル</span><span class="tag">年間伴走</span></div>
+        </div>
+      </article>
+
+      <article class="card case-card card-glow" data-industry="it">
+        <div class="case-cover"><span class="industry">IT</span><span class="num">04</span></div>
+        <div class="case-body">
+          <h3>SaaS企業 D社｜社外取締役で組織再構築</h3>
+          <p>急成長期に伴うマネジメント崩壊。社外取締役として参画し、会議体・OKR・評価制度を再設計。離職率を半減。</p>
+          <div class="case-result">
+            <span class="arrow">↑</span>
+            <span class="text">離職率 <strong>50% 減</strong> ／ ARR <strong>+72%</strong> ／ シリーズB調達 <strong>5億円</strong></span>
+          </div>
+          <div class="case-meta"><span class="tag">顧問・社外取締役</span><span class="tag">24ヶ月</span></div>
+        </div>
+      </article>
+
+      <article class="card case-card card-glow" data-industry="construction">
+        <div class="case-cover"><span class="industry">Construction</span><span class="num">05</span></div>
+        <div class="case-body">
+          <h3>建設業 E社｜AI 研修で全社員のリテラシー底上げ</h3>
+          <p>Claude Training Program を全社展開。図面確認・見積もり・施主対応の現場業務に AI を組み込み、全社で習慣化。</p>
+          <div class="case-result">
+            <span class="arrow">↓</span>
+            <span class="text">見積作成時間 <strong>70% 減</strong> ／ 施主対応速度 <strong>3 倍</strong> ／ 受注率 <strong>+18%</strong></span>
+          </div>
+          <div class="case-meta"><span class="tag tag-gold">Claude Training</span><span class="tag">全社展開</span></div>
+        </div>
+      </article>
+
+      <article class="card case-card card-glow" data-industry="healthcare">
+        <div class="case-cover"><span class="industry">Healthcare</span><span class="num">06</span></div>
+        <div class="case-body">
+          <h3>医療法人 F社｜経営改善で利益率 2 倍</h3>
+          <p>顧問コンサルで収益構造を可視化。診療報酬最大化と業務効率化を同時推進し、過去最高利益を更新。</p>
+          <div class="case-result">
+            <span class="arrow">↑</span>
+            <span class="text">営業利益率 <strong>2 倍</strong> ／ 患者単価 <strong>+22%</strong> ／ スタッフ満足度 <strong>+30 pt</strong></span>
+          </div>
+          <div class="case-meta"><span class="tag">顧問コンサル</span><span class="tag">18ヶ月</span></div>
+        </div>
+      </article>
+
+      <article class="card case-card card-glow" data-industry="manufacturing">
+        <div class="case-cover"><span class="industry">Manufacturing</span><span class="num">07</span></div>
+        <div class="case-body">
+          <h3>町工場 G社｜事業承継+DXで第二創業</h3>
+          <p>事業承継期に経営伴走。デジタル化と新規開拓を同時推進し、若手承継者の経営基盤を構築。</p>
+          <div class="case-result">
+            <span class="arrow">↑</span>
+            <span class="text">新規顧客 <strong>+18 社</strong> ／ 業務工数 <strong>40% 減</strong> ／ 承継完了</span>
+          </div>
+          <div class="case-meta"><span class="tag">顧問</span><span class="tag tag-gold">補助金併用</span></div>
+        </div>
+      </article>
+
+      <article class="card case-card card-glow" data-industry="service">
+        <div class="case-cover"><span class="industry">Service</span><span class="num">08</span></div>
+        <div class="case-body">
+          <h3>美容院チェーン H社｜AI予約で来店率向上</h3>
+          <p>来店予測 AI と LINE 自動応答を実装。失客率を改善し、リピーター育成プロセスを仕組み化。</p>
+          <div class="case-result">
+            <span class="arrow">↑</span>
+            <span class="text">予約率 <strong>+38%</strong> ／ 失客率 <strong>52% 減</strong> ／ LTV <strong>1.6 倍</strong></span>
+          </div>
+          <div class="case-meta"><span class="tag">TRUST FORGE</span><span class="tag">3ヶ月</span></div>
+        </div>
+      </article>
+
+      <article class="card case-card card-glow" data-industry="it">
+        <div class="case-cover"><span class="industry">IT</span><span class="num">09</span></div>
+        <div class="case-body">
+          <h3>受託開発企業 I社｜Claude 研修で粗利改善</h3>
+          <p>エンジニア全員が Claude Training を受講。設計レビュー・テスト・ドキュメント作成を AI 並走化。</p>
+          <div class="case-result">
+            <span class="arrow">↑</span>
+            <span class="text">プロジェクト粗利 <strong>+28%</strong> ／ レビュー時間 <strong>60% 減</strong> ／ ドキュメント網羅率 <strong>2 倍</strong></span>
+          </div>
+          <div class="case-meta"><span class="tag tag-gold">Claude Training</span><span class="tag">全エンジニア</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:50px;">
+      <p class="section-num reveal">Voices</p>
+      <p class="section-kicker reveal delay-1">お客様の声</p>
+      <h2 class="section-title center reveal delay-2">本気で向き合ってくれる<br>パートナーが、ここにいた。</h2>
+    </div>
+
+    <div class="testimonial-grid reveal-stagger">
+      <div class="card testimonial">
+        <blockquote>「TRUSTEP さんと組んでから、現場が言い訳をしなくなった。仕組みで解決できると分かったから。」</blockquote>
+        <div class="from">
+          <div class="avatar">A</div>
+          <div class="meta-text"><strong>製造業 代表取締役 60代</strong>従業員 80 名／東京都</div>
+        </div>
+      </div>
+      <div class="card testimonial">
+        <blockquote>「補助金のおかげで AI 投資が加速。TRUSTEP の年間伴走がなければ、ここまでの活用はできなかった。」</blockquote>
+        <div class="from">
+          <div class="avatar">B</div>
+          <div class="meta-text"><strong>小売業 経営企画部長 40代</strong>年商 12 億／神奈川県</div>
+        </div>
+      </div>
+      <div class="card testimonial">
+        <blockquote>「机上の戦略ではなく、現場で回る仕組みを作ってくれる。それが TRUSTEP の何よりの価値です。」</blockquote>
+        <div class="from">
+          <div class="avatar">C</div>
+          <div class="meta-text"><strong>SaaS 企業 CEO 30代</strong>従業員 35 名／東京都</div>
+        </div>
+      </div>
+      <div class="card testimonial">
+        <blockquote>「Claude 研修を受けて、社員の AI リテラシーが一気に変わりました。"使える人だけ" の時代は終わった。」</blockquote>
+        <div class="from">
+          <div class="avatar">D</div>
+          <div class="meta-text"><strong>建設業 取締役 50代</strong>従業員 120 名／埼玉県</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container-narrow text-center">
+    <p class="section-kicker reveal">Get Started</p>
+    <h2 class="section-title center reveal delay-1" style="margin-bottom:32px;">あなたの会社にも、<br>ぴったりの一手を。</h2>
+    <p class="section-lead reveal delay-2" style="margin:0 auto 36px;">業界・規模・課題に合わせた最適なご提案を、無料相談で。</p>
+    <div class="reveal delay-3" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a class="btn btn-primary magnetic" href="contact.html">無料相談を申し込む <span class="arrow">→</span></a>
+      <a class="btn btn-ghost magnetic" href="services.html">サービスを見る <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="assets/trustep-logo-white.png" alt="TRUSTEP JAPAN"><p>中小企業の経営課題を、本気で解決する。顧問・人材育成・AI開発・営業支援・補助金活用までを一気通貫で提供する経営パートナーです。</p></div>
+      <div class="footer-col"><h4>Sitemap</h4><ul><li><a href="about.html">会社概要</a></li><li><a href="services.html">サービス</a></li><li><a href="case-studies.html">導入事例</a></li><li><a href="news.html">ニュース</a></li><li><a href="blog.html">ブログ</a></li><li><a href="recruit.html">採用情報</a></li><li><a href="faq.html">よくある質問</a></li><li><a href="contact.html">お問い合わせ</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="advisory-and-outside-director-consulting.html">顧問・社外取締役</a></li><li><a href="ai-talent-development-consulting.html">人材育成 × AI</a></li><li><a href="corporate-custom-ai-training.html" target="_blank" rel="noopener">法人向け AI 研修</a></li><li><a href="trust-forge-lp.html" target="_blank" rel="noopener">TRUST FORGE</a></li><li><a href="top-seller-advance-lp.html">Top Seller Advance</a></li><li><a href="mitasu-consul.html">ミタス・コンサル</a></li><li><a href="claude-training-lp.html">Claude Training Program</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><div class="footer-contact-row"><span style="font-weight:600;color:rgba(255,255,255,.8)">本社</span><span>TRUSTEP JAPAN株式会社</span><span>〒102-0074 東京都千代田区九段南 1-5-6<br>りそな九段ビル 5F</span><span>TEL <a href="tel:0368695250">03-6869-5250</a></span><span>FAX 03-4216-7051</span></div><div class="footer-contact-row" style="margin-top:16px;"><span style="font-weight:600;color:rgba(255,255,255,.8)">茨城営業所</span><span>〒301-0824 茨城県龍ケ崎市下町4872-11 3F</span><span>TEL <a href="tel:05037185250">050-3718-5250</a></span></div></div>
+    </div>
+    <div class="footer-bottom"><p>© <span data-year></span> TRUSTEP JAPAN Co., Ltd. All rights reserved.</p><div class="links"><a href="privacy-policy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></div></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const filters = document.querySelectorAll('#filterBar .filter-btn');
+  const cards = document.querySelectorAll('#caseGrid .case-card');
+  filters.forEach(b => b.addEventListener('click', () => {
+    filters.forEach(x => x.classList.remove('is-active'));
+    b.classList.add('is-active');
+    const f = b.dataset.filter;
+    cards.forEach(c => c.classList.toggle('is-hidden', !(f === 'all' || c.dataset.industry === f)));
+  }));
+})();
+</script>
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/chatbot.js" defer></script>
+<script defer src="assets/js/ai-assistant.js"></script>
+</body>
+</html>

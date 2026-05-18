@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>中小企業のためのClaudeプロンプト設計5原則｜業務効率を3倍にする実務テンプレート | TRUSTEP JAPAN</title>
+<meta name="description" content="生成AI Claudeを中小企業の業務で活用するためのプロンプト設計5原則と、議事録要約・提案書ドラフト・調査リサーチ等で明日から使える実務テンプレートを、研修現場の知見からまとめました。">
+<meta name="theme-color" content="#0a1428">
+<link rel="canonical" href="../blog/2026-05-12-claude-prompt-5gensoku.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a2f5e'/%3E%3Cpath d='M14 20h36v7H36v24h-8V27H14z' fill='%23b8963e'/%3E%3C/svg%3E">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="中小企業のためのClaudeプロンプト設計5原則｜業務効率を3倍にする実務テンプレート">
+<meta property="og:description" content="Claudeを中小企業業務で使い倒すためのプロンプト設計5原則と、明日から使える実務テンプレート集。">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="TRUSTEP JAPAN">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"BlogPosting",
+  "headline":"中小企業のためのClaudeプロンプト設計5原則｜業務効率を3倍にする実務テンプレート",
+  "description":"Claudeを中小企業業務で使い倒すためのプロンプト設計5原則と実務テンプレート集。",
+  "datePublished":"2026-05-12","dateModified":"2026-05-12",
+  "author":{"@type":"Organization","name":"TRUSTEP JAPAN株式会社"},
+  "publisher":{"@type":"Organization","name":"TRUSTEP JAPAN株式会社"},
+  "mainEntityOfPage":"https://trustep-japan.co.jp/blog/2026-05-12-claude-prompt-5gensoku.html",
+  "articleSection":"AI / DX"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="_blog-article.css">
+
+<style>
+.prompt-block{
+  background:rgba(13,31,60,.7);border:1px solid rgba(232,199,106,.25);
+  border-left:4px solid var(--gold-a);border-radius:10px;
+  padding:18px 22px;margin:18px 0 28px;font-family:Menlo,Consolas,monospace;
+  font-size:13.5px;line-height:1.85;color:#dee5f0;white-space:pre-wrap;
+}
+.prompt-block-label{
+  display:inline-block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--gold-a);background:rgba(232,199,106,.1);
+  padding:3px 10px;border-radius:30px;margin-bottom:10px;font-family:var(--sans);font-weight:600;
+}
+</style>
+</head>
+
+<body class="noise">
+<div class="bg-layer"></div><div class="bg-grid"></div><div class="scroll-progress"></div>
+
+<header class="site-header">
+  <div class="inner">
+    <a href="../index.html" class="site-logo"><img src="../assets/trustep-logo-white.png" alt="TRUSTEP JAPAN"></a>
+    <nav class="site-nav">
+      <a class="nav-item" href="../about.html">About</a>
+      <a class="nav-item" href="../services.html">Services</a>
+      <a class="nav-item" href="../case-studies.html">Cases</a>
+      <a class="nav-item" href="../news.html">News</a>
+      <a class="nav-item nav-active" href="../blog.html">Blog</a>
+      <a class="nav-item" href="../recruit.html">Recruit</a>
+      <a class="nav-item" href="../faq.html">FAQ</a>
+      <a class="btn-header-cta magnetic" href="../contact.html">お問い合わせ →</a>
+    </nav>
+    <button class="menu-toggle" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-menu">
+  <a href="../about.html">About <span class="arr">→</span></a>
+  <a href="../services.html">Services <span class="arr">→</span></a>
+  <a href="../case-studies.html">Cases <span class="arr">→</span></a>
+  <a href="../news.html">News <span class="arr">→</span></a>
+  <a href="../blog.html">Blog <span class="arr">→</span></a>
+  <a href="../recruit.html">Recruit <span class="arr">→</span></a>
+  <a href="../faq.html">FAQ <span class="arr">→</span></a>
+  <a class="mobile-cta" href="../contact.html">お問い合わせ <span class="arr">→</span></a>
+</nav>
+
+<section class="article-hero">
+  <div class="article-breadcrumb">
+    <a href="../index.html">HOME</a> / <a href="../blog.html">BLOG</a> / AI / DX
+  </div>
+  <span class="article-cat-pill cat-ai">AI / DX</span>
+  <h1 class="article-title">中小企業のためのClaude<br><em>プロンプト設計5原則</em>｜業務効率を3倍にする実務テンプレート</h1>
+  <div class="article-meta">
+    <span><span class="dot">●</span> 2026.05.12</span>
+    <span>カテゴリ：AI / DX</span>
+    <span>読了目安：約10分</span>
+  </div>
+</section>
+
+<div class="article-eyecatch">
+  <div class="article-eyecatch-inner theme-ai">
+    <div class="article-eyecatch-text">5原則 × 実務テンプレで<br><span class="em">業務効率3倍</span></div>
+  </div>
+</div>
+
+<article class="article-body">
+
+<p>Claude を契約してみたものの、「思った答えが返ってこない」「結局自分で書き直している」——そんな声をよく聞きます。原因はAIの能力不足ではなく、ほとんどが<strong>プロンプト設計の問題</strong>です。</p>
+
+<p>本記事では、研修現場で多くの中小企業の方々にお伝えしている <strong>Claudeプロンプト設計5原則</strong> を体系的にご紹介します。さらに議事録要約・提案書ドラフト・調査リサーチ・契約書チェック・営業メール等、明日から使える実務テンプレートも公開します。</p>
+
+<div class="callout">
+  <div class="callout-title">📌 本記事のポイント</div>
+  <p>・プロンプト設計の基本は <strong>「役割」「文脈」「出力形式」「制約」「思考過程」</strong> の5要素<br>・5原則を意識するだけで Claude のアウトプット品質は劇的に変わる<br>・本記事では業務別の<strong>コピペ可能なテンプレート</strong>を5つ公開<br>・"良いAI" ではなく "良い指示" が成果を分ける</p>
+</div>
+
+<h2>1. 原則①：役割（Role）を与える</h2>
+
+<p>Claudeに「あなたは○○の専門家です」と役割を与えるだけで、回答のトーン・専門性・前提知識が一気に整います。役割設定は最も簡単で効果絶大なテクニックです。</p>
+
+<h3>悪い例</h3>
+
+<div class="prompt-block">議事録を要約してください。</div>
+
+<h3>良い例</h3>
+
+<div class="prompt-block">あなたは中小企業の取締役会議事録を担当する経験豊富な秘書です。
+これから商談の生録音テキストをお渡しします。
+取締役レベルの読み手が3分で意思決定できる粒度で、議事要旨を作成してください。</div>
+
+<p><strong>ポイント</strong>：「秘書」「取締役レベル」「3分で意思決定できる」と具体的に役割と読み手を指定することで、文章の粒度・抽象度が適切に調整されます。</p>
+
+<h2>2. 原則②：文脈（Context）を共有する</h2>
+
+<p>Claudeは状況を知らないと一般的な答えを返します。<strong>「なぜこのタスクが必要か」「何のために使うか」</strong>といった背景情報を与えると、質が変わります。</p>
+
+<h3>良い例</h3>
+
+<div class="prompt-block">【背景】
+弊社は神奈川県で従業員30名の製造業です。来週、新規取引先の経営幹部向けに会社紹介をする商談があります。
+先方は機械部品の調達を検討中で、すでに2社の競合と相見積もりに入っています。
+
+【タスク】
+30分の商談で使う、A4横2枚の会社紹介資料の構成を提案してください。</div>
+
+<p><strong>ポイント</strong>：会社規模、業種、商談シーン、競合状況、求める成果物（A4横2枚）まで具体的に伝えることで、すぐに使える提案が返ってきます。</p>
+
+<h2>3. 原則③：出力形式（Format）を指定する</h2>
+
+<p>「箇条書きで」「表で」「Markdownで」「3段構成で」など、欲しい形式を明示することで、出力の使いやすさが劇的に変わります。</p>
+
+<h3>良い例</h3>
+
+<div class="prompt-block">下記の商品説明を、ECサイト向けに次の形式で出力してください。
+
+【出力形式】
+- キャッチコピー（1文・25字以内）
+- 商品の特徴 3点（各40字以内・箇条書き）
+- 推奨購入者像（150字程度）
+- 価格表示（税込）
+
+【素材】
+〔商品説明テキストを貼る〕</div>
+
+<p><strong>ポイント</strong>：文字数や構造を細かく指定すると、コピペで即時使える形で返ってきます。</p>
+
+<h2>4. 原則④：制約（Constraints）を伝える</h2>
+
+<p>「やってほしくないこと」「気をつけてほしいこと」を明示することで、修正回数が大幅に減ります。</p>
+
+<h3>良い例</h3>
+
+<div class="prompt-block">下記の議事録から、お客様への提案メールを作成してください。
+
+【制約】
+- 競合他社名は一切出さない
+- 価格は「お見積もりにてご提示」とぼかす
+- 弊社のサービス名は「Custom AI Training」と表記
+- 締めの挨拶は「引き続き、何卒よろしくお願いいたします。」を必ず使う
+- 文字数は400字以内
+
+【議事録】
+〔議事録テキストを貼る〕</div>
+
+<p><strong>ポイント</strong>：「やってほしくないこと」を先に伝えると、後で修正する手間が激減します。</p>
+
+<h2>5. 原則⑤：思考過程（Reasoning）を引き出す</h2>
+
+<p>Claudeに「ステップバイステップで考えて」「理由とともに答えて」と伝えると、回答の精度が大きく上がります。</p>
+
+<h3>良い例</h3>
+
+<div class="prompt-block">下記の見積もり内容に、契約上のリスクがないかチェックしてください。
+
+【手順】
+1. まず見積もり項目を一つずつ確認し、不明瞭な箇所を列挙
+2. それぞれについて、想定されるトラブルパターンを記述
+3. 最後に、追加すべき条項・修正すべき表現を提案
+
+【見積もり書】
+〔見積もり書テキストを貼る〕</div>
+
+<p><strong>ポイント</strong>：手順を分解して指示することで、Claudeの「考えながら答える」能力を引き出せます。これは複雑なタスク（契約書チェック・経営判断・課題分析等）で特に効果を発揮します。</p>
+
+<h2>6. 業務別 実務テンプレート集</h2>
+
+<h3>テンプレ①：議事録要約</h3>
+
+<div class="prompt-block-label">議事録を3分読了サマリーへ</div>
+<div class="prompt-block">あなたは中小企業の経営会議議事録を担当する熟練秘書です。
+下記の議事録テキストから、以下の形式で要約してください。
+
+【出力形式】
+■ 結論（3行以内）
+■ 決定事項（箇条書き）
+■ 検討中事項（箇条書き）
+■ 次回までのアクション（担当者・期日付き）
+
+【制約】
+- 議論の経緯は省略し、結論と次のアクションに集中
+- 個人名は役職名で表記
+
+【議事録】
+〔ここに議事録を貼る〕</div>
+
+<h3>テンプレ②：提案書ドラフト</h3>
+
+<div class="prompt-block-label">商談メモから提案書骨子へ</div>
+<div class="prompt-block">あなたはB2Bソリューション営業の経験豊富な提案書ライターです。
+下記の商談メモから、A4×8ページの提案書骨子を作成してください。
+
+【出力構成】
+1. 表紙（タイトル・サブタイトル）
+2. 御社の課題（3点・各見出しと本文）
+3. 解決策の全体像
+4. 具体的な提供内容
+5. 導入後の効果（定量・定性）
+6. スケジュール
+7. 概算費用
+8. 弊社実績・選ばれる理由
+
+【商談メモ】
+〔ここに商談メモを貼る〕</div>
+
+<h3>テンプレ③：調査リサーチ</h3>
+
+<div class="prompt-block-label">市場・競合のクイックリサーチ</div>
+<div class="prompt-block">あなたは中小企業向け経営コンサルタントです。
+下記のテーマについて、構造化されたリサーチサマリーを作成してください。
+
+【テーマ】
+〔リサーチテーマ〕
+
+【出力形式】
+■ 市場規模・成長性
+■ 主要プレイヤー 5社（強み・弱み）
+■ 顧客セグメント別の特徴
+■ 業界の主要トレンド 3つ
+■ 中小企業が参入する際の機会と脅威
+■ 推奨される次の調査ステップ
+
+【制約】
+- 不確実な情報は「推定」「業界一般論」と明示
+- 出典が必要な統計は「要追加調査」とラベル付け</div>
+
+<h3>テンプレ④：契約書チェック</h3>
+
+<div class="prompt-block-label">契約書のリスクチェック</div>
+<div class="prompt-block">あなたは契約実務に詳しい法務担当者です。
+下記の契約書ドラフトを、中小企業の発注者目線でチェックしてください。
+
+【チェック観点】
+1. 不利な条項はないか（特に責任・賠償・違約金）
+2. 曖昧な表現はないか（「相応の」「適切な」等）
+3. 解除条件は妥当か
+4. 知的財産権の帰属は明確か
+5. 守秘義務範囲は適切か
+
+【出力形式】
+- 条項ごとに「リスク評価（高・中・低）」+「修正提案」
+- 最後に総合評価と優先修正5箇所
+
+【契約書】
+〔ここに契約書を貼る〕
+
+【注意】
+最終判断は必ず弁護士・社労士等の専門家にご確認ください。</div>
+
+<h3>テンプレ⑤：営業フォローメール</h3>
+
+<div class="prompt-block-label">商談後フォローメールの自動生成</div>
+<div class="prompt-block">下記の商談メモから、当日中にお送りするフォローメールを作成してください。
+
+【出力構成】
+1. 件名
+2. 冒頭の挨拶（お時間いただいたお礼）
+3. 商談で出た主要論点 3点の要約
+4. 次回までの宿題（こちらの作業・先方への確認事項）
+5. 次回打ち合わせの提案（候補日3つ）
+6. 締めの挨拶
+
+【トーン】
+- 丁寧だが堅すぎない
+- 「ありがとうございます」「承知いたしました」を多用
+- 1メール400字以内
+
+【商談メモ】
+〔ここに商談メモを貼る〕</div>
+
+<h2>7. プロンプト改善のサイクル</h2>
+
+<p>初回で完璧なプロンプトを書く必要はありません。<strong>「使う → 結果を見る → プロンプトを微調整 → 再実行」</strong>のサイクルを回すことで、自社専用の最強テンプレが完成します。</p>
+
+<ol>
+  <li><strong>初稿プロンプトを書く</strong>：5原則の最低3つは入れる</li>
+  <li><strong>結果を確認</strong>：足りない部分・修正したい部分を特定</li>
+  <li><strong>プロンプトを修正</strong>：制約・出力形式を追加</li>
+  <li><strong>再実行</strong>：満足するまで2-3回繰り返す</li>
+  <li><strong>テンプレ化</strong>：完成したプロンプトを社内で共有</li>
+</ol>
+
+<h2>8. プロンプト共有の仕組みを社内で作る</h2>
+
+<p>個人がプロンプトを工夫しても、社内で共有されなければ組織の生産性は上がりません。Claude Projects・社内Wiki・Notion・スプレッドシートなど、何でも良いので<strong>「業務別プロンプト集」</strong>を1つ作ることをお勧めします。</p>
+
+<p>TRUSTEP JAPAN の Claude研修では、研修中に貴社の業務テンプレートを実際に作成し、社内推進担当を育成して、組織全体に展開する仕組みづくりまで伴走しています。</p>
+
+<div class="cta-card">
+  <div class="cta-card-kicker">無料相談 受付中</div>
+  <div class="cta-card-title">Claude を貴社の業務に最適化する研修を、<br>無料相談で診断します。</div>
+  <a href="../contact.html" class="cta-card-btn">無料相談を申し込む <span>→</span></a>
+</div>
+
+<h2>9. まとめ</h2>
+
+<p>Claudeを中小企業の業務で使い倒すために必要なのは、AIの能力ではなく <strong>「良い指示の出し方」</strong> です。<strong>役割・文脈・出力形式・制約・思考過程</strong> の5原則を意識するだけで、生成物の品質は劇的に変わります。</p>
+
+<p>本記事の業務別テンプレートをそのままコピペして使い始めることで、明日から議事録・提案書・調査・契約書チェック・メール作成のスピードと精度が段違いに向上します。さらに使いながらプロンプトを改善し、自社専用のテンプレ集を蓄積することで、組織全体の生産性が継続的に上がっていきます。</p>
+
+<p>TRUSTEP JAPANでは、<a href="../claude-training-lp.html" style="color:var(--gold-a);text-decoration:underline;">Claude Training Program</a> として、研修の中で実際に貴社業務テンプレートを構築する伴走型のプログラムを提供しています。<a href="../corporate-custom-ai-training.html" style="color:var(--gold-a);text-decoration:underline;">法人向けオーダーメイドAI研修</a> も併せてご検討ください。</p>
+
+<div class="share-bar">
+  <span class="share-bar-label">Share</span>
+  <a href="https://twitter.com/intent/tweet?url=https://trustep-japan.co.jp/blog/2026-05-12-claude-prompt-5gensoku.html&text=中小企業のためのClaudeプロンプト設計5原則" target="_blank" rel="noopener">𝕏</a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://trustep-japan.co.jp/blog/2026-05-12-claude-prompt-5gensoku.html" target="_blank" rel="noopener">f</a>
+  <a href="https://timeline.line.me/social-plugin/share?url=https://trustep-japan.co.jp/blog/2026-05-12-claude-prompt-5gensoku.html" target="_blank" rel="noopener">LINE</a>
+  <a href="javascript:navigator.clipboard?.writeText(location.href)">🔗</a>
+</div>
+
+<div class="author-card">
+  <div class="author-avatar">T</div>
+  <div>
+    <div class="author-name">TRUSTEP JAPAN 編集部</div>
+    <div class="author-bio">認定経営革新等支援機関として1,000件超の補助金・助成金申請を支援。中小企業の経営課題を、補助金活用 × AI × 営業改革で本気で解決するパートナー。</div>
+  </div>
+</div>
+
+</article>
+
+<section class="related-posts">
+  <h3 class="related-posts-title">— 関連記事 —</h3>
+  <div class="related-grid">
+    <a href="2026-05-05-degital-ai-dounyu-hojokin-2026.html" class="related-card">
+      <span class="related-cat cat-ai">AI / DX</span>
+      <div class="related-title">デジタル化・AI導入補助金 2026最新｜通常枠・インボイス枠の違いと、導入後に成果を出す実行ガイド</div>
+    </a>
+    <a href="2026-04-28-jinzai-kaihatsu-josei-kin-guide.html" class="related-card">
+      <span class="related-cat">SUBSIDY</span>
+      <div class="related-title">人材開発支援助成金 2026 完全ガイド｜中小企業がAI研修を"実質負担22%"で導入する方法</div>
+    </a>
+    <a href="2026-04-29-tokyo-keieiryoku-kyouka-hojokin.html" class="related-card">
+      <span class="related-cat">SUBSIDY</span>
+      <div class="related-title">東京都「経営力強化に向けた創意工夫チャレンジ促進事業」3コース完全解説</div>
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="../assets/trustep-logo-white.png" alt="TRUSTEP JAPAN"><p>中小企業の経営課題を、本気で解決する。顧問・人材育成・AI開発・営業支援・補助金活用までを一気通貫で提供する経営パートナーです。</p></div>
+      <div class="footer-col"><h4>Sitemap</h4><ul><li><a href="../about.html">会社概要</a></li><li><a href="../services.html">サービス</a></li><li><a href="../case-studies.html">導入事例</a></li><li><a href="../news.html">ニュース</a></li><li><a href="../blog.html">ブログ</a></li><li><a href="../recruit.html">採用情報</a></li><li><a href="../faq.html">よくある質問</a></li><li><a href="../contact.html">お問い合わせ</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="../advisory-and-outside-director-consulting.html">顧問・社外取締役</a></li><li><a href="../ai-talent-development-consulting.html">人材育成 × AI</a></li><li><a href="../corporate-custom-ai-training.html">法人向け AI 研修</a></li><li><a href="../trust-forge-lp.html">TRUST FORGE</a></li><li><a href="../top-seller-advance-lp.html">Top Seller Advance</a></li><li><a href="../mitasu-consul.html">ミタス・コンサル</a></li><li><a href="../claude-training-lp.html">Claude Training Program</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><div class="footer-contact-row"><span>TRUSTEP JAPAN株式会社</span><span>〒102-0074 東京都千代田区九段南 1-5-6<br>りそな九段ビル 5F</span><span>TEL <a href="tel:0368695250">03-6869-5250</a></span><span>FAX 03-4216-7051</span></div></div>
+    </div>
+    <div class="footer-bottom"><p>© <span data-year></span> TRUSTEP JAPAN Co., Ltd. All rights reserved.</p><div class="links"><a href="../privacy-policy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../contact.html">Contact</a></div></div>
+  </div>
+</footer>
+
+<script>document.querySelectorAll('[data-year]').forEach(e=>e.textContent=new Date().getFullYear());</script>
+
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>サービス一覧 | TRUSTEP JAPAN</title>
+<meta name="description" content="TRUSTEP JAPAN株式会社が提供する 7 つのサービス一覧。顧問・社外取締役、AI活用、人材育成、営業改革、補助金活用——。経営課題に合わせて最適なソリューションを提供します。">
+<meta name="theme-color" content="#0a1428">
+<link rel="canonical" href="https://trustep-japan.co.jp/services.html">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a2f5e'/%3E%3Cpath d='M14 20h36v7H36v24h-8V27H14z' fill='%23b8963e'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/site.css">
+
+<style>
+.service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+.service-card{
+  display:flex;flex-direction:column;
+  padding:42px 38px;min-height:360px;
+  text-decoration:none;color:#fff;
+}
+.service-icon{
+  width:52px;height:52px;border-radius:14px;
+  background:linear-gradient(135deg,rgba(75,156,251,.18),rgba(0,124,255,.08));
+  border:1px solid rgba(75,156,251,.25);
+  display:grid;place-items:center;color:var(--blue-a);
+  margin-bottom:24px;
+}
+.service-card h3{font-size:24px;font-weight:600;line-height:1.4;margin-bottom:14px;}
+.service-card .num{
+  font-family:var(--serif);font-style:italic;font-size:13px;
+  color:var(--gold-a);letter-spacing:.18em;margin-bottom:6px;
+}
+.service-card p{color:var(--muted);font-size:14px;line-height:1.95;flex:1;}
+.service-card .meta{
+  margin-top:24px;display:flex;align-items:center;justify-content:space-between;
+  padding-top:20px;border-top:1px solid rgba(120,160,220,.1);
+}
+.service-card .tag{font-size:10.5px;}
+.service-card .arrow-pill{
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(75,156,251,.12);border:1px solid rgba(75,156,251,.25);
+  display:grid;place-items:center;color:var(--blue-a);
+  transition:transform .35s var(--ease-out-quart),background .25s ease;
+}
+.service-card:hover .arrow-pill{background:var(--blue-a);color:#fff;transform:rotate(-45deg);}
+
+.service-feature{grid-column:span 2;background:linear-gradient(135deg,rgba(75,156,251,.12) 0%,rgba(232,199,106,.08) 100%);}
+
+.compare-table{
+  width:100%;border-collapse:collapse;font-size:13.5px;
+  background:rgba(18,46,92,.35);border-radius:18px;overflow:hidden;
+  border:1px solid rgba(120,160,220,.12);
+}
+.compare-table th,.compare-table td{
+  padding:18px 20px;border-bottom:1px solid rgba(120,160,220,.08);
+  text-align:center;vertical-align:middle;color:#dbe6f7;
+}
+.compare-table thead th{
+  background:rgba(75,156,251,.08);
+  font-family:var(--serif);font-weight:600;font-size:14px;color:#fff;
+  border-bottom:1px solid rgba(75,156,251,.2);
+}
+.compare-table tbody td:first-child{
+  text-align:left;font-weight:600;color:#fff;
+  background:rgba(255,255,255,.02);
+}
+.compare-table tr:last-child td{border-bottom:0;}
+.compare-table .check{color:var(--gold-a);font-size:18px;}
+.compare-table .dash{color:var(--muted-2);}
+
+@media (max-width:900px){
+  .service-grid{grid-template-columns:1fr;}
+  .service-feature{grid-column:span 1;}
+  .compare-table{font-size:12px;}
+  .compare-table th,.compare-table td{padding:12px 8px;}
+}
+</style>
+</head>
+
+<body class="noise">
+
+<div class="bg-layer"></div>
+<div class="bg-grid"></div>
+<div class="scroll-progress"></div>
+
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" class="site-logo" aria-label="TRUSTEP JAPAN ホーム">
+      <img src="assets/trustep-logo-white.png" alt="TRUSTEP JAPAN">
+    </a>
+    <nav class="site-nav">
+      <a class="nav-item" href="about.html">About</a>
+      <a class="nav-item" href="services.html">Services</a>
+      <a class="nav-item" href="case-studies.html">Cases</a>
+      <a class="nav-item" href="news.html">News</a>
+      <a class="nav-item" href="blog.html">Blog</a>
+      <a class="nav-item" href="recruit.html">Recruit</a>
+      <a class="nav-item" href="faq.html">FAQ</a>
+      <a class="btn-header-cta magnetic" href="contact.html">お問い合わせ →</a>
+    </nav>
+    <button class="menu-toggle" aria-label="メニュー" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-menu" aria-label="モバイルメニュー">
+  <a href="about.html">About <span class="arr">→</span></a>
+  <a href="services.html">Services <span class="arr">→</span></a>
+  <a href="case-studies.html">Cases <span class="arr">→</span></a>
+  <a href="news.html">News <span class="arr">→</span></a>
+  <a href="blog.html">Blog <span class="arr">→</span></a>
+  <a href="recruit.html">Recruit <span class="arr">→</span></a>
+  <a href="faq.html">FAQ <span class="arr">→</span></a>
+  <a class="mobile-cta" href="contact.html">お問い合わせ <span class="arr">→</span></a>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="page-eyebrow reveal">Our Services</p>
+    <h1 class="page-title reveal delay-1">経営の現場に効く、<br><span class="accent">8つの武器</span>。</h1>
+    <p class="page-lead reveal delay-2">
+      顧問支援・人材育成・AI 導入・営業改革・補助金——。<br>
+      バラバラにならず、経営課題の筋道に沿って組み合わせ、事業成長のための一本の線に束ねていきます。
+    </p>
+    <div class="crumbs reveal delay-3"><a href="index.html">Home</a><span>/</span><span>Services</span></div>
+  </div>
+</section>
+
+<!-- Services Grid -->
+<section class="section">
+  <div class="container">
+    <div class="service-grid reveal-stagger">
+
+      <a href="advisory-and-outside-director-consulting.html" class="card service-card card-glow">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+        </div>
+        <p class="num">S/01 — Advisory</p>
+        <h3>顧問・社外取締役<br>コンサルティング</h3>
+        <p>経営課題の整理から、利益が上がる仕組みづくりまで。経営者の右腕・社外幹部として、会議体・数値管理・実行支援までを伴走します。</p>
+        <div class="meta">
+          <span class="tag tag-gold">月次伴走型</span>
+          <span class="arrow-pill">→</span>
+        </div>
+      </a>
+
+      <a href="ai-talent-development-consulting.html" class="card service-card card-glow">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1-3 4-5 7-5s6 2 7 5"/></svg>
+        </div>
+        <p class="num">S/02 — AI Talent</p>
+        <h3>人材育成 × AI<br>コンサルティング</h3>
+        <p>研修で終わらず、現場定着まで伴走する実践型コンサル。組織力・生産性・利益改善を同時に引き上げる、業務実装前提の人材開発プログラム。</p>
+        <div class="meta">
+          <span class="tag">実装前提</span>
+          <span class="arrow-pill">→</span>
+        </div>
+      </a>
+
+      <a href="corporate-custom-ai-training.html" target="_blank" rel="noopener" class="card service-card card-glow">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h16v11H4zM8 20h8M12 16v4"/></svg>
+        </div>
+        <p class="num">S/03 — Custom Training</p>
+        <h3>法人向けオーダーメイド<br>AI 研修</h3>
+        <p>企業固有の業務・課題・職種に合わせて、研修カリキュラムをすべてオーダーメイドで設計。生成AIの使い方ではなく、"成果が出るまでの道筋" を作ります。</p>
+        <div class="meta">
+          <span class="tag">フルカスタム</span>
+          <span class="arrow-pill">↗</span>
+        </div>
+      </a>
+
+      <a href="trust-forge-lp.html" target="_blank" rel="noopener" class="card service-card card-glow">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.9L12 16.9 6.8 19.2l1-5.9L3.5 9.2l5.9-.9z"/></svg>
+        </div>
+        <p class="num">S/04 — TRUST FORGE</p>
+        <h3>TRUST FORGE<br>中小企業向け AI システム開発</h3>
+        <p>業務自動化・DX 推進を実現する、中小企業に特化した AI システム開発サービス。<strong style="color:#fff;">最短 2 週間、10 万円台〜</strong> のスモールスタート可能。</p>
+        <div class="meta">
+          <span class="tag tag-gold">10 万円台〜</span>
+          <span class="arrow-pill">↗</span>
+        </div>
+      </a>
+
+      <a href="top-seller-advance-lp.html" class="card service-card card-glow">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17l5-5 4 4 8-8M14 8h6v6"/></svg>
+        </div>
+        <p class="num">S/05 — Top Seller</p>
+        <h3>Top Seller Advance<br>次世代型営業コンサル</h3>
+        <p>営業の属人化を解消し、"人 × AI × 組織" を同時に変える次世代型営業コンサルティング。継続的に数字が上がる営業組織を構築します。</p>
+        <div class="meta">
+          <span class="tag tag-pink">人 × AI × 組織</span>
+          <span class="arrow-pill">→</span>
+        </div>
+      </a>
+
+      <a href="mitasu-consul.html" class="card service-card card-glow">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16v10H4z"/><path d="M8 11h8M8 15h5"/></svg>
+        </div>
+        <p class="num">S/06 — Mitasu Consul</p>
+        <h3>ミタス・コンサル<br>補助金・助成金活用支援</h3>
+        <p>認定経営革新等支援機関としての知見を活かし、制度選定から申請・採択後の実務まで伴走。<strong style="color:#fff;">採択率 80% 以上、700 社超の実績</strong>。</p>
+        <div class="meta">
+          <span class="tag">採択率 80%+</span>
+          <span class="arrow-pill">→</span>
+        </div>
+      </a>
+
+      <a href="claude-training-lp.html" class="card service-card service-feature card-glow">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.4 5.4L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.6-1.6z"/><circle cx="12" cy="12" r="2.5"/></svg>
+        </div>
+        <p class="num">S/07 — Claude Training</p>
+        <h3>Claude Training Program｜実務で使える生成AI研修</h3>
+        <p>Claude を中心とした生成AI活用研修。<strong style="color:#fff;">基礎 × 実践 × 定着</strong> の 3 フェーズ・全 11 時間で、業務現場で再現可能なスキルを習得。経費助成活用で <strong style="color:#fff;">1 名あたり実質負担 89,000 円</strong>。</p>
+        <div class="meta">
+          <span class="tag tag-gold">経費助成対応</span>
+          <span class="arrow-pill">→</span>
+        </div>
+      </a>
+
+      <a href="service-subsidy-support-consulting.html" class="card service-card card-glow">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg>
+        </div>
+        <p class="num">S/08 — 0to1 Service</p>
+        <h3>自社サービス×補助金<br>0to1 Service</h3>
+        <p>貴社サービスと補助金・助成金を結びつけ、新たな売上と成長を実現。<strong style="color:#fff;">400社以上の支援実績</strong>をもとに、最適な補助金の選定から実績づくりまでトータルサポート。</p>
+        <div class="meta">
+          <span class="tag">400社+ 支援実績</span>
+          <span class="arrow-pill">→</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- 比較表 -->
+<section class="section">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:50px;">
+      <p class="section-num reveal">2 — Compare</p>
+      <p class="section-kicker reveal delay-1">サービスの位置付け</p>
+      <h2 class="section-title center reveal delay-2">どれを選べばいい？</h2>
+      <p class="section-lead reveal delay-3" style="margin:24px auto 0;">
+        経営課題のフェーズ・関与の深さで、最適なサービスは異なります。<br>
+        迷われる場合は無料相談から、最適な組み合わせをご提案します。
+      </p>
+    </div>
+
+    <div class="reveal" style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>サービス</th>
+            <th>関与</th>
+            <th>期間</th>
+            <th>料金感</th>
+            <th>主な対象</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>顧問・社外取締役</td><td>深 (常駐型に近い)</td><td>月次／継続</td><td>月額制</td><td>経営者・経営層</td></tr>
+          <tr><td>人材育成 × AI</td><td>中 (定期介入)</td><td>3〜12ヶ月</td><td>プロジェクト</td><td>HR・現場リーダー</td></tr>
+          <tr><td>法人向け AI 研修</td><td>低 (集合)</td><td>単発〜数回</td><td>研修料金</td><td>全社員・部門</td></tr>
+          <tr><td>TRUST FORGE</td><td>中 (実装中心)</td><td>最短 2 週間〜</td><td>10 万円台〜</td><td>業務自動化担当</td></tr>
+          <tr><td>Top Seller Advance</td><td>深 (現場伴走)</td><td>3〜12ヶ月</td><td>プロジェクト</td><td>営業組織</td></tr>
+          <tr><td>ミタス・コンサル</td><td>中 (年間伴走)</td><td>年間契約</td><td>顧問料＋成功報酬</td><td>補助金活用したい企業</td></tr>
+          <tr><td>Claude Training</td><td>低〜中 (集合＋伴走)</td><td>11時間 (3フェーズ)</td><td>89,000円〜／名</td><td>全社員・管理職</td></tr>
+          <tr><td>0to1 Service</td><td>中〜深 (戦略伴走)</td><td>最短 2ヶ月〜</td><td>プロジェクト</td><td>自社サービス保有企業</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container container-narrow text-center">
+    <p class="section-kicker reveal">Take Action</p>
+    <h2 class="section-title center reveal delay-1" style="margin-bottom:32px;">最適な組み合わせを、<br>無料相談で。</h2>
+    <p class="section-lead reveal delay-2" style="margin:0 auto 36px;">
+      "どのサービスが合うか分からない" その段階でも問題ありません。<br>
+      まずは現状をお聞かせください。最適な組み合わせをご提案します。
+    </p>
+    <div class="reveal delay-3" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a class="btn btn-primary magnetic" href="contact.html">無料相談を申し込む <span class="arrow">→</span></a>
+      <a class="btn btn-ghost magnetic" href="case-studies.html">導入事例を見る <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/trustep-logo-white.png" alt="TRUSTEP JAPAN">
+        <p>中小企業の経営課題を、本気で解決する。顧問・人材育成・AI開発・営業支援・補助金活用までを一気通貫で提供する経営パートナーです。</p>
+      </div>
+      <div class="footer-col"><h4>Sitemap</h4><ul>
+        <li><a href="about.html">会社概要</a></li>
+        <li><a href="services.html">サービス</a></li>
+        <li><a href="case-studies.html">導入事例</a></li>
+        <li><a href="news.html">ニュース</a></li>
+        <li><a href="blog.html">ブログ</a></li>
+        <li><a href="recruit.html">採用情報</a></li>
+        <li><a href="faq.html">よくある質問</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Services</h4><ul>
+        <li><a href="advisory-and-outside-director-consulting.html">顧問・社外取締役</a></li>
+        <li><a href="ai-talent-development-consulting.html">人材育成 × AI</a></li>
+        <li><a href="corporate-custom-ai-training.html" target="_blank" rel="noopener">法人向け AI 研修</a></li>
+        <li><a href="trust-forge-lp.html" target="_blank" rel="noopener">TRUST FORGE</a></li>
+        <li><a href="top-seller-advance-lp.html">Top Seller Advance</a></li>
+        <li><a href="mitasu-consul.html">ミタス・コンサル</a></li>
+        <li><a href="claude-training-lp.html">Claude Training Program</a></li>
+        <li><a href="service-subsidy-support-consulting.html">0to1 Service</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4>
+        <div class="footer-contact-row">
+          <span style="font-weight:600;color:rgba(255,255,255,.8)">本社</span>
+          <span>TRUSTEP JAPAN株式会社</span>
+          <span>〒102-0074 東京都千代田区九段南 1-5-6<br>りそな九段ビル 5F</span>
+          <span>TEL <a href="tel:0368695250">03-6869-5250</a></span>
+          <span>FAX 03-4216-7051</span>
+        </div>
+        <div class="footer-contact-row" style="margin-top:16px;">
+          <span style="font-weight:600;color:rgba(255,255,255,.8)">茨城営業所</span>
+          <span>〒301-0824 茨城県龍ケ崎市下町4872-11 3F</span>
+          <span>TEL <a href="tel:05037185250">050-3718-5250</a></span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span data-year></span> TRUSTEP JAPAN Co., Ltd. All rights reserved.</p>
+      <div class="links">
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/chatbot.js" defer></script>
+<script defer src="assets/js/ai-assistant.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --color-deep: #0c1a32;
+  --color-mid: #0f2a53;
+  --color-soft: #122e5c;
+  --color-line: #1e3a66;
+  --color-blue-a: #4b9cfb;
+  --color-cyan-a: #007cff;
+  --color-pink-a: #f84f65;
+  --color-gold-a: #e8c76a;
+  --color-muted: #b8c5d8;
+  --font-serif: "Playfair Display", "Noto Serif JP", serif;
+  --font-sans: Inter, "Noto Sans JP", system-ui, sans-serif;
+}

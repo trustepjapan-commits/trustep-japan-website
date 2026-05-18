@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ニュース・お知らせ | TRUSTEP JAPAN</title>
+<meta name="description" content="TRUSTEP JAPAN株式会社のニュース・お知らせ・プレスリリース・メディア掲載情報。">
+<meta name="theme-color" content="#0a1428">
+<link rel="canonical" href="https://trustep-japan.co.jp/news.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a2f5e'/%3E%3Cpath d='M14 20h36v7H36v24h-8V27H14z' fill='%23b8963e'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+
+<style>
+.news-list{display:flex;flex-direction:column;}
+.news-row{
+  display:grid;grid-template-columns:160px 120px 1fr auto;
+  align-items:center;gap:32px;
+  padding:28px 28px;
+  border-bottom:1px solid rgba(120,160,220,.08);
+  transition:background .25s ease,padding-left .25s ease;
+  text-decoration:none;color:#fff;
+}
+.news-row:first-child{border-top:1px solid rgba(120,160,220,.08);}
+.news-row:hover{background:rgba(75,156,251,.04);padding-left:36px;}
+.news-date{
+  font-family:var(--serif);font-style:italic;
+  color:var(--gold-a);font-size:14px;letter-spacing:.04em;
+}
+.news-cat{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:6px 12px;border-radius:50px;font-size:10.5px;
+  letter-spacing:.12em;text-transform:uppercase;font-weight:500;
+  background:rgba(75,156,251,.12);border:1px solid rgba(75,156,251,.25);color:#d8e6ff;
+}
+.news-cat.cat-press{background:rgba(232,199,106,.1);border-color:rgba(232,199,106,.3);color:var(--gold-a);}
+.news-cat.cat-event{background:rgba(248,79,101,.1);border-color:rgba(248,79,101,.3);color:#ff8fa1;}
+.news-cat.cat-media{background:rgba(75,156,251,.12);border-color:rgba(75,156,251,.25);color:#95c7ff;}
+.news-title{font-size:15px;line-height:1.6;font-weight:500;color:#fff;}
+.news-arrow{color:var(--blue-a);font-size:18px;flex-shrink:0;}
+
+@media (max-width:780px){
+  .news-row{grid-template-columns:1fr;gap:8px;padding:22px 20px;}
+  .news-row:hover{padding-left:24px;}
+  .news-arrow{display:none;}
+}
+
+.cat-filter{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:30px;}
+.cat-filter button{
+  padding:8px 18px;border-radius:50px;cursor:pointer;
+  background:rgba(255,255,255,.04);border:1px solid rgba(120,160,220,.18);
+  color:var(--muted);font-size:12px;letter-spacing:.05em;
+  transition:all .25s ease;font-family:inherit;
+}
+.cat-filter button:hover{color:#fff;border-color:rgba(75,156,251,.4);}
+.cat-filter button.is-active{background:linear-gradient(135deg,var(--blue-a),var(--cyan-a));color:#fff;border-color:transparent;}
+.news-row.is-hidden{display:none;}
+</style>
+</head>
+
+<body class="noise">
+<div class="bg-layer"></div><div class="bg-grid"></div><div class="scroll-progress"></div>
+
+<header class="site-header">
+  <div class="inner">
+    <a href="index.html" class="site-logo"><img src="assets/trustep-logo-white.png" alt="TRUSTEP JAPAN"></a>
+    <nav class="site-nav">
+      <a class="nav-item" href="about.html">About</a>
+      <a class="nav-item" href="services.html">Services</a>
+      <a class="nav-item" href="case-studies.html">Cases</a>
+      <a class="nav-item" href="news.html">News</a>
+      <a class="nav-item" href="blog.html">Blog</a>
+      <a class="nav-item" href="recruit.html">Recruit</a>
+      <a class="nav-item" href="faq.html">FAQ</a>
+      <a class="btn-header-cta magnetic" href="contact.html">お問い合わせ →</a>
+    </nav>
+    <button class="menu-toggle" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-menu">
+  <a href="about.html">About <span class="arr">→</span></a>
+  <a href="services.html">Services <span class="arr">→</span></a>
+  <a href="case-studies.html">Cases <span class="arr">→</span></a>
+  <a href="news.html">News <span class="arr">→</span></a>
+  <a href="blog.html">Blog <span class="arr">→</span></a>
+  <a href="recruit.html">Recruit <span class="arr">→</span></a>
+  <a href="faq.html">FAQ <span class="arr">→</span></a>
+  <a class="mobile-cta" href="contact.html">お問い合わせ <span class="arr">→</span></a>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="page-eyebrow reveal">News & Updates</p>
+    <h1 class="page-title reveal delay-1">最新の <span class="accent">お知らせ</span>。</h1>
+    <p class="page-lead reveal delay-2">プレスリリース、メディア掲載、新サービス開始、セミナー情報など、TRUSTEP JAPAN からの最新情報をお届けします。</p>
+    <div class="crumbs reveal delay-3"><a href="index.html">Home</a><span>/</span><span>News</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container-narrow">
+    <div class="cat-filter reveal" id="newsFilter">
+      <button class="is-active" data-cat="all">All</button>
+      <button data-cat="news">News</button>
+      <button data-cat="press">Press</button>
+      <button data-cat="event">Event</button>
+      <button data-cat="media">Media</button>
+    </div>
+
+    <div class="news-list reveal" id="newsList">
+
+      <a class="news-row" data-cat="news" href="claude-training-lp.html">
+        <span class="news-date">2026.04.18</span>
+        <span class="news-cat">News</span>
+        <span class="news-title">Claude Training Program ｜ 経費助成対応の本格生成AI研修プログラムを開始</span>
+        <span class="news-arrow">→</span>
+      </a>
+      <a class="news-row" data-cat="press" href="#">
+        <span class="news-date">2026.03.22</span>
+        <span class="news-cat cat-press">Press</span>
+        <span class="news-title">補助金支援 1,000 件突破のお知らせ ｜ 認定経営革新等支援機関として全国展開を加速</span>
+        <span class="news-arrow">→</span>
+      </a>
+      <a class="news-row" data-cat="event" href="#">
+        <span class="news-date">2026.03.05</span>
+        <span class="news-cat cat-event">Event</span>
+        <span class="news-title">3月度オンラインセミナー「中小企業のための生成AI活用ロードマップ」開催</span>
+        <span class="news-arrow">→</span>
+      </a>
+      <a class="news-row" data-cat="news" href="mitasu-consul.html">
+        <span class="news-date">2026.02.14</span>
+        <span class="news-cat">News</span>
+        <span class="news-title">「ミタス・コンサル」公式サイトを公開しました</span>
+        <span class="news-arrow">→</span>
+      </a>
+      <a class="news-row" data-cat="media" href="#">
+        <span class="news-date">2026.01.28</span>
+        <span class="news-cat cat-media">Media</span>
+        <span class="news-title">中小企業庁発行『未来応援企業100』に弊社が掲載されました</span>
+        <span class="news-arrow">→</span>
+      </a>
+      <a class="news-row" data-cat="press" href="#">
+        <span class="news-date">2026.01.10</span>
+        <span class="news-cat cat-press">Press</span>
+        <span class="news-title">「TRUST FORGE」最短2週間・10万円台〜の AI システム開発スモールスタートプラン提供開始</span>
+        <span class="news-arrow">→</span>
+      </a>
+      <a class="news-row" data-cat="event" href="#">
+        <span class="news-date">2025.12.18</span>
+        <span class="news-cat cat-event">Event</span>
+        <span class="news-title">12月度 経営者向け勉強会「2026年版 補助金活用ロードマップ」を開催</span>
+        <span class="news-arrow">→</span>
+      </a>
+      <a class="news-row" data-cat="news" href="top-seller-advance-lp.html">
+        <span class="news-date">2025.11.21</span>
+        <span class="news-cat">News</span>
+        <span class="news-title">「Top Seller Advance」次世代型営業コンサルプログラムを正式リリース</span>
+        <span class="news-arrow">→</span>
+      </a>
+      <a class="news-row" data-cat="media" href="#">
+        <span class="news-date">2025.10.15</span>
+        <span class="news-cat cat-media">Media</span>
+        <span class="news-title">月刊『経営者通信』にて代表 飛田の対談記事が掲載されました</span>
+        <span class="news-arrow">→</span>
+      </a>
+      <a class="news-row" data-cat="news" href="#">
+        <span class="news-date">2025.09.05</span>
+        <span class="news-cat">News</span>
+        <span class="news-title">人材育成×AIコンサルティングサービスを開始しました</span>
+        <span class="news-arrow">→</span>
+      </a>
+      <a class="news-row" data-cat="press" href="#">
+        <span class="news-date">2025.08.10</span>
+        <span class="news-cat cat-press">Press</span>
+        <span class="news-title">支援実績 400 社突破のお知らせ</span>
+        <span class="news-arrow">→</span>
+      </a>
+      <a class="news-row" data-cat="news" href="#">
+        <span class="news-date">2025.06.20</span>
+        <span class="news-cat">News</span>
+        <span class="news-title">本社移転のお知らせ ｜ 千代田区九段南へ移転しました</span>
+        <span class="news-arrow">→</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container-narrow text-center">
+    <p class="section-kicker reveal">Stay Connected</p>
+    <h2 class="section-title center reveal delay-1" style="margin-bottom:24px;font-size:clamp(28px,4vw,42px);">最新情報をいち早く。</h2>
+    <p class="section-lead reveal delay-2" style="margin:0 auto 30px;">経営に役立つ補助金情報・AI 活用事例・セミナー情報を不定期でお届けします。</p>
+    <a class="btn btn-primary magnetic reveal delay-3" href="contact.html">ニュース配信に登録する <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="assets/trustep-logo-white.png" alt="TRUSTEP JAPAN"><p>中小企業の経営課題を、本気で解決する。顧問・人材育成・AI開発・営業支援・補助金活用までを一気通貫で提供する経営パートナーです。</p></div>
+      <div class="footer-col"><h4>Sitemap</h4><ul><li><a href="about.html">会社概要</a></li><li><a href="services.html">サービス</a></li><li><a href="case-studies.html">導入事例</a></li><li><a href="news.html">ニュース</a></li><li><a href="blog.html">ブログ</a></li><li><a href="recruit.html">採用情報</a></li><li><a href="faq.html">よくある質問</a></li><li><a href="contact.html">お問い合わせ</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="advisory-and-outside-director-consulting.html">顧問・社外取締役</a></li><li><a href="ai-talent-development-consulting.html">人材育成 × AI</a></li><li><a href="corporate-custom-ai-training.html" target="_blank" rel="noopener">法人向け AI 研修</a></li><li><a href="trust-forge-lp.html" target="_blank" rel="noopener">TRUST FORGE</a></li><li><a href="top-seller-advance-lp.html">Top Seller Advance</a></li><li><a href="mitasu-consul.html">ミタス・コンサル</a></li><li><a href="claude-training-lp.html">Claude Training Program</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><div class="footer-contact-row"><span style="font-weight:600;color:rgba(255,255,255,.8)">本社</span><span>TRUSTEP JAPAN株式会社</span><span>〒102-0074 東京都千代田区九段南 1-5-6<br>りそな九段ビル 5F</span><span>TEL <a href="tel:0368695250">03-6869-5250</a></span><span>FAX 03-4216-7051</span></div><div class="footer-contact-row" style="margin-top:16px;"><span style="font-weight:600;color:rgba(255,255,255,.8)">茨城営業所</span><span>〒301-0824 茨城県龍ケ崎市下町4872-11 3F</span><span>TEL <a href="tel:05037185250">050-3718-5250</a></span></div></div>
+    </div>
+    <div class="footer-bottom"><p>© <span data-year></span> TRUSTEP JAPAN Co., Ltd. All rights reserved.</p><div class="links"><a href="privacy-policy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></div></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const fs = document.querySelectorAll('#newsFilter button');
+  const rows = document.querySelectorAll('#newsList .news-row');
+  fs.forEach(b => b.addEventListener('click', () => {
+    fs.forEach(x => x.classList.remove('is-active'));
+    b.classList.add('is-active');
+    const c = b.dataset.cat;
+    rows.forEach(r => r.classList.toggle('is-hidden', !(c === 'all' || r.dataset.cat === c)));
+  }));
+})();
+</script>
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/chatbot.js" defer></script>
+<script defer src="assets/js/ai-assistant.js"></script>
+</body>
+</html>
