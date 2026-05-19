@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>無料相談・お問い合わせ｜早期経営改善計画策定支援｜TRUSTEP JAPAN株式会社</title>
+<meta name="description" content="早期経営改善計画策定支援の無料相談・お問い合わせフォーム。黒字企業でも活用可能。認定経営革新等支援機関TRUSTEP JAPANが一貫サポート。">
+<meta name="theme-color" content="#0a1428">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231a2f5e'/%3E%3Cpath d='M14 20h36v7H36v24h-8V27H14z' fill='%23b8963e'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700;800&family=Noto+Serif+JP:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary-color: #1a2f5e;
+    --primary-dark: #0d1f3c;
+    --accent-color: #b8963e;
+    --accent-glow: #e8c76a;
+    --accent-hover: #d4af5e;
+    --sales-red: #e54b4b;
+    --sales-orange: #ff7847;
+    --text-color: #1a1a2e;
+    --text-muted: #5a6a7a;
+    --bg-light: #f8f9fc;
+    --blue-a: #4b9cfb;
+    --font-main: 'Noto Sans JP', 'Inter', sans-serif;
+    --font-serif: 'Playfair Display', 'Noto Serif JP', serif;
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-main);
+    background: linear-gradient(180deg, #060e1f 0%, #0a1428 30%, #0c1a36 100%);
+    color: #e0e6f0;
+    min-height: 100vh;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; height: auto; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  .contact-header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 16px 0;
+    background: rgba(6, 14, 31, 0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(120, 160, 220, 0.1);
+  }
+  .contact-header .container {
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .contact-header .logo img {
+    height: 44px; width: auto;
+    background: rgba(255,255,255,0.92);
+    padding: 8px 14px; border-radius: 10px;
+  }
+  .contact-header .back-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; color: rgba(255,255,255,0.6);
+    transition: color 0.3s;
+  }
+  .contact-header .back-link:hover { color: var(--accent-glow); }
+  .contact-header .back-link svg {
+    width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2;
+  }
+
+  /* Hero */
+  .contact-hero {
+    padding: 140px 0 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .contact-hero::before {
+    content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(75,156,251,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .contact-hero .eyebrow {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+    color: var(--accent-color); text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .contact-hero h1 {
+    font-family: var(--font-serif); font-size: clamp(28px, 5vw, 42px);
+    font-weight: 700; color: #fff; margin-bottom: 16px;
+    line-height: 1.3;
+  }
+  .contact-hero h1 em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--accent-glow), var(--sales-orange));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .contact-hero .lead {
+    font-size: 15px; color: rgba(255,255,255,0.6);
+    max-width: 560px; margin: 0 auto; line-height: 1.9;
+  }
+  .contact-hero .reassurance {
+    display: flex; justify-content: center; gap: 24px;
+    margin-top: 24px; flex-wrap: wrap;
+  }
+  .contact-hero .reassurance span {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.5);
+  }
+
+  /* Main Content Grid */
+  .contact-main {
+    padding: 0 0 80px;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 48px;
+    align-items: flex-start;
+  }
+
+  /* Sidebar */
+  .contact-side {
+    position: sticky; top: 100px;
+  }
+  .info-card {
+    padding: 28px; border-radius: 18px;
+    background: linear-gradient(135deg, rgba(75,156,251,0.08), rgba(232,199,106,0.04));
+    border: 1px solid rgba(120,160,220,0.15);
+    margin-bottom: 16px;
+  }
+  .info-card h3 {
+    font-family: var(--font-serif); font-size: 12px;
+    font-style: italic; letter-spacing: 0.18em;
+    color: var(--accent-color); text-transform: uppercase;
+    margin-bottom: 12px; font-weight: 400;
+  }
+  .info-card .big {
+    font-family: var(--font-serif); font-size: 26px;
+    color: #fff; letter-spacing: 0.04em;
+  }
+  .info-card p {
+    font-size: 13.5px; color: rgba(255,255,255,0.6); line-height: 2;
+  }
+  .info-card a { color: #fff; }
+  .info-card .small { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 6px; }
+
+  .method-row {
+    display: flex; gap: 14px; align-items: center;
+    padding: 16px; border-radius: 14px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(120,160,220,0.1);
+    margin-bottom: 10px;
+    transition: border-color 0.25s, background 0.25s;
+  }
+  .method-row:hover {
+    border-color: rgba(75,156,251,0.3);
+    background: rgba(75,156,251,0.05);
+  }
+  .method-icon {
+    width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;
+    background: linear-gradient(135deg, var(--blue-a), #007cff);
+    display: grid; place-items: center; color: #fff;
+  }
+  .method-row .label {
+    font-size: 10px; letter-spacing: 0.18em;
+    color: var(--accent-color); text-transform: uppercase;
+  }
+  .method-row .val {
+    color: #fff; font-size: 14px; font-weight: 500; margin-top: 2px;
+  }
+
+  .consult-points {
+    padding: 24px 28px; border-radius: 16px;
+    background: linear-gradient(135deg, rgba(229,75,75,0.08), rgba(255,120,71,0.05));
+    border: 1px solid rgba(229,75,75,0.2);
+    margin-top: 16px;
+  }
+  .consult-points h4 {
+    font-size: 13px; font-weight: 700; color: var(--sales-orange);
+    margin-bottom: 12px;
+  }
+  .consult-points ul {
+    list-style: none; padding: 0;
+  }
+  .consult-points li {
+    font-size: 13px; color: rgba(255,255,255,0.6);
+    padding: 4px 0; padding-left: 18px; position: relative;
+  }
+  .consult-points li::before {
+    content: '✓'; position: absolute; left: 0;
+    color: var(--accent-glow); font-weight: 700; font-size: 12px;
+  }
+
+  /* Form Card */
+  .form-card {
+    padding: 48px; border-radius: 24px;
+    background: linear-gradient(180deg, rgba(18,46,92,0.5) 0%, rgba(12,26,50,0.85) 100%);
+    border: 1px solid rgba(120,160,220,0.15);
+    position: relative; overflow: hidden;
+  }
+  .form-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--blue-a), var(--accent-glow), var(--sales-orange));
+  }
+  .form-card h2 {
+    font-size: 22px; color: #fff; font-weight: 700; margin-bottom: 6px;
+  }
+  .form-card .form-desc {
+    font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 32px;
+  }
+  .form-card .form-desc .req { color: var(--sales-red); }
+
+  .form-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 18px;
+    margin-bottom: 18px;
+  }
+
+  .field { margin-bottom: 18px; }
+  .field label {
+    display: block; font-size: 13px; font-weight: 600;
+    color: rgba(255,255,255,0.8); margin-bottom: 6px;
+    letter-spacing: 0.04em;
+  }
+  .field label .req { color: var(--sales-red); margin-left: 4px; font-weight: 800; }
+
+  .field input,
+  .field select,
+  .field textarea {
+    width: 100%; padding: 12px 16px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(120,160,220,0.18);
+    border-radius: 12px; color: #fff;
+    font-size: 14px; font-family: var(--font-main);
+    outline: none; transition: border-color 0.3s, background 0.3s, box-shadow 0.3s;
+    line-height: 1.6;
+  }
+  .field input::placeholder,
+  .field textarea::placeholder {
+    color: rgba(255,255,255,0.25);
+  }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus {
+    border-color: var(--blue-a);
+    background: rgba(255,255,255,0.08);
+    box-shadow: 0 0 0 3px rgba(75,156,251,0.15);
+  }
+  .field select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236a87b3' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 40px;
+  }
+  .field select option {
+    background: #0c1a36; color: #fff;
+  }
+  .field textarea {
+    min-height: 140px; resize: vertical;
+  }
+
+  .field-error input,
+  .field-error select,
+  .field-error textarea {
+    border-color: var(--sales-red) !important;
+    box-shadow: 0 0 0 3px rgba(229,75,75,0.15) !important;
+  }
+  .error-msg {
+    font-size: 12px; color: var(--sales-red);
+    margin-top: 4px; display: none;
+  }
+  .field-error .error-msg { display: block; }
+
+  .consent-row {
+    display: flex; align-items: flex-start; gap: 10px;
+    margin-top: 6px; margin-bottom: 24px;
+  }
+  .consent-row input[type="checkbox"] {
+    width: 18px; height: 18px; margin-top: 2px;
+    accent-color: var(--blue-a); flex-shrink: 0; cursor: pointer;
+  }
+  .consent-row label {
+    font-size: 12.5px; color: rgba(255,255,255,0.5);
+    cursor: pointer; line-height: 1.6;
+  }
+  .consent-row a {
+    color: var(--blue-a); text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .consent-row a:hover { color: var(--accent-glow); }
+
+  .submit-row {
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-submit {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 40px; border: none; border-radius: 60px;
+    background: linear-gradient(135deg, var(--sales-red), var(--sales-orange));
+    color: #fff; font-size: 16px; font-weight: 700;
+    font-family: var(--font-main);
+    cursor: pointer; transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 8px 30px rgba(229,75,75,0.4);
+    letter-spacing: 0.04em;
+    min-width: 200px; justify-content: center;
+  }
+  .btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(229,75,75,0.5);
+  }
+  .btn-submit:disabled {
+    opacity: 0.6; cursor: not-allowed; transform: none;
+  }
+  .btn-submit .arrow {
+    transition: transform 0.3s;
+  }
+  .btn-submit:hover .arrow { transform: translateX(4px); }
+  .submit-note {
+    font-size: 12px; color: rgba(255,255,255,0.4);
+  }
+
+  /* Success */
+  .form-success {
+    display: none; text-align: center; padding: 60px 24px;
+  }
+  .form-success.is-shown { display: block; }
+  .form-success .success-icon {
+    width: 80px; height: 80px; margin: 0 auto 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(82,216,105,0.15), rgba(75,156,251,0.1));
+    border: 2px solid rgba(82,216,105,0.4);
+    display: grid; place-items: center;
+  }
+  .form-success .success-icon svg {
+    width: 36px; height: 36px; stroke: #52d869; fill: none; stroke-width: 2.5;
+  }
+  .form-success h3 {
+    font-size: 26px; color: #fff; margin-bottom: 14px; font-weight: 700;
+  }
+  .form-success p {
+    font-size: 14px; color: rgba(255,255,255,0.6);
+    max-width: 480px; margin: 0 auto; line-height: 2;
+  }
+  .form-success a { color: var(--accent-glow); }
+  .form-success .back-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 28px; padding: 14px 32px; border-radius: 60px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(120,160,220,0.2);
+    color: #fff; font-size: 14px; font-weight: 600;
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .form-success .back-btn:hover {
+    background: rgba(75,156,251,0.1);
+    border-color: rgba(75,156,251,0.3);
+  }
+
+  /* Footer */
+  footer {
+    background: #050d1f;
+    color: rgba(255,255,255,0.5);
+    padding: 40px 0 24px;
+    text-align: center; font-size: 13px;
+  }
+  footer::before {
+    content: ''; display: block;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(184,150,62,0.3), transparent);
+    margin-bottom: 40px;
+  }
+  footer .footer-logo {
+    height: 50px; width: auto; margin-bottom: 16px;
+    background: rgba(255,255,255,0.92);
+    padding: 8px 16px; border-radius: 10px;
+  }
+  footer p { margin-bottom: 6px; }
+  footer .copyright {
+    margin-top: 24px; font-size: 11px;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* Animations */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up {
+    opacity: 0; animation: fadeUp 0.8s var(--ease-out-expo) forwards;
+  }
+  .delay-1 { animation-delay: 0.15s; }
+  .delay-2 { animation-delay: 0.3s; }
+  .delay-3 { animation-delay: 0.45s; }
+  .delay-4 { animation-delay: 0.6s; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .contact-grid {
+      grid-template-columns: 1fr; gap: 32px;
+    }
+    .contact-side { position: static; }
+    .form-card { padding: 32px 20px; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .contact-hero h1 { font-size: 24px; }
+    .contact-hero .reassurance { gap: 14px; }
+    .form-card { padding: 24px 16px; }
+    .btn-submit { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="contact-header">
+  <div class="container">
+    <a class="logo" href="early-management-improvement-lp.html">
+      <img src="assets/images/trustep-japan-logo.png" alt="TRUSTEP JAPAN株式会社" width="180" height="56">
+    </a>
+    <a class="back-link" href="early-management-improvement-lp.html">
+      <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      LPに戻る
+    </a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="contact-hero">
+  <div class="container">
+    <p class="eyebrow fade-up">Free Consultation</p>
+    <h1 class="fade-up delay-1">まずは<em>無料相談</em>から。</h1>
+    <p class="lead fade-up delay-2">
+      早期経営改善計画策定支援について、制度の対象になるか、<br>
+      費用や進め方など、お気軽にご相談ください。<br>
+      原則1営業日以内にご返信いたします。
+    </p>
+    <div class="reassurance fade-up delay-3">
+      <span>🔒 秘密厳守</span>
+      <span>📞 営業電話なし</span>
+      <span>💰 相談無料</span>
+    </div>
+  </div>
+</section>
+
+<!-- Main -->
+<section class="contact-main">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Sidebar -->
+      <aside class="contact-side fade-up delay-2">
+        <div class="info-card">
+          <h3>By Phone</h3>
+          <a href="tel:0368695250" class="big">03-6869-5250</a>
+          <p class="small">平日 9:00 - 18:00（土日祝休み）</p>
+        </div>
+
+        <div class="info-card" style="background:linear-gradient(135deg,rgba(232,199,106,0.08),rgba(184,150,62,0.03));">
+          <h3>Office</h3>
+          <p>TRUSTEP JAPAN株式会社<br>
+          〒102-0074<br>
+          東京都千代田区九段南1-5-6<br>
+          りそな九段ビル5F</p>
+          <p class="small" style="margin-top:12px;">認定支援機関ID：107013001812</p>
+        </div>
+
+        <a class="method-row" href="tel:0368695250">
+          <span class="method-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.61.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c1.2.34 2 .57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <span><span class="label">Phone</span><br><span class="val">03-6869-5250</span></span>
+        </a>
+        <a class="method-row" href="mailto:info@trustep-japan.co.jp">
+          <span class="method-icon" style="background:linear-gradient(135deg,#e8c76a,#b8963e);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          <span><span class="label">Email</span><br><span class="val">info@trustep-japan.co.jp</span></span>
+        </a>
+
+        <div class="consult-points">
+          <h4>無料相談で確認できること</h4>
+          <ul>
+            <li>制度を活用できる可能性</li>
+            <li>黒字企業でも対象になるか</li>
+            <li>現在の財務・資金繰りの課題</li>
+            <li>計画の方向性・必要資料</li>
+            <li>費用負担のイメージ</li>
+            <li>支援開始〜計画策定の流れ</li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Form -->
+      <div class="fade-up delay-3">
+        <div class="form-card">
+          <form id="contactForm" action="https://formsubmit.co/info@trustep-japan.co.jp" method="POST">
+            <!-- FormSubmit設定 -->
+            <input type="hidden" name="_subject" value="【早期経営改善計画】無料相談のお問い合わせ">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="">
+            <input type="text" name="_honey" style="display:none">
+
+            <h2>無料相談・お問い合わせ</h2>
+            <p class="form-desc">必要項目をご入力ください。<span class="req">*</span> は必須項目です。</p>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="company">会社名<span class="req">*</span></label>
+                <input id="company" name="会社名" type="text" required placeholder="株式会社〇〇">
+                <p class="error-msg">会社名を入力してください</p>
+              </div>
+              <div class="field">
+                <label for="name">お名前<span class="req">*</span></label>
+                <input id="name" name="お名前" type="text" required placeholder="山田 太郎">
+                <p class="error-msg">お名前を入力してください</p>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="email">メールアドレス<span class="req">*</span></label>
+                <input id="email" name="メールアドレス" type="email" required placeholder="example@company.co.jp">
+                <p class="error-msg">正しいメールアドレスを入力してください</p>
+              </div>
+              <div class="field">
+                <label for="phone">電話番号</label>
+                <input id="phone" name="電話番号" type="tel" placeholder="03-1234-5678">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="employees">従業員数</label>
+              <select id="employees" name="従業員数">
+                <option value="">選択してください</option>
+                <option value="1-5名">1〜5名</option>
+                <option value="6-20名">6〜20名</option>
+                <option value="21-50名">21〜50名</option>
+                <option value="51-100名">51〜100名</option>
+                <option value="101-300名">101〜300名</option>
+                <option value="301名以上">301名以上</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="topic">ご相談内容<span class="req">*</span></label>
+              <select id="topic" name="ご相談内容" required>
+                <option value="">選択してください</option>
+                <option value="早期経営改善計画策定支援">早期経営改善計画策定支援について</option>
+                <option value="資金繰り改善">資金繰りの改善について</option>
+                <option value="金融機関対応">金融機関への説明・計画書作成</option>
+                <option value="補助金・助成金活用">補助金・助成金の活用について</option>
+                <option value="成長投資・設備投資">成長投資・設備投資の計画</option>
+                <option value="経営改善全般">経営改善全般のご相談</option>
+                <option value="その他">その他</option>
+              </select>
+              <p class="error-msg">ご相談内容を選択してください</p>
+            </div>
+
+            <div class="field">
+              <label for="situation">現在の状況・ご相談の詳細</label>
+              <textarea id="situation" name="現在の状況・ご相談の詳細" placeholder="現在の経営状況、抱えている課題、ご検討されていることなど、&#10;お気軽にご記入ください。簡単な内容で構いません。"></textarea>
+            </div>
+
+            <div class="field">
+              <label for="preferred">ご希望の連絡方法</label>
+              <select id="preferred" name="ご希望の連絡方法">
+                <option value="">選択してください</option>
+                <option value="メール">メール</option>
+                <option value="電話">電話</option>
+                <option value="オンライン面談">オンライン面談（Zoom等）</option>
+                <option value="対面">対面での打ち合わせ</option>
+              </select>
+            </div>
+
+            <div class="consent-row">
+              <input type="checkbox" id="consent" required>
+              <label for="consent">
+                <a href="early-management-improvement-privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に同意の上、送信します。<span style="color:var(--sales-red);">*</span>
+              </label>
+            </div>
+
+            <div class="submit-row">
+              <button type="submit" class="btn-submit" id="submitBtn">
+                送信する <span class="arrow">→</span>
+              </button>
+              <span class="submit-note">原則1営業日以内にご返信</span>
+            </div>
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            <div class="success-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3>送信ありがとうございました</h3>
+            <p>お問い合わせを受け付けました。<br>原則1営業日以内に、ご入力いただいたメールアドレス宛にご返信いたします。<br>お急ぎの場合は <a href="tel:0368695250">03-6869-5250</a> までお電話ください。</p>
+            <a class="back-btn" href="early-management-improvement-lp.html">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              LPに戻る
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <img class="footer-logo" src="assets/images/trustep-japan-logo.png" alt="TRUSTEP JAPAN株式会社" width="180" height="56">
+  <p>TRUSTEP JAPAN株式会社｜認定経営革新等支援機関（ID：107013001812）</p>
+  <p>〒102-0074 東京都千代田区九段南1-5-6 りそな九段ビル5F ／ TEL：03-6869-5250</p>
+  <p class="copyright">&copy; 2026 TRUSTEP JAPAN Inc. All Rights Reserved.</p>
+</footer>
+
+<script>
+(function(){
+  const form = document.getElementById('contactForm');
+  const successEl = document.getElementById('formSuccess');
+  const submitBtn = document.getElementById('submitBtn');
+  if (!form) return;
+
+  // リダイレクト先を現在ページに設定
+  const nextInput = form.querySelector('input[name="_next"]');
+  if (nextInput) nextInput.value = window.location.href + '#sent';
+
+  // ページロード時に#sentがあれば送信完了表示
+  if (window.location.hash === '#sent') {
+    form.style.display = 'none';
+    successEl.classList.add('is-shown');
+  }
+
+  // バリデーション
+  function validateField(field) {
+    const parent = field.closest('.field');
+    if (!parent) return true;
+    let valid = true;
+    if (field.required && !field.value.trim()) valid = false;
+    if (field.type === 'email' && field.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) valid = false;
+    parent.classList.toggle('field-error', !valid);
+    return valid;
+  }
+
+  form.querySelectorAll('input, select, textarea').forEach(f => {
+    f.addEventListener('blur', () => validateField(f));
+    f.addEventListener('input', () => {
+      if (f.closest('.field-error')) validateField(f);
+    });
+  });
+
+  form.addEventListener('submit', function(e) {
+    let allValid = true;
+    form.querySelectorAll('[required]').forEach(f => {
+      if (!validateField(f)) allValid = false;
+    });
+
+    const consent = document.getElementById('consent');
+    if (!consent.checked) {
+      allValid = false;
+      alert('プライバシーポリシーへの同意が必要です。');
+    }
+
+    if (!allValid) {
+      e.preventDefault();
+      const firstError = form.querySelector('.field-error');
+      if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = '送信中…';
+  });
+})();
+</script>
+</body>
+</html>
