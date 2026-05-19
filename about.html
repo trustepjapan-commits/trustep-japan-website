@@ -184,9 +184,16 @@
 .facts-table td{padding:18px 16px;color:#dbe6f7;font-size:14px;line-height:1.9;}
 .facts-table a{color:var(--blue-a);text-decoration:underline;text-underline-offset:2px;}
 
+.stat-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;
+}
+.stat-grid .stat-value{font-size:clamp(28px,5vw,48px);font-weight:700;font-family:var(--serif);color:#fff;display:block;}
+.stat-grid .stat-label{font-size:clamp(10px,1.5vw,12px);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:8px;display:block;}
+
 @media (max-width:900px){
   .message-block{grid-template-columns:1fr;gap:32px;}
   .values-grid{grid-template-columns:1fr;}
+  .stat-grid{grid-template-columns:repeat(2,1fr);gap:16px;}
   .timeline::before{left:60px;}
   .timeline-row{grid-template-columns:60px 1fr;}
   .timeline-year{font-size:18px;padding-right:8px;text-align:right;}
@@ -325,7 +332,7 @@
       <p class="section-kicker reveal delay-1">数字で見る TRUSTEP</p>
       <h2 class="section-title center reveal delay-2">実績が証明する、<br>本気の伴走支援。</h2>
     </div>
-    <div class="reveal-stagger" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;">
+    <div class="reveal-stagger stat-grid">
       <div class="card" style="padding:40px 24px;">
         <div class="stat">
           <span class="stat-value"><span data-count="400" data-suffix="">0</span>+</span>
