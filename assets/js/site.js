@@ -53,6 +53,132 @@
     }
   });
 
+  /* --- AI Header Effects --- */
+  (function initHeaderAI(){
+    /* Text scramble on nav hover */
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZアイウエオカキクケコ01';
+    document.querySelectorAll('.site-nav a.nav-item').forEach(a => {
+      const original = a.textContent;
+      let scrambleTimer = null;
+      a.addEventListener('pointerenter', function(){
+        let iteration = 0;
+        const len = original.length;
+        clearInterval(scrambleTimer);
+        scrambleTimer = setInterval(function(){
+          a.textContent = original.split('').map(function(ch, i){
+            if (i < iteration) return original[i];
+            return chars[Math.floor(Math.random() * chars.length)];
+          }).join('');
+          iteration += 1/2;
+          if (iteration >= len){
+            clearInterval(scrambleTimer);
+            a.textContent = original;
+          }
+        }, 35);
+      });
+      a.addEventListener('pointerleave', function(){
+        clearInterval(scrambleTimer);
+        a.textContent = original;
+      });
+    });
+
+    /* Micro-particle system in header */
+    if (window.innerWidth < 768) return;
+    var headerEl = document.querySelector('.site-header');
+    if (!headerEl) return;
+    var canvas = document.createElement('canvas');
+    canvas.className = 'header-particles';
+    canvas.style.cssText = 'position:absolute;inset:0;pointer-events:none;z-index:0;';
+    headerEl.insertBefore(canvas, headerEl.firstChild);
+    var ctx = canvas.getContext('2d');
+    var particles = [];
+    var PARTICLE_COUNT = 18;
+    var mouseX = -100, mouseY = -100;
+
+    function resize(){
+      var r = headerEl.getBoundingClientRect();
+      canvas.width = r.width;
+      canvas.height = r.height;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    headerEl.addEventListener('pointermove', function(e){
+      var r = headerEl.getBoundingClientRect();
+      mouseX = e.clientX - r.left;
+      mouseY = e.clientY - r.top;
+    });
+    headerEl.addEventListener('pointerleave', function(){
+      mouseX = -100; mouseY = -100;
+    });
+
+    for (var i = 0; i < PARTICLE_COUNT; i++){
+      particles.push({
+        x: Math.random() * (canvas.width || 1280),
+        y: Math.random() * (canvas.height || 72),
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.15,
+        r: Math.random() * 1.5 + 0.5,
+        alpha: Math.random() * 0.4 + 0.1,
+        pulse: Math.random() * Math.PI * 2
+      });
+    }
+
+    function drawParticles(){
+      if (!canvas.width) { requestAnimationFrame(drawParticles); return; }
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      var w = canvas.width, h = canvas.height;
+      for (var i = 0; i < particles.length; i++){
+        var p = particles[i];
+        p.pulse += 0.02;
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0) p.x = w;
+        if (p.x > w) p.x = 0;
+        if (p.y < 0) p.y = h;
+        if (p.y > h) p.y = 0;
+
+        /* React to mouse */
+        var dx = mouseX - p.x, dy = mouseY - p.y;
+        var dist = Math.sqrt(dx*dx + dy*dy);
+        var glow = dist < 120 ? (1 - dist/120) * 0.6 : 0;
+        var a = p.alpha + Math.sin(p.pulse) * 0.1 + glow;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r + glow * 2, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(212,168,67,' + a.toFixed(3) + ')';
+        ctx.fill();
+
+        /* Draw connection lines between close particles */
+        for (var j = i + 1; j < particles.length; j++){
+          var q = particles[j];
+          var ddx = p.x - q.x, ddy = p.y - q.y;
+          var d2 = Math.sqrt(ddx*ddx + ddy*ddy);
+          if (d2 < 100){
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(q.x, q.y);
+            ctx.strokeStyle = 'rgba(212,168,67,' + ((1 - d2/100) * 0.12).toFixed(3) + ')';
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+
+        /* Draw line to mouse if close */
+        if (dist < 120 && mouseX > 0){
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(mouseX, mouseY);
+          ctx.strokeStyle = 'rgba(212,168,67,' + ((1 - dist/120) * 0.2).toFixed(3) + ')';
+          ctx.lineWidth = 0.5;
+          ctx.stroke();
+        }
+      }
+      requestAnimationFrame(drawParticles);
+    }
+    requestAnimationFrame(drawParticles);
+  })();
+
   /* --- Reveal on scroll (IntersectionObserver) --- */
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const items = document.querySelectorAll('.reveal, .reveal-stagger');

@@ -85,6 +85,26 @@ body.noise::before{
   border-bottom:1px solid rgba(120,160,220,.08);
   transition:transform .4s var(--ease-out-quart),background .3s ease;
 }
+/* AI data-stream border — flows along header bottom */
+.site-header::after{
+  content:"";position:absolute;bottom:-1px;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,
+    transparent 0%,
+    rgba(212,168,67,0) 15%,
+    rgba(212,168,67,.6) 30%,
+    rgba(232,199,106,1) 50%,
+    rgba(212,168,67,.6) 70%,
+    rgba(212,168,67,0) 85%,
+    transparent 100%);
+  background-size:200% 100%;
+  animation:headerDataStream 4s linear infinite;
+  opacity:.7;
+  z-index:1;
+}
+@keyframes headerDataStream{
+  0%{background-position:200% 0;}
+  100%{background-position:-200% 0;}
+}
 .site-header.is-hidden{transform:translateY(-100%);}
 .site-header.is-scrolled{background:rgba(8,15,30,.85);}
 .site-header .inner{
@@ -98,18 +118,59 @@ body.noise::before{
 .site-nav a.nav-item{
   font-size:13px;letter-spacing:.05em;color:var(--muted);
   position:relative;padding:6px 0;
-  transition:color .25s ease;
+  transition:color .3s ease,text-shadow .3s ease;
 }
+/* AI scanning underline */
 .site-nav a.nav-item::after{
   content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
-  background:linear-gradient(90deg,transparent,var(--blue-a),var(--gold-a),transparent);
+  background:linear-gradient(90deg,transparent,var(--gold-a),transparent);
+  background-size:200% 100%;
   transform:scaleX(0);transform-origin:center;
   transition:transform .35s var(--ease-out-quart);
 }
-.site-nav a.nav-item:hover{color:#fff;}
-.site-nav a.nav-item:hover::after{transform:scaleX(1);}
-.site-nav a.nav-item.is-active{color:#fff;}
+.site-nav a.nav-item:hover::after{
+  transform:scaleX(1);
+  animation:navScanLine 1.5s ease-in-out infinite;
+}
+@keyframes navScanLine{
+  0%{background-position:200% 0;}
+  100%{background-position:-200% 0;}
+}
+/* AI glow on hover */
+.site-nav a.nav-item:hover{
+  color:#fff;
+  text-shadow:0 0 12px rgba(212,168,67,.35),0 0 24px rgba(212,168,67,.15);
+}
+/* Small AI node dot before active/hovered item */
+.site-nav a.nav-item::before{
+  content:"";position:absolute;left:50%;top:-4px;
+  width:3px;height:3px;border-radius:50%;
+  background:var(--gold-a);
+  transform:translateX(-50%) scale(0);
+  transition:transform .3s var(--ease-out-expo),opacity .3s ease;
+  opacity:0;
+  box-shadow:0 0 6px rgba(212,168,67,.6),0 0 12px rgba(212,168,67,.3);
+}
+.site-nav a.nav-item:hover::before{
+  transform:translateX(-50%) scale(1);
+  opacity:1;
+  animation:nodePulse 2s ease-in-out infinite;
+}
+@keyframes nodePulse{
+  0%,100%{box-shadow:0 0 4px rgba(212,168,67,.5),0 0 8px rgba(212,168,67,.2);transform:translateX(-50%) scale(1);}
+  50%{box-shadow:0 0 8px rgba(212,168,67,.8),0 0 16px rgba(212,168,67,.4);transform:translateX(-50%) scale(1.3);}
+}
+.site-nav a.nav-item.is-active{color:#fff;text-shadow:0 0 10px rgba(212,168,67,.25);}
 .site-nav a.nav-item.is-active::after{transform:scaleX(1);background:var(--gold-a);}
+.site-nav a.nav-item.is-active::before{
+  transform:translateX(-50%) scale(1);opacity:1;
+  animation:nodePulse 2.5s ease-in-out infinite;
+}
+
+/* Scramble text data attribute display */
+.site-nav a.nav-item .nav-text-scramble{
+  position:relative;display:inline-block;
+}
 
 .btn-header-cta{
   display:inline-flex;align-items:center;gap:6px;
@@ -118,8 +179,32 @@ body.noise::before{
   color:#fff !important;font-weight:600;font-size:12px;letter-spacing:.05em;
   box-shadow:0 6px 20px rgba(75,156,251,.35);
   transition:transform .25s ease,box-shadow .25s ease;
+  position:relative;overflow:visible;
+}
+/* AI pulse ring around CTA */
+.btn-header-cta::before{
+  content:"";position:absolute;inset:-3px;border-radius:inherit;
+  border:1px solid var(--gold-a);
+  opacity:0;
+  animation:ctaPulseRing 3s ease-in-out infinite;
+  pointer-events:none;
+}
+@keyframes ctaPulseRing{
+  0%,100%{opacity:0;transform:scale(1);}
+  50%{opacity:.4;transform:scale(1.04);}
 }
 .btn-header-cta:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(75,156,251,.5);}
+.btn-header-cta:hover::before{opacity:.6;animation:ctaPulseRingHover 1.5s ease-in-out infinite;}
+@keyframes ctaPulseRingHover{
+  0%,100%{opacity:.3;transform:scale(1);}
+  50%{opacity:.7;transform:scale(1.06);}
+}
+
+/* Header AI particle canvas */
+.header-particles{
+  position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0;
+}
+.site-header .inner{position:relative;z-index:1;}
 
 .menu-toggle{
   display:none;
