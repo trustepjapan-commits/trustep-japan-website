@@ -55,6 +55,69 @@
 .message-body p{color:var(--muted);line-height:2.05;font-size:14.5px;}
 .message-body p+p{margin-top:1em;}
 
+/* Representative Profile */
+.rep-profile{padding:100px 0;position:relative;overflow:hidden;
+  background:linear-gradient(180deg,rgba(75,156,251,.04),rgba(232,199,106,.03));}
+.rep-profile::before{content:"LEADER";position:absolute;top:20px;right:-30px;
+  font-family:var(--serif);font-style:italic;font-weight:700;font-size:clamp(80px,14vw,200px);
+  line-height:1;color:rgba(232,199,106,.03);pointer-events:none;z-index:0;}
+.rep-header{text-align:center;margin-bottom:50px;}
+.rep-statement{
+  font-family:var(--serif);font-size:clamp(22px,3.5vw,36px);font-weight:700;line-height:1.5;
+  color:#fff;text-align:center;margin-bottom:48px;
+}
+.rep-statement em{font-style:normal;color:var(--gold-a);}
+.rep-bio-tag{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:10px 20px;border-radius:50px;
+  background:rgba(255,255,255,.04);border:1px solid rgba(120,160,220,.15);
+  font-size:13px;color:var(--muted);margin:0 auto 48px;
+}
+.rep-bio-tag .pin{color:var(--gold-a);}
+.rep-bio-tag strong{color:#fff;}
+.career-timeline{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:48px;
+}
+.career-card{
+  background:rgba(255,255,255,.02);border:1px solid rgba(120,160,220,.12);
+  border-radius:18px;padding:28px 24px;position:relative;overflow:hidden;
+  transition:all .35s ease;
+}
+.career-card:hover{border-color:rgba(212,168,67,.3);background:rgba(212,168,67,.03);transform:translateY(-4px);}
+.career-card .era-badge{
+  display:inline-flex;padding:5px 14px;border-radius:50px;font-size:11px;font-weight:600;
+  letter-spacing:.08em;margin-bottom:16px;
+}
+.career-card .era-badge.era-sales{background:rgba(248,79,101,.12);color:#ff8fa1;border:1px solid rgba(248,79,101,.25);}
+.career-card .era-badge.era-turning{background:rgba(75,156,251,.12);color:#95c7ff;border:1px solid rgba(75,156,251,.25);}
+.career-card .era-badge.era-start{background:rgba(232,199,106,.12);color:var(--gold-a);border:1px solid rgba(232,199,106,.25);}
+.career-card .era-badge.era-now{background:rgba(95,212,167,.12);color:#7be3b8;border:1px solid rgba(95,212,167,.25);}
+.career-card .career-icon{font-size:24px;margin-bottom:12px;}
+.career-card h4{font-family:var(--serif);font-size:17px;font-weight:600;color:#fff;margin-bottom:6px;}
+.career-card .career-sub{font-size:12px;color:var(--gold-a);margin-bottom:12px;}
+.career-card p{font-size:13px;line-height:1.9;color:var(--muted);}
+.career-card.is-current h4{color:var(--gold-a);}
+.rep-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.rep-stat-card{
+  text-align:center;padding:32px 20px;border-radius:16px;
+  background:rgba(255,255,255,.02);border:1px solid rgba(120,160,220,.12);
+}
+.rep-stat-card .stat-label{font-size:12px;letter-spacing:.1em;color:var(--muted);margin-bottom:8px;}
+.rep-stat-card .stat-big{font-family:var(--serif);font-size:clamp(36px,5vw,52px);font-weight:700;color:var(--gold-a);line-height:1.2;}
+.rep-stat-card .stat-unit{font-size:16px;color:var(--muted);font-weight:400;}
+.rep-stat-card .stat-line{width:24px;height:2px;background:var(--gold-a);margin:10px auto 0;border-radius:2px;}
+
+@media (max-width:900px){
+  .career-timeline{grid-template-columns:repeat(2,1fr);}
+  .rep-stats{grid-template-columns:repeat(3,1fr);gap:12px;}
+}
+@media (max-width:640px){
+  .career-timeline{grid-template-columns:1fr;}
+  .rep-stats{grid-template-columns:1fr;}
+}
+
 /* MVV — bold, sculptural treatment */
 .philosophy-section{
   padding:140px 0 !important;
@@ -283,6 +346,86 @@
           経営者の皆様の "右腕" として、戦略設計から現場の実行、定着までを本気で伴走します。会議体の整備、数値管理、営業改革、人材育成、そして AI の現場実装まで——。一時的なアドバイスではなく、"再現性のある経営" を、ご一緒に築いてまいります。
         </p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- 代表プロフィール -->
+<section class="rep-profile">
+  <div class="container">
+    <div class="rep-header reveal">
+      <p class="section-num">01-2 — Profile</p>
+      <p class="section-kicker">代表プロフィール</p>
+    </div>
+
+    <h3 class="rep-statement reveal delay-1">
+      お客様の会社が良くなる（＝元気になる）ための<br>
+      <em>「経営改善」「業務革新」</em>を現場で遂行します
+    </h3>
+
+    <div class="text-center reveal delay-2">
+      <div class="rep-bio-tag">
+        <span class="pin">📍</span>
+        栃木県宇都宮市生まれ / 茨城県在住　<strong>大学経営学部経営学科卒業</strong>　※大学4年生時に野球日本代表選出
+      </div>
+    </div>
+
+    <div class="career-timeline reveal-stagger">
+      <div class="career-card">
+        <span class="era-badge era-sales">Sales Era</span>
+        <div class="career-icon">🏆</div>
+        <h4>大手総合商社時代</h4>
+        <p class="career-sub">トップセールスへの道</p>
+        <p>営業職として12年間勤務し、数々の表彰や優秀賞を受賞。史上初となる「6年連続7回」の年間優秀社員賞を獲得し、トップを走り続ける。</p>
+      </div>
+
+      <div class="career-card">
+        <span class="era-badge era-turning">Turning Point</span>
+        <div class="career-icon">🔧</div>
+        <h4>転身：コンサルティング業へ</h4>
+        <p class="career-sub">「もったいない」を解消</p>
+        <p>「知らないで損をしている経営者が多くいる」「もっとこうすれば利益が上がるのに」という想いから転身を決意。サラリーマン時代に猛勉強し、独立への準備を進める。</p>
+      </div>
+
+      <div class="career-card">
+        <span class="era-badge era-start">2020.03</span>
+        <div class="career-icon">🚀</div>
+        <h4>独立・創業</h4>
+        <p class="career-sub">ゼロからのスタート</p>
+        <p>資金なし・人脈なしで独立。1年目で調達した資金を全て自己投資し、人脈と情報を獲得。2年目で黒字化を達成し、独自の支援モデルを構築。</p>
+      </div>
+
+      <div class="career-card is-current">
+        <span class="era-badge era-now">Current</span>
+        <div class="career-icon">📈</div>
+        <h4>紹介のみで販路拡大中</h4>
+        <p class="career-sub">再現性のある支援</p>
+        <p>中小企業の業種業態を問わず、幅広く支援を展開。支援実績400社以上。「経営改善」「業務革新」を現場で遂行し、企業の利益向上に貢献。</p>
+      </div>
+    </div>
+
+    <div class="rep-stats reveal-stagger">
+      <div class="rep-stat-card">
+        <div class="stat-label">商社営業経験</div>
+        <div class="stat-big"><span data-count="12">0</span><span class="stat-unit">年</span></div>
+        <div class="stat-line"></div>
+      </div>
+      <div class="rep-stat-card">
+        <div class="stat-label">年間優秀社員賞</div>
+        <div class="stat-big"><span data-count="7">0</span><span class="stat-unit">回</span></div>
+        <div class="stat-line"></div>
+      </div>
+      <div class="rep-stat-card">
+        <div class="stat-label">支援実績数</div>
+        <div class="stat-big"><span data-count="400">0</span><span class="stat-unit">社+</span></div>
+        <div class="stat-line"></div>
+      </div>
+    </div>
+
+    <div class="text-center reveal" style="margin-top:40px;">
+      <p style="font-size:14px;color:var(--gold-a);font-family:var(--serif);font-style:italic;letter-spacing:.08em;">
+        各フェーズでの経験が現在の「再現性のある支援」の基盤となっています
+      </p>
     </div>
   </div>
 </section>
