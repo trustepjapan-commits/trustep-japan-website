@@ -588,7 +588,7 @@
       .btn-cta.visible-btn { opacity: 1; animation: none; }
 
       .hero-kpi-strip {
-        display: grid; grid-template-columns: repeat(4, 1fr);
+        display: grid; grid-template-columns: repeat(5, 1fr);
         gap: 18px; max-width: 920px; margin: 32px auto 0;
         padding: 28px 20px;
         background: rgba(255,255,255,0.035);
@@ -616,7 +616,7 @@
         color: rgba(255,255,255,0.65); font-weight: 500;
       }
       @media (max-width: 700px) {
-        .hero-kpi-strip { grid-template-columns: repeat(2, 1fr); gap: 22px 12px; }
+        .hero-kpi-strip { grid-template-columns: repeat(3, 1fr); gap: 22px 12px; }
         .hero-kpi-strip .kpi + .kpi::before { display: none; }
       }
 
@@ -814,6 +814,70 @@
         background: linear-gradient(135deg, var(--sales-red), var(--sales-orange));
         -webkit-background-clip: text; background-clip: text;
         -webkit-text-fill-color: transparent;
+      }
+
+      /* Workload (作業負担最小限) */
+      .workload-bg {
+        background: linear-gradient(180deg, #fff 0%, #f7faff 100%);
+        position: relative;
+      }
+      .workload-content {
+        max-width: 860px; margin: 0 auto;
+      }
+      .workload-text {
+        text-align: center; margin-bottom: 40px;
+      }
+      .workload-text p {
+        font-size: 16px; line-height: 2.1; color: var(--text-color); margin-bottom: 14px;
+      }
+      .workload-text strong {
+        color: var(--primary-color); font-weight: 700;
+      }
+      .workload-table-wrap {
+        border-radius: 16px; overflow: hidden;
+        border: 1px solid rgba(26,47,94,0.1);
+        box-shadow: 0 8px 30px rgba(10,25,60,0.06);
+        margin-bottom: 32px;
+      }
+      .workload-table {
+        width: 100%; border-collapse: collapse; background: #fff;
+      }
+      .workload-table th {
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-deep));
+        color: var(--accent-glow); padding: 16px 24px;
+        font-size: 14px; font-weight: 700; letter-spacing: 0.06em;
+      }
+      .workload-table td {
+        padding: 18px 24px; font-size: 15px; border-bottom: 1px solid #eef1f6;
+        color: var(--text-color);
+      }
+      .workload-table td:last-child {
+        text-align: center; font-size: 16px; white-space: nowrap;
+      }
+      .workload-table td strong {
+        color: var(--sales-red); font-weight: 800;
+      }
+      .workload-table .wl-icon {
+        margin-right: 10px; font-size: 18px;
+      }
+      .workload-highlight {
+        display: flex; align-items: center; gap: 18px;
+        padding: 24px 32px; border-radius: 14px;
+        background: linear-gradient(135deg, rgba(229,75,75,0.06), rgba(255,120,71,0.04));
+        border: 2px solid rgba(229,75,75,0.25);
+      }
+      .workload-highlight .wl-highlight-icon {
+        font-size: 32px; flex-shrink: 0;
+      }
+      .workload-highlight p {
+        font-size: 16px; line-height: 1.8; color: var(--text-color);
+      }
+      .workload-highlight strong {
+        color: var(--sales-red); font-size: 20px;
+      }
+      @media (max-width: 700px) {
+        .workload-highlight { flex-direction: column; text-align: center; padding: 20px; }
+        .workload-table td, .workload-table th { padding: 14px 16px; font-size: 13px; }
       }
 
       /* System (制度説明) */
@@ -1163,6 +1227,48 @@
       .support-item:hover h3::after { width: 80px; }
       .support-item p { font-size: 13.5px; color: #555; line-height: 1.75; }
 
+      /* Council Support (協議会対応) */
+      .council-support-bg {
+        background: linear-gradient(180deg, #f0f4fa 0%, #fff 100%);
+        position: relative;
+      }
+      .council-content {
+        max-width: 860px; margin: 0 auto;
+        background: #fff; border-radius: 20px;
+        padding: 48px;
+        border: 1px solid rgba(26,47,94,0.08);
+        box-shadow: 0 10px 40px rgba(10,25,60,0.06);
+      }
+      .council-content p {
+        font-size: 16px; line-height: 2.1; color: var(--text-color); margin-bottom: 18px;
+      }
+      .council-content strong {
+        color: var(--primary-color);
+      }
+      .council-highlight {
+        background: linear-gradient(135deg, rgba(75,156,251,0.06), rgba(75,156,251,0.02));
+        border-left: 4px solid #4b9cfb;
+        padding: 18px 24px; border-radius: 0 12px 12px 0;
+        margin-bottom: 28px;
+      }
+      .council-highlight p {
+        font-weight: 500; color: var(--primary-deep); margin-bottom: 0;
+      }
+      .council-bank-note {
+        padding: 28px 32px; border-radius: 14px;
+        background: linear-gradient(135deg, rgba(184,150,62,0.06), rgba(184,150,62,0.02));
+        border: 1px solid rgba(184,150,62,0.2);
+      }
+      .council-bank-note h3 {
+        font-size: 17px; color: var(--primary-color); margin-bottom: 12px; font-weight: 700;
+      }
+      .council-bank-note p {
+        font-size: 15px; margin-bottom: 0;
+      }
+      @media (max-width: 700px) {
+        .council-content { padding: 28px 20px; }
+      }
+
       /* Results (支援後に得られる成果) */
       .results-bg {
         background: linear-gradient(180deg, #f0f4fa 0%, #e5ecf7 100%);
@@ -1200,7 +1306,7 @@
         display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
       }
       .flow-step {
-        flex: 1 1 calc(12.5% - 14px); min-width: 130px;
+        flex: 1 1 calc(10% - 14px); min-width: 100px;
         background: var(--white); padding: 24px 16px;
         border-radius: 14px; position: relative; text-align: center;
         box-shadow: 0 4px 20px rgba(10, 25, 60, 0.05);
@@ -1443,6 +1549,58 @@
         .roadmap-body { width: 100%; }
         .roadmap-phase:nth-child(odd) .roadmap-body,
         .roadmap-phase:nth-child(even) .roadmap-body { margin: 0; }
+      }
+
+      /* Target (対象企業) */
+      .target-bg {
+        background: linear-gradient(180deg, #f7faff 0%, #f0f4fa 100%);
+        position: relative;
+      }
+      .target-grid {
+        display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 16px; max-width: 960px; margin: 0 auto 32px;
+      }
+      .target-item {
+        background: #fff; padding: 20px 24px; border-radius: 12px;
+        display: flex; align-items: center; gap: 14px;
+        box-shadow: 0 4px 16px rgba(10,25,60,0.04);
+        transition: all 0.4s var(--ease-out-expo);
+        border-left: 3px solid var(--accent-color);
+      }
+      .target-item:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(10,25,60,0.08); }
+      .target-check {
+        flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%;
+        background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+        color: #fff; display: flex; align-items: center; justify-content: center;
+        font-size: 14px; font-weight: 900;
+      }
+      .target-item p { font-size: 14.5px; font-weight: 600; color: var(--text-color); }
+      .target-note {
+        text-align: center; font-size: 13px; color: var(--text-muted);
+        line-height: 1.9; max-width: 600px; margin: 0 auto;
+      }
+
+      /* Docs (必要資料) */
+      .docs-bg {
+        background: linear-gradient(180deg, #f0f4fa 0%, #fff 100%);
+        position: relative;
+      }
+      .docs-grid {
+        display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px; max-width: 960px; margin: 0 auto 32px;
+      }
+      .docs-item {
+        background: #fff; padding: 20px 24px; border-radius: 12px;
+        display: flex; align-items: center; gap: 14px;
+        box-shadow: 0 4px 16px rgba(10,25,60,0.04);
+        transition: all 0.4s var(--ease-out-expo);
+      }
+      .docs-item:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(10,25,60,0.08); }
+      .docs-icon { font-size: 22px; flex-shrink: 0; }
+      .docs-item p { font-size: 14.5px; font-weight: 600; color: var(--text-color); }
+      .docs-note {
+        text-align: center; font-size: 14.5px; color: var(--text-muted);
+        line-height: 1.9; max-width: 600px; margin: 0 auto;
       }
 
       /* FAQ */
@@ -1839,6 +1997,7 @@
       <a href="#empathy" data-target="empathy"><span class="label">課題提起</span></a>
       <a href="#appeal" data-target="appeal"><span class="label">黒字企業へ</span></a>
       <a href="#checklist" data-target="checklist"><span class="label">チェック</span></a>
+      <a href="#workload" data-target="workload"><span class="label">作業負担</span></a>
       <a href="#system" data-target="system"><span class="label">制度説明</span></a>
       <a href="#price" data-target="price"><span class="label">費用</span></a>
       <a href="#reason" data-target="reason"><span class="label">選ばれる理由</span></a>
@@ -2195,6 +2354,10 @@
             <div class="kpi-num">1,000<span style="font-size:0.5em;font-family:var(--font-main)">件+</span></div>
             <div class="kpi-label">補助金申請</div>
           </div>
+          <div class="kpi">
+            <div class="kpi-num">2~4<span style="font-size:0.5em;font-family:var(--font-main)">時間</span></div>
+            <div class="kpi-label">お客様負担目安</div>
+          </div>
         </div>
       </div>
       <div class="hero-scroll-indicator">scroll</div>
@@ -2273,6 +2436,54 @@
       </div>
     </section>
 
+    <!-- お客様の作業負担は最小限 -->
+    <section class="workload-bg" id="workload">
+      <div class="container">
+        <div class="section-title reveal-up">
+          <h2 data-index="02.5">お客様の作業負担は最小限。<br>忙しい経営者様でも進められます。</h2>
+        </div>
+        <p class="section-lead reveal-up">TRUSTEP JAPAN株式会社では、早期経営改善計画の作成に必要な情報を効率的に整理できる独自のヒアリングシートと資料作成システムを構築しています。</p>
+        <div class="workload-content reveal-up">
+          <div class="workload-text">
+            <p>お客様にお願いする主な作業は、<strong>ヒアリングシートの入力</strong>、<strong>決算書・試算表・借入資料などの共有</strong>、<strong>60〜90分程度の打ち合わせ</strong>です。</p>
+            <p>計画書作成、数値整理、資金繰り表、アクションプラン、金融機関提出用の資料作成は、<strong>TRUSTEP JAPANが中心となって対応</strong>します。</p>
+          </div>
+          <div class="workload-table-wrap">
+            <table class="workload-table">
+              <thead>
+                <tr>
+                  <th>お客様にお願いすること</th>
+                  <th>目安時間</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="wl-icon">📝</span>ヒアリングシート入力</td>
+                  <td><strong>約15分</strong></td>
+                </tr>
+                <tr>
+                  <td><span class="wl-icon">📁</span>決算書・試算表・借入資料の共有</td>
+                  <td><strong>30分前後</strong></td>
+                </tr>
+                <tr>
+                  <td><span class="wl-icon">🤝</span>初回打ち合わせ</td>
+                  <td><strong>60〜90分</strong></td>
+                </tr>
+                <tr>
+                  <td><span class="wl-icon">✅</span>作成資料の確認</td>
+                  <td><strong>30〜60分</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="workload-highlight reveal-up">
+            <div class="wl-highlight-icon">⏱️</div>
+            <p><strong>最短2〜4時間程度</strong>のご協力で、金融機関に説明できる経営改善計画の作成を進められます。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- アクセントコピー2 -->
     <div class="accent-copy dark reveal-up">
       <div class="accent-copy-inner">
@@ -2347,7 +2558,7 @@
             <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
           </div>
           <div class="price-emphasis-text">
-            <h3>事業者が支払うのは<em>40万円のみ</em></h3>
+            <h3>事業者様の実質負担は<em>合計40万円程度</em></h3>
             <p>通常の補助金は「全額を立て替え→後日入金」ですが、この制度は違います。<br>協議会負担分（80万円）は協議会から支援機関に直接支払われるため、<strong style="color:#fff">事業者が全額を立て替える必要がありません。</strong></p>
           </div>
         </div>
@@ -2383,7 +2594,7 @@
               <h4>事業者負担分のみ支払い</h4>
               <div class="pflow-step">
                 <span class="step-num">1</span>
-                <span class="step-text">事業者が支援機関に<strong>40万円のみ支払い</strong></span>
+                <span class="step-text">事業者が支援機関に<strong>自己負担分（約40万円）を支払い</strong></span>
               </div>
               <div class="pflow-step">
                 <span class="step-num">2</span>
@@ -2393,7 +2604,7 @@
                 <span class="step-num">3</span>
                 <span class="step-text">協議会が審査後、<strong>支援機関に直接80万円を支払い</strong></span>
               </div>
-              <div class="box-result">事業者の持ち出しは40万円だけ</div>
+              <div class="box-result">事業者様の自己負担は合計約40万円</div>
             </div>
           </div>
 
@@ -2430,7 +2641,7 @@
           </div>
         </div>
 
-        <p class="price-note">※上記は一例です。詳細は無料相談にてご確認ください。<br>参考：<a href="https://www.chusho.meti.go.jp/keiei/saisei/04.html" target="_blank" rel="noopener" style="color:var(--accent-glow);text-decoration:underline;">中小企業庁｜早期経営改善計画策定支援</a></p>
+        <p class="price-note">※上記は、計画策定支援75万円・伴走支援45万円で設計した場合の一例です。<br>※制度利用には要件確認が必要です。<br>※費用の支払いタイミングは、計画策定支援・伴走支援の実施状況により異なります。<br>参考：<a href="https://www.chusho.meti.go.jp/keiei/saisei/04.html" target="_blank" rel="noopener" style="color:var(--accent-glow);text-decoration:underline;">中小企業庁｜早期経営改善計画策定支援</a></p>
       </div>
     </section>
 
@@ -2520,6 +2731,26 @@
       </div>
     </section>
 
+    <!-- 協議会・金融機関対応サポート -->
+    <section class="council-support-bg" id="council-support">
+      <div class="container">
+        <div class="section-title reveal-up">
+          <h2 data-index="06.5">協議会・金融機関との<br>やり取りもサポートします</h2>
+        </div>
+        <div class="council-content reveal-up">
+          <p>制度の窓口は、各都道府県の<strong>中小企業活性化協議会</strong>です。<br>申請内容によっては、協議会との事前相談や確認が入る場合があります。</p>
+          <p>TRUSTEP JAPAN株式会社では、<strong>必要書類の整理、申請手続き、協議会との確認、金融機関への提出</strong>までサポートします。</p>
+          <div class="council-highlight">
+            <p>必要に応じて事業者様に同席いただく場合もありますが、できる限りお客様の負担が少ない形で進めます。</p>
+          </div>
+          <div class="council-bank-note reveal-up">
+            <h3>📊 メイン金融機関・準メイン金融機関への提出をサポート</h3>
+            <p>作成した経営改善計画は、メイン金融機関または準メイン金融機関へ提出・共有します。<br>TRUSTEP JAPANが、金融機関に説明しやすい資料づくりと提出までの流れをサポートします。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- アクセントコピー4 -->
     <div class="accent-copy dark reveal-up">
       <div class="accent-copy-inner">
@@ -2562,36 +2793,46 @@
           <div class="flow-step">
             <span class="step-num">Step 02</span>
             <div class="step-circle">2</div>
-            <div class="step-title">対象可否<br>課題確認</div>
+            <div class="step-title">制度対象<br>課題確認</div>
           </div>
           <div class="flow-step">
             <span class="step-num">Step 03</span>
             <div class="step-circle">3</div>
-            <div class="step-title">利用申請</div>
+            <div class="step-title">ヒアリング<br>シート入力</div>
           </div>
           <div class="flow-step">
             <span class="step-num">Step 04</span>
             <div class="step-circle">4</div>
-            <div class="step-title">現状分析</div>
+            <div class="step-title">資料共有</div>
           </div>
           <div class="flow-step">
             <span class="step-num">Step 05</span>
             <div class="step-circle">5</div>
-            <div class="step-title">計画策定</div>
+            <div class="step-title">60〜90分<br>打ち合わせ</div>
           </div>
           <div class="flow-step">
             <span class="step-num">Step 06</span>
             <div class="step-circle">6</div>
-            <div class="step-title">金融機関へ<br>提出</div>
+            <div class="step-title">計画書<br>作成</div>
           </div>
           <div class="flow-step">
             <span class="step-num">Step 07</span>
             <div class="step-circle">7</div>
-            <div class="step-title">支払申請</div>
+            <div class="step-title">内容確認<br>修正</div>
           </div>
           <div class="flow-step">
             <span class="step-num">Step 08</span>
             <div class="step-circle">8</div>
+            <div class="step-title">金融機関へ<br>提出</div>
+          </div>
+          <div class="flow-step">
+            <span class="step-num">Step 09</span>
+            <div class="step-circle">9</div>
+            <div class="step-title">支払申請</div>
+          </div>
+          <div class="flow-step">
+            <span class="step-num">Step 10</span>
+            <div class="step-circle">10</div>
             <div class="step-title">3年間の<br>伴走支援</div>
           </div>
         </div>
@@ -2648,7 +2889,7 @@
               <span class="roadmap-period">📊 伴走支援 1年目</span>
               <div class="roadmap-phase-title">モニタリング開始・改善アクション実行</div>
               <ul class="roadmap-items">
-                <li>四半期ごとのモニタリング面談（計4回）</li>
+                <li>年2回以上の伴走支援面談</li>
                 <li>計画と実績の差異分析・原因把握</li>
                 <li>改善アクションの進捗確認・軌道修正</li>
                 <li>資金繰り・キャッシュフローの定期チェック</li>
@@ -2664,11 +2905,11 @@
               <span class="roadmap-period">🔄 伴走支援 2年目</span>
               <div class="roadmap-phase-title">中間評価・計画見直し・追加施策</div>
               <ul class="roadmap-items">
-                <li>四半期ごとのモニタリング面談（計4回）</li>
-                <li>中間時点での計画達成度評価</li>
+                <li>年2回以上の伴走支援面談</li>
+                <li>計画達成度の確認</li>
                 <li>環境変化に応じた計画の見直し・修正</li>
-                <li>新たな経営課題への対応策検討</li>
-                <li>補助金・助成金の追加活用提案</li>
+                <li>環境変化に応じた計画の見直し</li>
+                <li>補助金・助成金・融資活用の検討</li>
                 <li>成長投資（設備・採用・DX）の判断支援</li>
               </ul>
             </div>
@@ -2681,12 +2922,11 @@
               <span class="roadmap-period">🏆 伴走支援 3年目</span>
               <div class="roadmap-phase-title">最終評価・自走体制構築・計画達成</div>
               <ul class="roadmap-items">
-                <li>四半期ごとのモニタリング面談（計4回）</li>
-                <li>3年間の成果を総括・最終評価レポート作成</li>
+                <li>年2回以上の伴走支援面談</li>
+                <li>3年間の成果確認</li>
                 <li>自社で経営管理を継続できる体制の構築</li>
-                <li>次期中期経営計画のフレーム設計</li>
-                <li>金融機関への最終報告・関係強化</li>
-                <li>支援終了後の継続サポート体制のご案内</li>
+                <li>次期計画への接続</li>
+                <li>金融機関への説明材料の整理</li>
               </ul>
             </div>
           </div>
@@ -2703,11 +2943,51 @@
       </div>
     </section>
 
+    <!-- 対象企業・利用条件 -->
+    <section class="target-bg" id="target">
+      <div class="container">
+        <div class="section-title reveal-up">
+          <h2 data-index="09.5">このような企業様に<br>おすすめです</h2>
+        </div>
+        <div class="target-grid">
+          <div class="target-item reveal-up" style="transition-delay:0.05s"><div class="target-check">✓</div><p>創業後12か月以上の営業実績がある</p></div>
+          <div class="target-item reveal-up" style="transition-delay:0.1s"><div class="target-check">✓</div><p>決算実績がある</p></div>
+          <div class="target-item reveal-up" style="transition-delay:0.15s"><div class="target-check">✓</div><p>資金繰りや採算管理を見直したい</p></div>
+          <div class="target-item reveal-up" style="transition-delay:0.2s"><div class="target-check">✓</div><p>黒字だが現金が残らない</p></div>
+          <div class="target-item reveal-up" style="transition-delay:0.25s"><div class="target-check">✓</div><p>借入返済の見通しを立てたい</p></div>
+          <div class="target-item reveal-up" style="transition-delay:0.3s"><div class="target-check">✓</div><p>金融機関に今後の計画を説明したい</p></div>
+          <div class="target-item reveal-up" style="transition-delay:0.35s"><div class="target-check">✓</div><p>設備投資・採用・DX・新規事業などを検討している</p></div>
+          <div class="target-item reveal-up" style="transition-delay:0.4s"><div class="target-check">✓</div><p>補助金・融資を組み合わせた資金計画を作りたい</p></div>
+        </div>
+        <p class="target-note reveal-up">※制度の利用には要件確認があります。<br>※創業直後や決算実績がない場合は対象外となる可能性があります。</p>
+      </div>
+    </section>
+
+    <!-- ご準備いただく主な資料 -->
+    <section class="docs-bg" id="docs">
+      <div class="container">
+        <div class="section-title reveal-up">
+          <h2 data-index="09.7">ご準備いただく主な資料</h2>
+        </div>
+        <div class="docs-grid">
+          <div class="docs-item reveal-up" style="transition-delay:0.05s"><span class="docs-icon">📄</span><p>直近の決算書・申告書</p></div>
+          <div class="docs-item reveal-up" style="transition-delay:0.1s"><span class="docs-icon">📊</span><p>直近の試算表</p></div>
+          <div class="docs-item reveal-up" style="transition-delay:0.15s"><span class="docs-icon">🏦</span><p>借入金一覧表</p></div>
+          <div class="docs-item reveal-up" style="transition-delay:0.2s"><span class="docs-icon">📅</span><p>返済予定表</p></div>
+          <div class="docs-item reveal-up" style="transition-delay:0.25s"><span class="docs-icon">💰</span><p>資金繰り表（ある場合）</p></div>
+          <div class="docs-item reveal-up" style="transition-delay:0.3s"><span class="docs-icon">📈</span><p>売上推移が分かる資料</p></div>
+          <div class="docs-item reveal-up" style="transition-delay:0.35s"><span class="docs-icon">🤝</span><p>主要取引先・仕入先の情報</p></div>
+          <div class="docs-item reveal-up" style="transition-delay:0.4s"><span class="docs-icon">🏛️</span><p>金融機関の情報</p></div>
+        </div>
+        <p class="docs-note reveal-up">資料が揃っていない場合でも、まずは<a href="https://trustep-japan.co.jp/contact/" style="color:var(--sales-red);font-weight:700;text-decoration:underline;">無料相談</a>で確認できます。</p>
+      </div>
+    </section>
+
     <!-- 11. よくある質問 -->
     <section class="faq-bg" id="faq">
       <div class="container">
         <div class="section-title reveal-up">
-          <h2 data-index="09">よくある質問</h2>
+          <h2 data-index="10">よくある質問</h2>
         </div>
         <div class="faq-list">
           <div class="faq-item reveal-up">
@@ -2758,7 +3038,7 @@
     <section class="consult-bg" id="consult">
       <div class="container">
         <div class="section-title reveal-up">
-          <h2 data-index="10">無料相談では、<br>制度対象かどうかを確認できます</h2>
+          <h2 data-index="11">無料相談では、<br>制度対象かどうかを確認できます</h2>
         </div>
         <div class="consult-content">
           <p class="section-lead reveal-up">無料相談では、以下の内容を確認します。</p>
