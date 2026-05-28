@@ -1642,6 +1642,74 @@
       .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.5s var(--ease-out-expo); }
       .faq-a-inner { padding: 0 26px 24px 76px; font-size: 14.5px; color: var(--text-muted); line-height: 1.9; }
 
+      /* Hero Reassure Message */
+      .hero-reassure-msg {
+        display: flex; align-items: center; gap: 12px;
+        padding: 14px 22px; margin-bottom: 24px;
+        background: rgba(184,150,62,0.1);
+        border: 1px solid rgba(184,150,62,0.25);
+        border-radius: 12px;
+        backdrop-filter: blur(8px);
+      }
+      .hero-reassure-icon { font-size: 24px; flex-shrink: 0; }
+      .hero-reassure-text {
+        font-size: 13.5px; line-height: 1.8;
+        color: rgba(255,255,255,0.9); font-weight: 500;
+      }
+      @media (max-width: 768px) {
+        .hero-reassure-msg { padding: 12px 16px; }
+        .hero-reassure-text { font-size: 12.5px; }
+      }
+
+      /* Deliverables (計画書に含まれるもの) */
+      .deliverables-bg {
+        background: linear-gradient(180deg, #f8f8f8 0%, #f0f4fa 100%);
+        position: relative;
+      }
+      .deliverables-intro {
+        text-align: center; max-width: 720px; margin: 0 auto 40px;
+        font-size: 15.5px; line-height: 2; color: var(--text-muted);
+      }
+      .deliverables-intro strong { color: var(--text-color); }
+      .deliverables-grid {
+        display: grid; grid-template-columns: repeat(2, 1fr);
+        gap: 20px; max-width: 960px; margin: 0 auto;
+      }
+      .deliverable-card {
+        background: var(--white); padding: 28px 26px; border-radius: 14px;
+        box-shadow: 0 4px 20px rgba(10,25,60,0.04);
+        border-left: 4px solid var(--accent-color);
+        transition: all 0.4s var(--ease-out-expo);
+        display: flex; gap: 16px; align-items: flex-start;
+      }
+      .deliverable-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 40px rgba(10,25,60,0.08);
+      }
+      .deliverable-num {
+        flex-shrink: 0; width: 36px; height: 36px; border-radius: 10px;
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-deep));
+        color: var(--accent-glow); display: flex; align-items: center; justify-content: center;
+        font-size: 14px; font-weight: 900;
+      }
+      .deliverable-card h4 {
+        font-size: 15.5px; font-weight: 700; color: var(--primary-color);
+        margin-bottom: 6px;
+      }
+      .deliverable-card p {
+        font-size: 13.5px; color: var(--text-muted); line-height: 1.75;
+      }
+      .deliverables-note {
+        text-align: center; margin-top: 32px;
+        font-size: 14px; color: var(--text-muted); line-height: 1.9;
+      }
+      .deliverables-note strong {
+        color: var(--sales-red); font-weight: 700;
+      }
+      @media (max-width: 768px) {
+        .deliverables-grid { grid-template-columns: 1fr; }
+      }
+
       /* Reassurance (安心してご相談ください) */
       .reassure-bg {
         background: linear-gradient(180deg, #fff 0%, #f7f5f0 50%, #f0f4fa 100%);
@@ -2209,6 +2277,10 @@
               <p>認定経営革新等支援機関であるTRUSTEP JAPAN株式会社が、<br>計画策定から3年間の伴走支援まで一貫対応。<br>
               <strong style="color:rgba(255,255,255,0.95)">補助金・融資・成長投資まで見据えた経営改善計画を作ります。</strong></p>
             </div>
+            <div class="hero-reassure-msg" style="opacity:0;animation:heroFadeIn 0.8s var(--ease-out-expo) 1.4s forwards">
+              <span class="hero-reassure-icon">🤝</span>
+              <span class="hero-reassure-text">経営の相談は恥ずかしいことではありません。<br>秘密厳守で、安心してご相談いただけます。</span>
+            </div>
             <div class="hero-btn-row">
               <a class="btn-cta" href="https://trustep-japan.co.jp/contact.html">
                 無料相談する <span class="arrow">→</span>
@@ -2465,6 +2537,7 @@
           <div class="check-item reveal-up" style="transition-delay:0.15s"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div><p>借入返済の負担が重い</p></div>
           <div class="check-item reveal-up" style="transition-delay:0.2s"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><p>金融機関に今後の計画を説明したい</p></div>
           <div class="check-item reveal-up" style="transition-delay:0.25s"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><p>今後の投資判断を整理したい</p></div>
+          <div class="check-item reveal-up" style="transition-delay:0.3s"><div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><p>売上を伸ばすための戦略を整理したい</p></div>
         </div>
       </div>
     </section>
@@ -2519,6 +2592,7 @@
           <div class="cl-item reveal-up" style="transition-delay:0.4s"><div class="cl-check">☑</div><p>幹部や社員に経営方針を共有できていない</p></div>
           <div class="cl-item reveal-up" style="transition-delay:0.45s"><div class="cl-check">☑</div><p>補助金・助成金・融資を組み合わせた資金計画を作りたい</p></div>
           <div class="cl-item reveal-up" style="transition-delay:0.5s"><div class="cl-check">☑</div><p>社長の頭の中にある計画を資料化したい</p></div>
+          <div class="cl-item reveal-up" style="transition-delay:0.55s"><div class="cl-check">☑</div><p>売上をもっと伸ばすための戦略を整理したい</p></div>
         </div>
         <div class="cl-closing reveal-up">
           <em>黒字の今だからこそ、計画を作る意味があります。</em>
@@ -2818,6 +2892,68 @@
             <p>設備投資・採用・新規事業の判断材料を整理し、成長戦略を計画に落とし込みます。</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- 計画書に含まれるもの -->
+    <section class="deliverables-bg section-padding" id="deliverables">
+      <div class="container">
+        <div class="section-title reveal-up">
+          <h2 data-index="06.5">経営改善計画書には、<br>何が含まれますか？</h2>
+        </div>
+        <p class="deliverables-intro reveal-up">
+          「計画書を作る」と言われても、具体的に何ができあがるのかイメージしにくいもの。<br>
+          TRUSTEP JAPANが作成する経営改善計画書には、<strong>以下の内容</strong>が含まれます。
+        </p>
+        <div class="deliverables-grid">
+          <div class="deliverable-card reveal-up" style="transition-delay:0.05s">
+            <div class="deliverable-num">1</div>
+            <div>
+              <h4>財務分析レポート</h4>
+              <p>決算書・試算表をもとに、売上・利益・経費の構造を分析。どこに課題があるかを数字で見える化します。</p>
+            </div>
+          </div>
+          <div class="deliverable-card reveal-up" style="transition-delay:0.1s">
+            <div class="deliverable-num">2</div>
+            <div>
+              <h4>資金繰り表</h4>
+              <p>月次の入出金を整理し、今後の資金ショートリスクや余裕資金のタイミングを明確にします。</p>
+            </div>
+          </div>
+          <div class="deliverable-card reveal-up" style="transition-delay:0.15s">
+            <div class="deliverable-num">3</div>
+            <div>
+              <h4>3年間の売上・利益計画</h4>
+              <p>今後3年間の売上目標・利益目標を設定し、どう成長していくかのロードマップを作ります。</p>
+            </div>
+          </div>
+          <div class="deliverable-card reveal-up" style="transition-delay:0.2s">
+            <div class="deliverable-num">4</div>
+            <div>
+              <h4>具体的な改善アクションプラン</h4>
+              <p>売上向上策・コスト削減策・業務改善策など、「何を・いつまでに・誰が」やるかを明記します。</p>
+            </div>
+          </div>
+          <div class="deliverable-card reveal-up" style="transition-delay:0.25s">
+            <div class="deliverable-num">5</div>
+            <div>
+              <h4>借入返済・投資計画</h4>
+              <p>現在の借入状況を整理し、返済スケジュールと今後の設備投資・採用計画を組み込みます。</p>
+            </div>
+          </div>
+          <div class="deliverable-card reveal-up" style="transition-delay:0.3s">
+            <div class="deliverable-num">6</div>
+            <div>
+              <h4>金融機関提出用の計画書</h4>
+              <p>メイン金融機関・準メイン金融機関にそのまま提出できる形式で作成します。</p>
+            </div>
+          </div>
+        </div>
+        <p class="deliverables-note reveal-up" style="margin-top:36px">
+          <strong>社長の頭の中にある成長戦略を、数字と計画に落とし込みます。</strong><br>
+          売上を伸ばしたい、新事業を始めたい、採用を強化したい。<br>
+          そうした前向きな構想も、計画書に反映できます。
+        </p>
       </div>
     </section>
 
